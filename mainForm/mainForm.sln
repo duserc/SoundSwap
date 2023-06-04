@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mainForm", "mainForm\mainForm.csproj", "{B221F79C-8DA8-4BEF-B9BF-427F85E000B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mainForm", "mainForm\mainForm.csproj", "{B221F79C-8DA8-4BEF-B9BF-427F85E000B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "audioDeviceLibrary", "audioDeviceLibrary\audioDeviceLibrary.csproj", "{03E7D9E3-F2BC-4B8C-842C-01CFD0275F19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "audioDeviceLibrary", "audioDeviceLibrary\audioDeviceLibrary.csproj", "{03E7D9E3-F2BC-4B8C-842C-01CFD0275F19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
