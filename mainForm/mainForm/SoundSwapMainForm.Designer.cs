@@ -51,6 +51,7 @@
             audioDeviceTable.RowTemplate.Height = 25;
             audioDeviceTable.Size = new Size(665, 149);
             audioDeviceTable.TabIndex = 0;
+            audioDeviceTable.Visible = false;
             // 
             // audioDeviceCol
             // 
@@ -73,9 +74,12 @@
             // 
             // myDataGridView
             // 
+            myDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            myDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             myDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             myDataGridView.Location = new Point(12, 24);
             myDataGridView.Name = "myDataGridView";
+            myDataGridView.ReadOnly = true;
             myDataGridView.RowTemplate.Height = 25;
             myDataGridView.Size = new Size(665, 256);
             myDataGridView.TabIndex = 1;
