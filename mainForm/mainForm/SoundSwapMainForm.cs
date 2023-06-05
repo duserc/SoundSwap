@@ -45,7 +45,5 @@ public partial class mainForm : Form
         myDataGridView.AllowUserToResizeRows = false;
         myDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 
-
-
     }
 }
