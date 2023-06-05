@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             audioDeviceTable = new DataGridView();
             audioDeviceCol = new DataGridViewTextBoxColumn();
-            toggleHotkeyCol = new DataGridViewCheckBoxColumn();
+            activeHotkeyCol = new DataGridViewCheckBoxColumn();
             uniqueHotKeyButtonCol = new DataGridViewButtonColumn();
             audioDevicesBindingSource = new BindingSource(components);
             myDataGridView = new DataGridView();
@@ -44,13 +46,14 @@
             // 
             audioDeviceTable.AutoGenerateColumns = false;
             audioDeviceTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            audioDeviceTable.Columns.AddRange(new DataGridViewColumn[] { audioDeviceCol, toggleHotkeyCol, uniqueHotKeyButtonCol });
+            audioDeviceTable.Columns.AddRange(new DataGridViewColumn[] { audioDeviceCol, activeHotkeyCol, uniqueHotKeyButtonCol });
             audioDeviceTable.DataSource = audioDevicesBindingSource;
             audioDeviceTable.Location = new Point(12, 286);
             audioDeviceTable.Name = "audioDeviceTable";
             audioDeviceTable.RowTemplate.Height = 25;
             audioDeviceTable.Size = new Size(665, 149);
             audioDeviceTable.TabIndex = 0;
+            audioDeviceTable.VirtualMode = true;
             audioDeviceTable.Visible = false;
             // 
             // audioDeviceCol
@@ -58,10 +61,10 @@
             audioDeviceCol.HeaderText = "Audio Device";
             audioDeviceCol.Name = "audioDeviceCol";
             // 
-            // toggleHotkeyCol
+            // activeHotkeyCol
             // 
-            toggleHotkeyCol.HeaderText = "Toggle";
-            toggleHotkeyCol.Name = "toggleHotkeyCol";
+            activeHotkeyCol.HeaderText = "Active";
+            activeHotkeyCol.Name = "activeHotkeyCol";
             // 
             // uniqueHotKeyButtonCol
             // 
@@ -74,21 +77,45 @@
             // 
             // myDataGridView
             // 
-            myDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            myDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            myDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            myDataGridView.Location = new Point(12, 24);
+            myDataGridView.AllowUserToAddRows = false;
+            myDataGridView.AllowUserToDeleteRows = false;
+            myDataGridView.AllowUserToResizeColumns = false;
+            myDataGridView.AllowUserToResizeRows = false;
+            myDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            myDataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            myDataGridView.BackgroundColor = Color.Black;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            myDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            myDataGridView.ColumnHeadersHeight = 42;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.Black;
+            dataGridViewCellStyle2.Font = new Font("Microsoft YaHei UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.DarkGray;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            myDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            myDataGridView.Dock = DockStyle.Fill;
+            myDataGridView.EditMode = DataGridViewEditMode.EditOnF2;
+            myDataGridView.GridColor = Color.Gainsboro;
+            myDataGridView.Location = new Point(0, 0);
             myDataGridView.Name = "myDataGridView";
-            myDataGridView.ReadOnly = true;
             myDataGridView.RowTemplate.Height = 25;
-            myDataGridView.Size = new Size(665, 256);
+            myDataGridView.ScrollBars = ScrollBars.None;
+            myDataGridView.Size = new Size(805, 525);
             myDataGridView.TabIndex = 1;
             // 
             // mainForm
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(707, 447);
+            ClientSize = new Size(805, 525);
             Controls.Add(myDataGridView);
             Controls.Add(audioDeviceTable);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -102,12 +129,11 @@
         }
 
         #endregion
-
-        private DataGridView audioDeviceTable;
-        private DataGridViewTextBoxColumn audioDeviceCol;
-        private DataGridViewCheckBoxColumn toggleHotkeyCol;
-        private DataGridViewButtonColumn uniqueHotKeyButtonCol;
         private BindingSource audioDevicesBindingSource;
+        private DataGridViewTextBoxColumn audioDeviceCol;
+        private DataGridViewCheckBoxColumn activeHotkeyCol;
+        private DataGridViewButtonColumn uniqueHotKeyButtonCol;
+        public DataGridView audioDeviceTable;
         private DataGridView myDataGridView;
     }
 }
