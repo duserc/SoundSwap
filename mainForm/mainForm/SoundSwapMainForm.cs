@@ -1,27 +1,46 @@
 namespace mainForm;
 
 using audioDeviceLibrary;
+using AssignHotkeyForm;
 using System.Data;
 using System.Windows.Forms;
-
+//using WK.Libraries.HotkeyListenerNS;
 
 public partial class mainForm : Form
 {
+    public class SoundDevice
+    {
+        public string? Name { get; set; }
+        public bool? IsActive { get; set; }
+        public string? HotKey { get; set; }
+    }
+
+    private List<SoundDevice> newSoundDevices;
+
     public mainForm()
     {
         InitializeComponent();
+        newSoundDevices = new List<SoundDevice>();
         PopulateAudioDeviceData();
     }
 
     private void PopulateAudioDeviceData()
     {
-
+        myDataGridView.CellContentClick += DataGridView_CellContentClick;
         DataTable audioDeviceTable = new DataTable();
         audioDeviceTable.Columns.Add("Audio Device", typeof(string));
         audioDeviceTable.Columns.Add("Active", typeof(bool));
 
         foreach (string audioDevice in audioDevices.EnumberateAudioDevices())
         {
+            SoundDevice soundDevice = new SoundDevice()
+            {
+                Name = audioDevice,
+                IsActive = false,
+                HotKey = "",
+            };
+            newSoundDevices.Add(soundDevice);
+            //NEED TO WRITE CODE TO READ ACTIVE AND KEYBIND STATE HERE
             DataRow newRow = audioDeviceTable.NewRow();
             newRow["Audio Device"] = audioDevice;
             newRow["Active"] = false;
@@ -46,4 +65,27 @@ public partial class mainForm : Form
         myDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 
     }
+    private void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    {
+        // if button clicked
+        if (e.ColumnIndex == myDataGridView.Columns["customHotkey"].Index &&
+            e.RowIndex >= 0 && e.RowIndex < myDataGridView.Rows.Count)
+        {
+            // access hotkey library, binding new hotkey
+
+            
+            // just create new form to recieve hotkey inputs
+
+            SoundDevice soundDevice = newSoundDevices[e.RowIndex];
+            //soundDevice.HotKey = hotKeyHandler.CreateBind();
+            MessageBox.Show("You entered: " + e.ColumnIndex);
+            HotKeyForm frm = new HotKeyForm();
+            frm.Show();
+
+            //string input = ShowInputDialog("Choose hotkey:", "Input Box");
+
+            
+        }
+    }
+
 }

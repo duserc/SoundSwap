@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "HotkeyListener": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
             "NAudio": {
               "target": "Package",
               "version": "[2.1.0, )"

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mainForm", "mainForm\mainFo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "audioDeviceLibrary", "audioDeviceLibrary\audioDeviceLibrary.csproj", "{03E7D9E3-F2BC-4B8C-842C-01CFD0275F19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignHotkeyForm", "AssignHotkeyForm\AssignHotkeyForm.csproj", "{93D8C626-7D48-43D2-A98A-59B7CF7A8E06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{03E7D9E3-F2BC-4B8C-842C-01CFD0275F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03E7D9E3-F2BC-4B8C-842C-01CFD0275F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03E7D9E3-F2BC-4B8C-842C-01CFD0275F19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D8C626-7D48-43D2-A98A-59B7CF7A8E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D8C626-7D48-43D2-A98A-59B7CF7A8E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D8C626-7D48-43D2-A98A-59B7CF7A8E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D8C626-7D48-43D2-A98A-59B7CF7A8E06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

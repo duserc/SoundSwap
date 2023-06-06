@@ -25,3 +25,9 @@ C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\bin\Debug\net6.
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\bin\Debug\net6.0-windows\audioDeviceLibrary.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\bin\Debug\net6.0-windows\audioDeviceLibrary.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\obj\Debug\net6.0-windows\mainForm.csproj.CopyComplete
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\bin\Debug\net6.0-windows\HotkeyListener.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\bin\Debug\net6.0-windows\AssignHotkeyForm.deps.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\bin\Debug\net6.0-windows\AssignHotkeyForm.runtimeconfig.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\bin\Debug\net6.0-windows\AssignHotkeyForm.exe
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\bin\Debug\net6.0-windows\AssignHotkeyForm.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\bin\Debug\net6.0-windows\AssignHotkeyForm.pdb

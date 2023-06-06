@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "HotkeyListener/1.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/HotkeyListener.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/HotkeyListener.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -179,10 +192,27 @@
           }
         }
       },
+      "AssignHotkeyForm/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "HotkeyListener": "1.9.0"
+        },
+        "compile": {
+          "bin/placeholder/AssignHotkeyForm.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AssignHotkeyForm.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "audioDeviceLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "HotkeyListener": "1.9.0",
           "NAudio": "2.1.0"
         },
         "compile": {
@@ -195,6 +225,20 @@
     }
   },
   "libraries": {
+    "HotkeyListener/1.9.0": {
+      "sha512": "6EwC4ZIURdzsAkryBCjaeVQO4RxTdKPOu7QNpissOd9qqLohlovFD9s9MBVaFbrDgRU6Y6vtTnZxIFCRidCH/A==",
+      "type": "package",
+      "path": "hotkeylistener/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "assets/hotkey-listener-icon.png",
+        "hotkeylistener.1.9.0.nupkg.sha512",
+        "hotkeylistener.nuspec",
+        "lib/net40/HotkeyListener.dll",
+        "lib/net40/HotkeyListener.xml"
+      ]
+    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
@@ -461,6 +505,11 @@
         "version.txt"
       ]
     },
+    "AssignHotkeyForm/1.0.0": {
+      "type": "project",
+      "path": "../AssignHotkeyForm/AssignHotkeyForm.csproj",
+      "msbuildProject": "../AssignHotkeyForm/AssignHotkeyForm.csproj"
+    },
     "audioDeviceLibrary/1.0.0": {
       "type": "project",
       "path": "../audioDeviceLibrary/audioDeviceLibrary.csproj",
@@ -469,6 +518,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "AssignHotkeyForm >= 1.0.0",
+      "HotkeyListener >= 1.9.0",
       "audioDeviceLibrary >= 1.0.0"
     ]
   },
@@ -499,6 +550,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\AssignHotkeyForm\\AssignHotkeyForm.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\AssignHotkeyForm\\AssignHotkeyForm.csproj"
+            },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj"
             }
@@ -514,6 +568,12 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "HotkeyListener": {
+            "target": "Package",
+            "version": "[1.9.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -536,5 +596,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'HotkeyListener 1.9.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "HotkeyListener",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

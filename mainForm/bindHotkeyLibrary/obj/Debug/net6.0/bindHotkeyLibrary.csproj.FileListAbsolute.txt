@@ -1,0 +1,12 @@
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\obj\Debug\net6.0\bindHotkeyLibrary.csproj.AssemblyReference.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\obj\Debug\net6.0\bindHotkeyLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\obj\Debug\net6.0\bindHotkeyLibrary.AssemblyInfoInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\obj\Debug\net6.0\bindHotkeyLibrary.AssemblyInfo.cs
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\obj\Debug\net6.0\bindHotkeyLibrary.csproj.CoreCompileInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\bin\Debug\net6.0\bindHotkeyLibrary.deps.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\bin\Debug\net6.0\bindHotkeyLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\bin\Debug\net6.0\bindHotkeyLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\obj\Debug\net6.0\bindHotkeyLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\obj\Debug\net6.0\refint\bindHotkeyLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\obj\Debug\net6.0\bindHotkeyLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\bindHotkeyLibrary\obj\Debug\net6.0\ref\bindHotkeyLibrary.dll

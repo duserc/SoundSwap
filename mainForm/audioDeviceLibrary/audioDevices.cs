@@ -1,6 +1,5 @@
 ﻿namespace audioDeviceLibrary;
 using NAudio.CoreAudioApi;
-using audioDeviceLibrary;
 
 public class audioDevices
 {
