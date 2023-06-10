@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pUmWx63fQqL4kE1rc15UT+STF00A4HzDlLHqAm1me9OaPwrTilcMISVL0sVLsULQsZ0H8+lQ7O+X2Lft1/ruvQ==",
+  "dgSpecHash": "884BgqvWK079EcDAQE+KWWiRLaq4CKTxq+FZ6qoq2UM42HWxosQ5uqSADKdb5Oa9Yp8fZWY10JV0ei7h32y3gg==",
   "success": false,
   "projectFilePath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceList.csproj",
   "expectedPackageFiles": [
