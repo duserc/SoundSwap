@@ -1,8 +1,7 @@
 namespace mainForm;
 
-using SoundDeviceLibrary;
+using SoundDeviceObjectDeclareLibrary;
 using audioDeviceLibrary;
-using AssignHotkeyForm;
 using System.Data;
 using System.Windows.Forms;
 //using WK.Libraries.HotkeyListenerNS;
@@ -59,6 +58,12 @@ public partial class mainForm : Form
         myDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 
     }
+
+    private void InitializeComponent()
+    {
+
+    }
+
     private void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
     {
         // if button clicked
@@ -67,7 +72,7 @@ public partial class mainForm : Form
         {
             // access hotkey library, binding new hotkey
 
-            
+
             // just create new form to recieve hotkey inputs
 
             SoundDevice soundDevice = newSoundDevices[e.RowIndex];
@@ -78,7 +83,7 @@ public partial class mainForm : Form
 
             //string input = ShowInputDialog("Choose hotkey:", "Input Box");
 
-            
+
         }
     }
 

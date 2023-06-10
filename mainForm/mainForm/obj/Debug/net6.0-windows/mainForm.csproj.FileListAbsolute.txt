@@ -1,0 +1,5 @@
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\obj\Debug\net6.0-windows\mainForm.csproj.AssemblyReference.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\obj\Debug\net6.0-windows\mainForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\obj\Debug\net6.0-windows\mainForm.AssemblyInfoInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\obj\Debug\net6.0-windows\mainForm.AssemblyInfo.cs
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\mainForm\obj\Debug\net6.0-windows\mainForm.csproj.CoreCompileInputs.cache

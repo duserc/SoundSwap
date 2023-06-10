@@ -1,0 +1,12 @@
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\bin\Debug\net6.0\WriteSettingsJson.deps.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\bin\Debug\net6.0\WriteSettingsJson.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\bin\Debug\net6.0\WriteSettingsJson.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\obj\Debug\net6.0\WriteSettingsJson.csproj.AssemblyReference.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\obj\Debug\net6.0\WriteSettingsJson.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\obj\Debug\net6.0\WriteSettingsJson.AssemblyInfoInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\obj\Debug\net6.0\WriteSettingsJson.AssemblyInfo.cs
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\obj\Debug\net6.0\WriteSettingsJson.csproj.CoreCompileInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\obj\Debug\net6.0\WriteSettingsJson.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\obj\Debug\net6.0\refint\WriteSettingsJson.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\obj\Debug\net6.0\WriteSettingsJson.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\WriteSettingsJson\obj\Debug\net6.0\ref\WriteSettingsJson.dll

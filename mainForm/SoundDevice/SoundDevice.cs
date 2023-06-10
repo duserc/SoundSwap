@@ -1,4 +1,4 @@
-﻿namespace SoundDeviceLibrary;
+﻿namespace SoundDeviceObjectDeclareLibrary;
 
 using System.Reflection;
 using WK.Libraries.HotkeyListenerNS;

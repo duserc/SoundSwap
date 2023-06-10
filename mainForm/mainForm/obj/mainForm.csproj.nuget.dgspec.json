@@ -111,6 +111,10 @@
             "NAudio": {
               "target": "Package",
               "version": "[2.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -163,8 +167,8 @@
               "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
                 "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj"
               },
-              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj": {
-                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj"
+              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
+                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"
               }
             }
           }
@@ -182,6 +186,14 @@
             "HotkeyListener": {
               "target": "Package",
               "version": "[1.9.0, )"
+            },
+            "NAudio": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -207,12 +219,12 @@
         }
       }
     },
-    "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj": {
+    "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj",
-        "projectName": "SoundDeviceLibrary",
-        "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj",
+        "projectName": "SoundDeviceObjectDeclareLibrary",
+        "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj",
         "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\obj\\",
         "projectStyle": "PackageReference",
@@ -246,6 +258,14 @@
             "HotkeyListener": {
               "target": "Package",
               "version": "[1.9.0, )"
+            },
+            "NAudio": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [

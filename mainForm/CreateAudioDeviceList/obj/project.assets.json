@@ -194,7 +194,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "HotkeyListener": "1.9.0",
-          "NAudio": "2.1.0"
+          "NAudio": "2.1.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/audioDeviceLibrary.dll": {}
@@ -208,8 +209,9 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "HotkeyListener": "1.9.0",
+          "NAudio": "2.1.0",
           "Newtonsoft.Json": "13.0.3",
-          "SoundDeviceLibrary": "1.0.0"
+          "SoundDeviceObjectDeclareLibrary": "1.0.0"
         },
         "compile": {
           "bin/placeholder/JsonDeseralizerLibrary.dll": {}
@@ -228,17 +230,19 @@
           "bin/placeholder/mainForm.dll": {}
         }
       },
-      "SoundDeviceLibrary/1.0.0": {
+      "SoundDeviceObjectDeclareLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "HotkeyListener": "1.9.0"
+          "HotkeyListener": "1.9.0",
+          "NAudio": "2.1.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
-          "bin/placeholder/SoundDeviceLibrary.dll": {}
+          "bin/placeholder/SoundDeviceObjectDeclareLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SoundDeviceLibrary.dll": {}
+          "bin/placeholder/SoundDeviceObjectDeclareLibrary.dll": {}
         }
       }
     }
@@ -555,16 +559,16 @@
       "path": "../mainForm/mainForm.csproj",
       "msbuildProject": "../mainForm/mainForm.csproj"
     },
-    "SoundDeviceLibrary/1.0.0": {
+    "SoundDeviceObjectDeclareLibrary/1.0.0": {
       "type": "project",
-      "path": "../SoundDevice/SoundDeviceLibrary.csproj",
-      "msbuildProject": "../SoundDevice/SoundDeviceLibrary.csproj"
+      "path": "../SoundDevice/SoundDeviceObjectDeclareLibrary.csproj",
+      "msbuildProject": "../SoundDevice/SoundDeviceObjectDeclareLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "JsonDeseralizerLibrary >= 1.0.0",
-      "SoundDeviceLibrary >= 1.0.0",
+      "SoundDeviceObjectDeclareLibrary >= 1.0.0",
       "audioDeviceLibrary >= 1.0.0",
       "mainForm >= 1.0.0"
     ]
@@ -605,8 +609,8 @@
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\mainForm\\mainForm.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\mainForm\\mainForm.csproj"
             },
-            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj": {
-              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj"
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"
             }
           }
         }

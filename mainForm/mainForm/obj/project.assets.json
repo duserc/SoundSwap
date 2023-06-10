@@ -146,6 +146,19 @@
           "lib/netstandard2.0/NAudio.WinMM.dll": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Security.AccessControl/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -213,7 +226,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "HotkeyListener": "1.9.0",
-          "NAudio": "2.1.0"
+          "NAudio": "2.1.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/audioDeviceLibrary.dll": {}
@@ -222,17 +236,19 @@
           "bin/placeholder/audioDeviceLibrary.dll": {}
         }
       },
-      "SoundDeviceLibrary/1.0.0": {
+      "SoundDeviceObjectDeclareLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "HotkeyListener": "1.9.0"
+          "HotkeyListener": "1.9.0",
+          "NAudio": "2.1.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
-          "bin/placeholder/SoundDeviceLibrary.dll": {}
+          "bin/placeholder/SoundDeviceObjectDeclareLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SoundDeviceLibrary.dll": {}
+          "bin/placeholder/SoundDeviceObjectDeclareLibrary.dll": {}
         }
       }
     }
@@ -418,6 +434,36 @@
         "naudio.winmm.nuspec"
       ]
     },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "System.Security.AccessControl/4.7.0": {
       "sha512": "JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
       "type": "package",
@@ -528,17 +574,19 @@
       "path": "../audioDeviceLibrary/audioDeviceLibrary.csproj",
       "msbuildProject": "../audioDeviceLibrary/audioDeviceLibrary.csproj"
     },
-    "SoundDeviceLibrary/1.0.0": {
+    "SoundDeviceObjectDeclareLibrary/1.0.0": {
       "type": "project",
-      "path": "../SoundDevice/SoundDeviceLibrary.csproj",
-      "msbuildProject": "../SoundDevice/SoundDeviceLibrary.csproj"
+      "path": "../SoundDevice/SoundDeviceObjectDeclareLibrary.csproj",
+      "msbuildProject": "../SoundDevice/SoundDeviceObjectDeclareLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "AssignHotkeyForm >= 1.0.0",
       "HotkeyListener >= 1.9.0",
-      "SoundDeviceLibrary >= 1.0.0",
+      "NAudio >= 2.1.0",
+      "Newtonsoft.Json >= 13.0.3",
+      "SoundDeviceObjectDeclareLibrary >= 1.0.0",
       "audioDeviceLibrary >= 1.0.0"
     ]
   },
@@ -575,8 +623,8 @@
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj"
             },
-            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj": {
-              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj"
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"
             }
           }
         }
@@ -594,6 +642,14 @@
           "HotkeyListener": {
             "target": "Package",
             "version": "[1.9.0, )"
+          },
+          "NAudio": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           }
         },
         "imports": [
