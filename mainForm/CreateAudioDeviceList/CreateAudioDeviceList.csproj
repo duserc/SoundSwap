@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\audioDeviceLibrary\audioDeviceLibrary.csproj" />
     <ProjectReference Include="..\JsonDeseralizerLibrary\JsonDeseralizerLibrary.csproj" />
-    <ProjectReference Include="..\mainForm\mainForm.csproj" />
     <ProjectReference Include="..\SoundDevice\SoundDeviceObjectDeclareLibrary.csproj" />
   </ItemGroup>
 

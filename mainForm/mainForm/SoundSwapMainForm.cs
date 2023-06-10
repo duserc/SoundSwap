@@ -4,40 +4,65 @@ using SoundDeviceObjectDeclareLibrary;
 using audioDeviceLibrary;
 using System.Data;
 using System.Windows.Forms;
+using CreateAudioDeviceList;
+using NAudio.Wave;
+using WK.Libraries.HotkeyListenerNS;
+using static audioDeviceLibrary.audioDevices;
+
 //using WK.Libraries.HotkeyListenerNS;
 
 public partial class mainForm : Form
 {
-    private List<SoundDevice> newSoundDevices;
+    private List<SoundDevice> listOfSoundDevices;
 
     public mainForm()
     {
         InitializeComponent();
-        newSoundDevices = new List<SoundDevice>();
+        listOfSoundDevices = new List<SoundDevice>();
         PopulateAudioDeviceData();
     }
 
     private void PopulateAudioDeviceData()
     {
-        myDataGridView.CellContentClick += DataGridView_CellContentClick;
-        DataTable audioDeviceTable = new DataTable();
-        audioDeviceTable.Columns.Add("Audio Device", typeof(string));
-        audioDeviceTable.Columns.Add("Active", typeof(bool));
+        //myDataGridView.CellContentClick += DataGridView_CellContentClick;
+        //DataTable audioDeviceTable = new DataTable();
+        //audioDeviceTable.Columns.Add("Audio Device", typeof(string));
+        //audioDeviceTable.Columns.Add("Active", typeof(bool));
 
-        foreach (string audioDevice in audioDevices.EnumberateAudioDevices())
+        //getting the name of each audio device plugged into PC
+        foreach (AudioDeviceInfo audioDevice in audioDevices.EnumberateAudioDevices())
         {
-            SoundDevice soundDevice = new SoundDevice()
+            //Looping over the SoundDevices inside the Settings.json
+            foreach (SoundDevice SoundDevice in ListManager.ListDatabase)
             {
-                Name = audioDevice,
-                IsActive = false,
-                HotKey = "",
-            };
-            newSoundDevices.Add(soundDevice);
-            //NEED TO WRITE CODE TO READ ACTIVE AND KEYBIND STATE HERE
-            DataRow newRow = audioDeviceTable.NewRow();
-            newRow["Audio Device"] = audioDevice;
-            newRow["Active"] = false;
-            audioDeviceTable.Rows.Add(newRow);
+                //Checking if the sound device has already got settings saved
+                if (SoundDevice.AudioDevice == audioDevice.Name)
+                {
+                    //if so:
+                    listOfSoundDevices.Add(SoundDevice);
+                }
+                //This below code will not work because it would just keep adding new sound devices
+                //else
+                //{
+                //    SoundDevice newSoundDevice = new SoundDevice(audioDevice, false, false, );
+                //}
+            }
+            //Looping over every sound device in new list with updated settings
+            foreach (SoundDevice SoundDevice in listOfSoundDevices)
+            {
+                //if the current sound device is not in new list, it means its probably first launch
+                if (!listOfSoundDevices.Contains(SoundDevice))
+                {
+                    SoundDevice newSoundDev = new SoundDevice(SoundDevice.AudioDevice, false, audioDevice.IsDefaultDevice, )
+                    listOfSoundDevices.Add(newSoundDev);
+                }
+            }
+            //newSoundDevices.Add(soundDevice);
+            ////NEED TO WRITE CODE TO READ ACTIVE AND KEYBIND STATE HERE
+            //DataRow newRow = audioDeviceTable.NewRow();
+            //newRow["Audio Device"] = audioDevice;
+            //newRow["Active"] = false;
+            //audioDeviceTable.Rows.Add(newRow);
         }
         myDataGridView.RowHeadersVisible = false;
         myDataGridView.DataSource = audioDeviceTable;

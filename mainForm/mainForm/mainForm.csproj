@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AssignHotkeyForm\AssignHotkeyForm.csproj" />
     <ProjectReference Include="..\audioDeviceLibrary\audioDeviceLibrary.csproj" />
+    <ProjectReference Include="..\CreateAudioDeviceList\CreateAudioDeviceList.csproj" />
     <ProjectReference Include="..\SoundDevice\SoundDeviceObjectDeclareLibrary.csproj" />
   </ItemGroup>
 
