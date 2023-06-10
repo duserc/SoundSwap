@@ -1,5 +1,6 @@
 namespace mainForm;
 
+using SoundDeviceLibrary;
 using audioDeviceLibrary;
 using AssignHotkeyForm;
 using System.Data;
@@ -8,13 +9,6 @@ using System.Windows.Forms;
 
 public partial class mainForm : Form
 {
-    public class SoundDevice
-    {
-        public string? Name { get; set; }
-        public bool? IsActive { get; set; }
-        public string? HotKey { get; set; }
-    }
-
     private List<SoundDevice> newSoundDevices;
 
     public mainForm()

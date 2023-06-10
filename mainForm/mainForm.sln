@@ -7,7 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mainForm", "mainForm\mainFo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "audioDeviceLibrary", "audioDeviceLibrary\audioDeviceLibrary.csproj", "{03E7D9E3-F2BC-4B8C-842C-01CFD0275F19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignHotkeyForm", "AssignHotkeyForm\AssignHotkeyForm.csproj", "{93D8C626-7D48-43D2-A98A-59B7CF7A8E06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssignHotkeyForm", "AssignHotkeyForm\AssignHotkeyForm.csproj", "{93D8C626-7D48-43D2-A98A-59B7CF7A8E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundDeviceLibrary", "SoundDevice\SoundDeviceLibrary.csproj", "{E608F64F-F9A6-4D8D-93C4-D4A659504C87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAudioDeviceList", "CreateAudioDeviceList\CreateAudioDeviceList.csproj", "{8218359A-E5D7-4466-B5B0-20868578BCB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonDeseralizerLibrary", "JsonDeseralizerLibrary\JsonDeseralizerLibrary.csproj", "{0301FC62-183C-46CB-A8C6-8A902598EDF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteSettingsJson", "WriteSettingsJson\WriteSettingsJson.csproj", "{7B9B5B65-864F-4763-A240-C1D6B78AB9FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +35,22 @@ Global
 		{93D8C626-7D48-43D2-A98A-59B7CF7A8E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93D8C626-7D48-43D2-A98A-59B7CF7A8E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93D8C626-7D48-43D2-A98A-59B7CF7A8E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E608F64F-F9A6-4D8D-93C4-D4A659504C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E608F64F-F9A6-4D8D-93C4-D4A659504C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E608F64F-F9A6-4D8D-93C4-D4A659504C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E608F64F-F9A6-4D8D-93C4-D4A659504C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8218359A-E5D7-4466-B5B0-20868578BCB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8218359A-E5D7-4466-B5B0-20868578BCB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8218359A-E5D7-4466-B5B0-20868578BCB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8218359A-E5D7-4466-B5B0-20868578BCB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0301FC62-183C-46CB-A8C6-8A902598EDF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0301FC62-183C-46CB-A8C6-8A902598EDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0301FC62-183C-46CB-A8C6-8A902598EDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0301FC62-183C-46CB-A8C6-8A902598EDF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9B5B65-864F-4763-A240-C1D6B78AB9FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9B5B65-864F-4763-A240-C1D6B78AB9FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9B5B65-864F-4763-A240-C1D6B78AB9FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9B5B65-864F-4763-A240-C1D6B78AB9FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

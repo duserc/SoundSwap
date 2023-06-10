@@ -221,6 +221,19 @@
         "runtime": {
           "bin/placeholder/audioDeviceLibrary.dll": {}
         }
+      },
+      "SoundDeviceLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "HotkeyListener": "1.9.0"
+        },
+        "compile": {
+          "bin/placeholder/SoundDeviceLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SoundDeviceLibrary.dll": {}
+        }
       }
     }
   },
@@ -514,12 +527,18 @@
       "type": "project",
       "path": "../audioDeviceLibrary/audioDeviceLibrary.csproj",
       "msbuildProject": "../audioDeviceLibrary/audioDeviceLibrary.csproj"
+    },
+    "SoundDeviceLibrary/1.0.0": {
+      "type": "project",
+      "path": "../SoundDevice/SoundDeviceLibrary.csproj",
+      "msbuildProject": "../SoundDevice/SoundDeviceLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "AssignHotkeyForm >= 1.0.0",
       "HotkeyListener >= 1.9.0",
+      "SoundDeviceLibrary >= 1.0.0",
       "audioDeviceLibrary >= 1.0.0"
     ]
   },
@@ -555,6 +574,9 @@
             },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj"
+            },
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceLibrary.csproj"
             }
           }
         }
