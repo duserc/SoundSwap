@@ -236,6 +236,37 @@
           "bin/placeholder/audioDeviceLibrary.dll": {}
         }
       },
+      "CreateAudioDeviceList/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "JsonDeseralizerLibrary": "1.0.0",
+          "SoundDeviceObjectDeclareLibrary": "1.0.0",
+          "audioDeviceLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CreateAudioDeviceList.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CreateAudioDeviceList.dll": {}
+        }
+      },
+      "JsonDeseralizerLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "HotkeyListener": "1.9.0",
+          "NAudio": "2.1.0",
+          "Newtonsoft.Json": "13.0.3",
+          "SoundDeviceObjectDeclareLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/JsonDeseralizerLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JsonDeseralizerLibrary.dll": {}
+        }
+      },
       "SoundDeviceObjectDeclareLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -574,6 +605,16 @@
       "path": "../audioDeviceLibrary/audioDeviceLibrary.csproj",
       "msbuildProject": "../audioDeviceLibrary/audioDeviceLibrary.csproj"
     },
+    "CreateAudioDeviceList/1.0.0": {
+      "type": "project",
+      "path": "../CreateAudioDeviceList/CreateAudioDeviceList.csproj",
+      "msbuildProject": "../CreateAudioDeviceList/CreateAudioDeviceList.csproj"
+    },
+    "JsonDeseralizerLibrary/1.0.0": {
+      "type": "project",
+      "path": "../JsonDeseralizerLibrary/JsonDeseralizerLibrary.csproj",
+      "msbuildProject": "../JsonDeseralizerLibrary/JsonDeseralizerLibrary.csproj"
+    },
     "SoundDeviceObjectDeclareLibrary/1.0.0": {
       "type": "project",
       "path": "../SoundDevice/SoundDeviceObjectDeclareLibrary.csproj",
@@ -583,6 +624,7 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "AssignHotkeyForm >= 1.0.0",
+      "CreateAudioDeviceList >= 1.0.0",
       "HotkeyListener >= 1.9.0",
       "NAudio >= 2.1.0",
       "Newtonsoft.Json >= 13.0.3",
@@ -622,6 +664,9 @@
             },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj"
+            },
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceList.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceList.csproj"
             },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"

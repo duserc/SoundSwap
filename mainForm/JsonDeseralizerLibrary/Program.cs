@@ -1,6 +1,6 @@
 ﻿namespace JsonDeseralizerLibrary;
 
-using SoundDeviceLibrary;
+using SoundDeviceObjectDeclareLibrary;
 using System;
 using WK.Libraries.HotkeyListenerNS;
 using System.Collections.Generic;
