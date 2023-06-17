@@ -25,8 +25,6 @@ public partial class SoundSwapMainForm : Form
         PopulateAudioDeviceData();
         InitializeComponent();
         PopulateDataGridView();
-        
-
     }
 
     private void PopulateAudioDeviceData()
