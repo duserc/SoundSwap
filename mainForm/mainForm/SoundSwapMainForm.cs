@@ -12,6 +12,8 @@ using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
 using MainForm;
 using System;
+using System.Security.Cryptography.X509Certificates;
+using NAudio.CoreAudioApi;
 
 public partial class SoundSwapMainForm : Form
 {
@@ -22,6 +24,7 @@ public partial class SoundSwapMainForm : Form
         InitializeComponent();
         listOfSoundDevices = new List<SoundDevice>();
         PopulateAudioDeviceData();
+        PopulateDataGridView();
     }
 
     private void PopulateAudioDeviceData()
@@ -52,4 +55,11 @@ public partial class SoundSwapMainForm : Form
             }
         }
     }
+
+    private void PopulateDataGridView()
+    {
+        AudioDeviceGridView.DataSource = listOfSoundDevices;
+    }
+
+
 }
