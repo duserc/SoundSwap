@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6UnN1rl5SeyyY0ug88IwoqNgA4scx95RkJsgweiysZNviiNSfxuLMw2/9kC+7BsvRXsXNYSBu2tB5nBD9DoBoQ==",
+  "dgSpecHash": "bP2qm0g1PuQ4w6G5ACUNjEwe40ro5PNRsss/lE4zO6TR8572AeHGOKmoXuS5kX9MEZFFfYB4YjtfoohM0MHU/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceList.csproj",
+  "projectFilePath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danie\\.nuget\\packages\\hotkeylistener\\1.9.0\\hotkeylistener.1.9.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

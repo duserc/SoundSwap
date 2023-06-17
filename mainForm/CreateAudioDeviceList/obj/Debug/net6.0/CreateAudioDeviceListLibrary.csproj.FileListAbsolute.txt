@@ -1,0 +1,17 @@
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\bin\Debug\net6.0\CreateAudioDeviceListLibrary.deps.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\bin\Debug\net6.0\CreateAudioDeviceListLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\bin\Debug\net6.0\CreateAudioDeviceListLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\bin\Debug\net6.0\JsonDeseralizerLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\bin\Debug\net6.0\SoundDeviceObjectDeclareLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\bin\Debug\net6.0\JsonDeseralizerLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\bin\Debug\net6.0\SoundDeviceObjectDeclareLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\obj\Debug\net6.0\CreateAudioDeviceListLibrary.csproj.AssemblyReference.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\obj\Debug\net6.0\CreateAudioDeviceListLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\obj\Debug\net6.0\CreateAudioDeviceListLibrary.AssemblyInfoInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\obj\Debug\net6.0\CreateAudioDeviceListLibrary.AssemblyInfo.cs
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\obj\Debug\net6.0\CreateAudioDeviceListLibrary.csproj.CoreCompileInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\obj\Debug\net6.0\CreateAudioDeviceListLibrary.csproj.CopyComplete
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\obj\Debug\net6.0\CreateAudioDeviceListLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\obj\Debug\net6.0\refint\CreateAudioDeviceListLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\obj\Debug\net6.0\CreateAudioDeviceListLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\CreateAudioDeviceList\obj\Debug\net6.0\ref\CreateAudioDeviceListLibrary.dll

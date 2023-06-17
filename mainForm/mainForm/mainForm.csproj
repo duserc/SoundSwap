@@ -9,15 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotkeyListener" Version="1.9.0" />
-    <PackageReference Include="NAudio" Version="2.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\AssignHotkeyForm\AssignHotkeyForm.csproj" />
     <ProjectReference Include="..\audioDeviceLibrary\audioDeviceLibrary.csproj" />
-    <ProjectReference Include="..\CreateAudioDeviceList\CreateAudioDeviceList.csproj" />
+    <ProjectReference Include="..\CreateAudioDeviceList\CreateAudioDeviceListLibrary.csproj" />
     <ProjectReference Include="..\SoundDevice\SoundDeviceObjectDeclareLibrary.csproj" />
   </ItemGroup>
 

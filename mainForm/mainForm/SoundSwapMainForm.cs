@@ -1,4 +1,6 @@
-namespace mainForm;
+using Microsoft.VisualBasic.Devices;
+
+namespace MainForm;
 
 using SoundDeviceObjectDeclareLibrary;
 using audioDeviceLibrary;
@@ -8,15 +10,16 @@ using CreateAudioDeviceList;
 using NAudio.Wave;
 using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
+using MainForm;
+using System;
 
-
-public partial class mainForm : Form
+public partial class SoundSwapMainForm : Form
 {
     private List<SoundDevice> listOfSoundDevices;
 
-    public mainForm()
+    public SoundSwapMainForm()
     {
-        //InitializeComponent();
+        InitializeComponent();
         listOfSoundDevices = new List<SoundDevice>();
         PopulateAudioDeviceData();
     }

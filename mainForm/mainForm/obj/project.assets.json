@@ -205,22 +205,6 @@
           }
         }
       },
-      "AssignHotkeyForm/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "HotkeyListener": "1.9.0"
-        },
-        "compile": {
-          "bin/placeholder/AssignHotkeyForm.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/AssignHotkeyForm.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WindowsForms"
-        ]
-      },
       "audioDeviceLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -236,19 +220,18 @@
           "bin/placeholder/audioDeviceLibrary.dll": {}
         }
       },
-      "CreateAudioDeviceList/1.0.0": {
+      "CreateAudioDeviceListLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "JsonDeseralizerLibrary": "1.0.0",
-          "SoundDeviceObjectDeclareLibrary": "1.0.0",
-          "audioDeviceLibrary": "1.0.0"
+          "SoundDeviceObjectDeclareLibrary": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/CreateAudioDeviceList.dll": {}
+          "bin/placeholder/CreateAudioDeviceListLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CreateAudioDeviceList.dll": {}
+          "bin/placeholder/CreateAudioDeviceListLibrary.dll": {}
         }
       },
       "JsonDeseralizerLibrary/1.0.0": {
@@ -595,20 +578,15 @@
         "version.txt"
       ]
     },
-    "AssignHotkeyForm/1.0.0": {
-      "type": "project",
-      "path": "../AssignHotkeyForm/AssignHotkeyForm.csproj",
-      "msbuildProject": "../AssignHotkeyForm/AssignHotkeyForm.csproj"
-    },
     "audioDeviceLibrary/1.0.0": {
       "type": "project",
       "path": "../audioDeviceLibrary/audioDeviceLibrary.csproj",
       "msbuildProject": "../audioDeviceLibrary/audioDeviceLibrary.csproj"
     },
-    "CreateAudioDeviceList/1.0.0": {
+    "CreateAudioDeviceListLibrary/1.0.0": {
       "type": "project",
-      "path": "../CreateAudioDeviceList/CreateAudioDeviceList.csproj",
-      "msbuildProject": "../CreateAudioDeviceList/CreateAudioDeviceList.csproj"
+      "path": "../CreateAudioDeviceList/CreateAudioDeviceListLibrary.csproj",
+      "msbuildProject": "../CreateAudioDeviceList/CreateAudioDeviceListLibrary.csproj"
     },
     "JsonDeseralizerLibrary/1.0.0": {
       "type": "project",
@@ -623,11 +601,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "AssignHotkeyForm >= 1.0.0",
-      "CreateAudioDeviceList >= 1.0.0",
-      "HotkeyListener >= 1.9.0",
-      "NAudio >= 2.1.0",
-      "Newtonsoft.Json >= 13.0.3",
+      "CreateAudioDeviceListLibrary >= 1.0.0",
       "SoundDeviceObjectDeclareLibrary >= 1.0.0",
       "audioDeviceLibrary >= 1.0.0"
     ]
@@ -638,11 +612,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\mainForm\\mainForm.csproj",
-      "projectName": "mainForm",
-      "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\mainForm\\mainForm.csproj",
+      "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\MainForm.csproj",
+      "projectName": "MainForm",
+      "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\MainForm.csproj",
       "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\mainForm\\obj\\",
+      "outputPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -659,14 +633,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\AssignHotkeyForm\\AssignHotkeyForm.csproj": {
-              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\AssignHotkeyForm\\AssignHotkeyForm.csproj"
-            },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj"
             },
-            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceList.csproj": {
-              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceList.csproj"
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj"
             },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"
@@ -683,20 +654,6 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
-        "dependencies": {
-          "HotkeyListener": {
-            "target": "Package",
-            "version": "[1.9.0, )"
-          },
-          "NAudio": {
-            "target": "Package",
-            "version": "[2.1.0, )"
-          },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[13.0.3, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

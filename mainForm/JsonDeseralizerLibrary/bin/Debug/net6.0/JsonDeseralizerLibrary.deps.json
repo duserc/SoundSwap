@@ -11,7 +11,7 @@
           "HotkeyListener": "1.9.0",
           "NAudio": "2.1.0",
           "Newtonsoft.Json": "13.0.3",
-          "SoundDeviceLibrary": "1.0.0"
+          "SoundDeviceObjectDeclareLibrary": "1.0.0"
         },
         "runtime": {
           "JsonDeseralizerLibrary.dll": {}
@@ -116,14 +116,14 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "SoundDeviceLibrary/1.0.0": {
+      "SoundDeviceObjectDeclareLibrary/1.0.0": {
         "dependencies": {
           "HotkeyListener": "1.9.0",
           "NAudio": "2.1.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "SoundDeviceLibrary.dll": {}
+          "SoundDeviceObjectDeclareLibrary.dll": {}
         }
       }
     }
@@ -218,7 +218,7 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "SoundDeviceLibrary/1.0.0": {
+    "SoundDeviceObjectDeclareLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

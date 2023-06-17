@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4fd0PbnpnbIwxzyPHCGq0a3nXC/1HlfaHl16mtKN17dfJKz1V/lfiy6YuQeKy3Usl63slvzz3p4HSXQ4P3VgTA==",
+  "dgSpecHash": "/5E+b/9XtEIM9SWHM4JfR7yCdqKr0aZ5KgVPqqHinaiGqRWb3vYj1BvIqb7hL7TkyH5uJ0B51BJa7tpcMKuyGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\mainForm\\mainForm.csproj",
+  "projectFilePath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\MainForm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danie\\.nuget\\packages\\hotkeylistener\\1.9.0\\hotkeylistener.1.9.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

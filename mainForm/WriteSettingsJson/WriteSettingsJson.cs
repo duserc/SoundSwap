@@ -1,4 +1,4 @@
-﻿namespace WriteSettingsJson;
+﻿namespace WriteSettingsJsonLibrary;
 
 public class WriteSettingsJson
 {

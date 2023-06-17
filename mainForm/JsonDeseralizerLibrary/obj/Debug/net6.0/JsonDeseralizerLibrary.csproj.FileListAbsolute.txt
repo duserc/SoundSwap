@@ -1,8 +1,8 @@
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\JsonDeseralizerLibrary\bin\Debug\net6.0\JsonDeseralizerLibrary.deps.json
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\JsonDeseralizerLibrary\bin\Debug\net6.0\JsonDeseralizerLibrary.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\JsonDeseralizerLibrary\bin\Debug\net6.0\JsonDeseralizerLibrary.pdb
-C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\JsonDeseralizerLibrary\bin\Debug\net6.0\SoundDeviceLibrary.dll
-C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\JsonDeseralizerLibrary\bin\Debug\net6.0\SoundDeviceLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\JsonDeseralizerLibrary\bin\Debug\net6.0\SoundDeviceObjectDeclareLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\JsonDeseralizerLibrary\bin\Debug\net6.0\SoundDeviceObjectDeclareLibrary.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\JsonDeseralizerLibrary\obj\Debug\net6.0\JsonDeseralizerLibrary.csproj.AssemblyReference.cache
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\JsonDeseralizerLibrary\obj\Debug\net6.0\JsonDeseralizerLibrary.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\JsonDeseralizerLibrary\obj\Debug\net6.0\JsonDeseralizerLibrary.AssemblyInfoInputs.cache
