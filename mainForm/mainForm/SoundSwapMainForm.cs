@@ -50,11 +50,8 @@ public partial class SoundSwapMainForm : Form
             }
         }
     }
-
     private void PopulateDataGridView()
     {
         AudioDeviceGridView.DataSource = listOfSoundDevices;
     }
-
-
 }
