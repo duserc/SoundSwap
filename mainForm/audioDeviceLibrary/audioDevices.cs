@@ -21,7 +21,7 @@ public class audioDevices
         {
             AudioDeviceInfo deviceInfo = new AudioDeviceInfo
             {
-                Name = device.DeviceFriendlyName,
+                Name = device.FriendlyName,
                 IsDefaultDevice = device.State == DeviceState.Active && device.ID == defaultDevice.ID
             };
 

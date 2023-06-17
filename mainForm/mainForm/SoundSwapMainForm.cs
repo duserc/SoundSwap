@@ -12,7 +12,6 @@ using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
 using MainForm;
 using System;
-using System.Security.Cryptography.X509Certificates;
 using NAudio.CoreAudioApi;
 
 public partial class SoundSwapMainForm : Form
@@ -42,16 +41,11 @@ public partial class SoundSwapMainForm : Form
                     listOfSoundDevices.Add(SoundDevice);
                 }
             }
-            //Looping over every sound device in new list with updated settings
-            foreach (SoundDevice SoundDevice in listOfSoundDevices)
+            // if sound device does not have settings saved, thus brand new deivce, adds to list
+            if (!listOfSoundDevices.Any(x => x.AudioDevice == audioDevice.Name))
             {
-                //if the current sound device is not in new list, it means its probably first launch or new audio device
-                if (!listOfSoundDevices.Contains(SoundDevice))
-                {
-                    //creating new sound device with defualt properties and adding it to the list of sound devices.
-                    SoundDevice newSoundDev = new SoundDevice(SoundDevice.AudioDevice, false, audioDevice.IsDefaultDevice, null);
-                    listOfSoundDevices.Add(newSoundDev);
-                }
+                SoundDevice newSoundDev = new SoundDevice(audioDevice.Name, false, audioDevice.IsDefaultDevice, null);
+                listOfSoundDevices.Add(newSoundDev);
             }
         }
     }
