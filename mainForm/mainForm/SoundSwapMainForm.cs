@@ -52,6 +52,21 @@ public partial class SoundSwapMainForm : Form
     }
     private void PopulateDataGridView()
     {
-        AudioDeviceGridView.DataSource = listOfSoundDevices;
+        // better way to implement this?
+        int i = 0;
+        foreach (SoundDevice soundDevice in listOfSoundDevices)
+        {
+            //kind of WIP, don't like how DRY it is
+            if (soundDevice.Hotkey == null)
+            {
+                AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
+            }
+            else
+            {
+                AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
+            }
+            // better way to implement this?
+            i++;
+        }
     }
 }

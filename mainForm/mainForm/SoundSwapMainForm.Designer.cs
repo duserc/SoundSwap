@@ -29,17 +29,45 @@
         private void InitializeComponent()
         {
             AudioDeviceGridView = new DataGridView();
+            AudioDeviceColumn = new DataGridViewTextBoxColumn();
+            enabledBoolColumn = new DataGridViewCheckBoxColumn();
+            currentlyPlayingBoolCollumn = new DataGridViewCheckBoxColumn();
+            hotkeyStringColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
             SuspendLayout();
             // 
             // AudioDeviceGridView
             // 
             AudioDeviceGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            AudioDeviceGridView.Columns.AddRange(new DataGridViewColumn[] { AudioDeviceColumn, enabledBoolColumn, currentlyPlayingBoolCollumn, hotkeyStringColumn });
             AudioDeviceGridView.Location = new Point(12, 12);
             AudioDeviceGridView.Name = "AudioDeviceGridView";
             AudioDeviceGridView.RowTemplate.Height = 25;
-            AudioDeviceGridView.Size = new Size(711, 150);
+            AudioDeviceGridView.Size = new Size(711, 283);
             AudioDeviceGridView.TabIndex = 0;
+            // 
+            // AudioDeviceColumn
+            // 
+            AudioDeviceColumn.HeaderText = "Audio Device";
+            AudioDeviceColumn.Name = "AudioDeviceColumn";
+            // 
+            // enabledBoolColumn
+            // 
+            enabledBoolColumn.HeaderText = "Enabled";
+            enabledBoolColumn.Name = "enabledBoolColumn";
+            enabledBoolColumn.Resizable = DataGridViewTriState.True;
+            // 
+            // currentlyPlayingBoolCollumn
+            // 
+            currentlyPlayingBoolCollumn.HeaderText = "Currently Playing Audio";
+            currentlyPlayingBoolCollumn.Name = "currentlyPlayingBoolCollumn";
+            currentlyPlayingBoolCollumn.Resizable = DataGridViewTriState.True;
+            currentlyPlayingBoolCollumn.SortMode = DataGridViewColumnSortMode.Automatic;
+            // 
+            // hotkeyStringColumn
+            // 
+            hotkeyStringColumn.HeaderText = "Hotkey";
+            hotkeyStringColumn.Name = "hotkeyStringColumn";
             // 
             // SoundSwapMainForm
             // 
@@ -59,5 +87,9 @@
         #endregion
 
         private DataGridView AudioDeviceGridView;
+        private DataGridViewTextBoxColumn AudioDeviceColumn;
+        private DataGridViewCheckBoxColumn enabledBoolColumn;
+        private DataGridViewCheckBoxColumn currentlyPlayingBoolCollumn;
+        private DataGridViewTextBoxColumn hotkeyStringColumn;
     }
 }
