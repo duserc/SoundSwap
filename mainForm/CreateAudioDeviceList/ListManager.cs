@@ -9,7 +9,7 @@ public class ListManager
 {
     public static List<SoundDevice> ListDatabase = new List<SoundDevice>();
 
-    static void Main(string[] args)
+    public static void CreateListFromJson()
     {
         var devices = Program.ReadJsonSoundDeviceObject();
         for (int i = 0; i < devices.Count; i++)

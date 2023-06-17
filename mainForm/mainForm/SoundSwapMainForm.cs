@@ -20,10 +20,13 @@ public partial class SoundSwapMainForm : Form
 
     public SoundSwapMainForm()
     {
-        InitializeComponent();
+        //ListManager.CreateListFromJson(); //returns null
         listOfSoundDevices = new List<SoundDevice>();
         PopulateAudioDeviceData();
+        InitializeComponent();
         PopulateDataGridView();
+        
+
     }
 
     private void PopulateAudioDeviceData()
