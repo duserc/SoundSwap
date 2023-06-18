@@ -38,24 +38,36 @@
             // 
             // AudioDeviceGridView
             // 
+            AudioDeviceGridView.AllowUserToAddRows = false;
+            AudioDeviceGridView.AllowUserToDeleteRows = false;
+            AudioDeviceGridView.AllowUserToOrderColumns = true;
+            AudioDeviceGridView.AllowUserToResizeColumns = false;
+            AudioDeviceGridView.AllowUserToResizeRows = false;
             AudioDeviceGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             AudioDeviceGridView.Columns.AddRange(new DataGridViewColumn[] { AudioDeviceColumn, enabledBoolColumn, currentlyPlayingBoolCollumn, hotkeyStringColumn });
-            AudioDeviceGridView.Location = new Point(12, 12);
+            AudioDeviceGridView.Dock = DockStyle.Fill;
+            AudioDeviceGridView.GridColor = Color.DimGray;
+            AudioDeviceGridView.Location = new Point(0, 0);
             AudioDeviceGridView.Name = "AudioDeviceGridView";
+            AudioDeviceGridView.RowHeadersVisible = false;
             AudioDeviceGridView.RowTemplate.Height = 25;
-            AudioDeviceGridView.Size = new Size(711, 283);
+            AudioDeviceGridView.Size = new Size(735, 307);
             AudioDeviceGridView.TabIndex = 0;
+            AudioDeviceGridView.CellClick += AudioDeviceGridView_CellClick;
             // 
             // AudioDeviceColumn
             // 
             AudioDeviceColumn.HeaderText = "Audio Device";
             AudioDeviceColumn.Name = "AudioDeviceColumn";
+            AudioDeviceColumn.ReadOnly = true;
+            AudioDeviceColumn.Width = 350;
             // 
             // enabledBoolColumn
             // 
             enabledBoolColumn.HeaderText = "Enabled";
             enabledBoolColumn.Name = "enabledBoolColumn";
             enabledBoolColumn.Resizable = DataGridViewTriState.True;
+            enabledBoolColumn.Width = 93;
             // 
             // currentlyPlayingBoolCollumn
             // 
@@ -63,11 +75,13 @@
             currentlyPlayingBoolCollumn.Name = "currentlyPlayingBoolCollumn";
             currentlyPlayingBoolCollumn.Resizable = DataGridViewTriState.True;
             currentlyPlayingBoolCollumn.SortMode = DataGridViewColumnSortMode.Automatic;
+            currentlyPlayingBoolCollumn.Width = 93;
             // 
             // hotkeyStringColumn
             // 
             hotkeyStringColumn.HeaderText = "Hotkey";
             hotkeyStringColumn.Name = "hotkeyStringColumn";
+            hotkeyStringColumn.Width = 180;
             // 
             // SoundSwapMainForm
             // 
