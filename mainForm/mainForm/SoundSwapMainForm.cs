@@ -15,6 +15,7 @@ using System;
 using NAudio.CoreAudioApi;
 using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.ComponentModel;
 
 public partial class SoundSwapMainForm : Form
 {
@@ -29,7 +30,7 @@ public partial class SoundSwapMainForm : Form
         InitializeComponent();
         PopulateDataGridView();
         DataGridViewStyling();
-        AudioDeviceGridView.CellClick += AudioDeviceGridView_CellClick;
+        AudioDeviceGridView.EditingControlShowing += AudioDeviceGridView_EditingControlShowing;
         hotkeyListener = new HotkeyListener();
     }
     private void DataGridViewStyling()
@@ -71,29 +72,25 @@ public partial class SoundSwapMainForm : Form
         foreach (SoundDevice soundDevice in listOfSoundDevices)
         {
             //kind of WIP, don't like how DRY it is
-            //if (soundDevice.Hotkey == null)
-            //{
-            //    AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
-            //}
-            var hks = new HotkeySelector();
-            AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
+            if (soundDevice.Hotkey == null)
+            {
+                AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
+            }
+            else
+            {
+                AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
+            }
             // better way to implement this?
-            var cr = AudioDeviceGridView.CurrentRow;
             i++;
         }
     }
-    private void AudioDeviceGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+    private void AudioDeviceGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
     {
-
-        var hks = new HotkeySelector();
-        if (AudioDeviceGridView.Columns[e.ColumnIndex] is DataGridViewTextBoxColumn &&
-            AudioDeviceGridView.Rows[e.RowIndex].Cells[e.ColumnIndex] is DataGridViewTextBoxCell)
+        if (AudioDeviceGridView.CurrentCell.ColumnIndex == 3 && e.Control is System.Windows.Forms.TextBox)
         {
-            DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)AudioDeviceGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
-            System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)cell.DataGridView.EditingControl;
-            //Hotkey hotkey2 = new Hotkey(Keys.Control | Keys.Shift, Keys.J);
+            System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)e.Control;
+            var hks = new HotkeySelector();
             hks.Enable(textBox);
-
         }
     }
 }
