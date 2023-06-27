@@ -30,12 +30,14 @@ public partial class SoundSwapMainForm : Form
     {
         //ListManager.CreateListFromJson(); //returns null
         listOfSoundDevices = new List<SoundDevice>();
+        ListManager.CreateListFromJson();
         PopulateAudioDeviceData();
         InitializeComponent();
         PopulateDataGridView();
         DataGridViewStyling();
         AudioDeviceGridView.EditingControlShowing += AudioDeviceGridView_EditingControlShowing;
         hotkeyListener = new HotkeyListener();
+        
     }
     private void DataGridViewStyling()
     {
