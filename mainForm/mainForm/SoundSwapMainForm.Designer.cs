@@ -33,6 +33,7 @@
             enabledBoolColumn = new DataGridViewCheckBoxColumn();
             currentlyPlayingBoolCollumn = new DataGridViewCheckBoxColumn();
             hotkeyStringColumn = new DataGridViewTextBoxColumn();
+            saveButton = new Button();
             ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
             SuspendLayout();
             // 
@@ -80,7 +81,17 @@
             // 
             hotkeyStringColumn.HeaderText = "Hotkey";
             hotkeyStringColumn.Name = "hotkeyStringColumn";
-            hotkeyStringColumn.Width = 180;
+            hotkeyStringColumn.Width = 185;
+            // 
+            // saveButton
+            // 
+            saveButton.Location = new Point(627, 258);
+            saveButton.Name = "saveButton";
+            saveButton.Size = new Size(96, 37);
+            saveButton.TabIndex = 1;
+            saveButton.Text = "Save";
+            saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
             // 
             // SoundSwapMainForm
             // 
@@ -88,6 +99,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
             ClientSize = new Size(735, 307);
+            Controls.Add(saveButton);
             Controls.Add(AudioDeviceGridView);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(5);
@@ -100,6 +112,7 @@
         #endregion
 
         private DataGridView AudioDeviceGridView;
+        private Button saveButton;
         private DataGridViewTextBoxColumn AudioDeviceColumn;
         private DataGridViewCheckBoxColumn enabledBoolColumn;
         private DataGridViewCheckBoxColumn currentlyPlayingBoolCollumn;

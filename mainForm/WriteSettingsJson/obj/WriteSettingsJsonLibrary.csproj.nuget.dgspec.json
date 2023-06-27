@@ -4,6 +4,347 @@
     "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\WriteSettingsJson\\WriteSettingsJsonLibrary.csproj": {}
   },
   "projects": {
+    "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj",
+        "projectName": "audioDeviceLibrary",
+        "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj",
+        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "HotkeyListener": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "NAudio": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj",
+        "projectName": "CreateAudioDeviceListLibrary",
+        "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj",
+        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\JsonDeseralizerLibrary\\JsonDeseralizerLibrary.csproj": {
+                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\JsonDeseralizerLibrary\\JsonDeseralizerLibrary.csproj"
+              },
+              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
+                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\JsonDeseralizerLibrary\\JsonDeseralizerLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\JsonDeseralizerLibrary\\JsonDeseralizerLibrary.csproj",
+        "projectName": "JsonDeseralizerLibrary",
+        "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\JsonDeseralizerLibrary\\JsonDeseralizerLibrary.csproj",
+        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\JsonDeseralizerLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
+                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "HotkeyListener": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "NAudio": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\MainForm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\MainForm.csproj",
+        "projectName": "MainForm",
+        "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\MainForm.csproj",
+        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
+                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj"
+              },
+              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj": {
+                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj"
+              },
+              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
+                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj",
+        "projectName": "SoundDeviceObjectDeclareLibrary",
+        "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj",
+        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "HotkeyListener": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "NAudio": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\WriteSettingsJson\\WriteSettingsJsonLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +368,14 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\MainForm.csproj": {
+                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\MainForm.csproj"
+              },
+              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
+                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

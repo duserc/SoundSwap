@@ -16,6 +16,10 @@ using NAudio.CoreAudioApi;
 using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.ComponentModel;
+using System.Reflection;
+using Newtonsoft.Json;
+using static System.Windows.Forms.Design.AxImporter;
+using System.Text.Json;
 
 public partial class SoundSwapMainForm : Form
 {
@@ -72,14 +76,13 @@ public partial class SoundSwapMainForm : Form
         foreach (SoundDevice soundDevice in listOfSoundDevices)
         {
             //kind of WIP, don't like how DRY it is
-            if (soundDevice.Hotkey == null)
-            {
-                AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
-            }
-            else
-            {
-                AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
-            }
+            //if (soundDevice.Hotkey == null)
+            //{
+            //    AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
+            //}
+
+            AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
+
             // better way to implement this?
             i++;
         }
@@ -91,6 +94,47 @@ public partial class SoundSwapMainForm : Form
             System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)e.Control;
             var hks = new HotkeySelector();
             hks.Enable(textBox);
+        }
+    }
+
+    public void saveButton_Click(object sender, EventArgs e)
+    {
+        List<SoundDevice> WriteJsonList = new List<SoundDevice>();
+        foreach (DataGridViewRow dr in AudioDeviceGridView.Rows)
+        {
+            var AudioDevice = string.Empty;
+            bool enabledBool = false;
+            var currentlyPlayingBool = false;
+            Hotkey hotkeyString = null;
+            foreach (DataGridViewCell dc in dr.Cells)
+            {
+                if (dc.OwningColumn == AudioDeviceColumn)
+                {
+                    AudioDevice = dc.Value as string;
+                }
+                if (dc.OwningColumn == enabledBoolColumn)
+                {
+                    enabledBool = (bool)dc.Value;
+                }
+                if (dc.OwningColumn == currentlyPlayingBoolCollumn)
+                {
+                    currentlyPlayingBool = (bool)dc.Value;
+                }
+                if (dc.OwningColumn == hotkeyStringColumn)
+                {
+                    hotkeyString = (Hotkey)dc.Value;
+                }
+            }
+            SoundDevice soundDevice = new SoundDevice(AudioDevice, enabledBool, currentlyPlayingBool, hotkeyString);
+            WriteJsonList.Add(soundDevice);
+        }
+        var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+        string fileName = $"{path}\\config\\Settings.json";
+        if (File.Exists(fileName))
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string jsonString = System.Text.Json.JsonSerializer.Serialize(WriteJsonList, options);
+            File.WriteAllText(fileName, jsonString);
         }
     }
 }

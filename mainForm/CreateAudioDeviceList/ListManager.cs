@@ -8,7 +8,6 @@ using JsonDeseralizerLibrary;
 public class ListManager
 {
     public static List<SoundDevice> ListDatabase = new List<SoundDevice>();
-
     public static void CreateListFromJson()
     {
         var devices = Program.ReadJsonSoundDeviceObject();
