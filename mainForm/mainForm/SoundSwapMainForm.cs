@@ -1,7 +1,6 @@
-using Microsoft.VisualBasic.Devices;
-
 namespace MainForm;
 
+using Microsoft.VisualBasic.Devices;
 using SoundDeviceObjectDeclareLibrary;
 using audioDeviceLibrary;
 using System.Data;
@@ -73,20 +72,16 @@ public partial class SoundSwapMainForm : Form
     }
     private void PopulateDataGridView()
     {
-        // better way to implement this?
-        int i = 0;
         foreach (SoundDevice soundDevice in listOfSoundDevices)
         {
-            //kind of WIP, don't like how DRY it is
-            //if (soundDevice.Hotkey == null)
-            //{
-            //    AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
-            //}
-
-            AudioDeviceGridView.Rows.Insert(i, (soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
-
-            // better way to implement this?
-            i++;
+            if (soundDevice.Hotkey == null)
+            {
+                AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
+            }
+            else
+            {
+                AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
+            }
         }
     }
     private void AudioDeviceGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
@@ -107,7 +102,7 @@ public partial class SoundSwapMainForm : Form
             var AudioDevice = string.Empty;
             bool enabledBool = false;
             var currentlyPlayingBool = false;
-            Hotkey hotkeyString = null;
+            string? hotkeyString = string.Empty;
             foreach (DataGridViewCell dc in dr.Cells)
             {
                 if (dc.OwningColumn == AudioDeviceColumn)
@@ -124,7 +119,7 @@ public partial class SoundSwapMainForm : Form
                 }
                 if (dc.OwningColumn == hotkeyStringColumn)
                 {
-                    hotkeyString = (Hotkey)dc.Value;
+                    hotkeyString = dc.Value as string;
                 }
             }
             SoundDevice soundDevice = new SoundDevice(AudioDevice, enabledBool, currentlyPlayingBool, hotkeyString);

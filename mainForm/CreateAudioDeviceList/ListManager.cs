@@ -11,9 +11,13 @@ public class ListManager
     public static void CreateListFromJson()
     {
         var devices = Program.ReadJsonSoundDeviceObject();
-        for (int i = 0; i < devices.Count; i++)
+        if (devices != null)
         {
-            ListDatabase.Add(devices[i]);
+            for (int i = 0; i < devices.Count; i++)
+            {
+                ListDatabase.Add(devices[i]);
+            }
         }
+
     }
 }

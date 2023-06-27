@@ -3,24 +3,24 @@
     "AudioDevice": "Speakers (G432 Gaming Headset)",
     "IsActive": false,
     "IsPlaying": false,
-    "Hotkey": null
+    "Hotkey": "Space"
   },
   {
     "AudioDevice": "Intel(R) Display Audio HDMI 2 (Intel(R) Display Audio)",
     "IsActive": false,
     "IsPlaying": false,
-    "Hotkey": null
+    "Hotkey": "None"
   },
   {
     "AudioDevice": "Realtek Digital Output (Realtek High Definition Audio)",
     "IsActive": false,
     "IsPlaying": false,
-    "Hotkey": null
+    "Hotkey": "Unbound"
   },
   {
     "AudioDevice": "Speakers (Realtek High Definition Audio)",
     "IsActive": false,
     "IsPlaying": true,
-    "Hotkey": null
+    "Hotkey": "Control \u002B F6"
   }
 ]
