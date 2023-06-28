@@ -1,33 +1,18 @@
-namespace MainForm;
-
-using Microsoft.VisualBasic.Devices;
 using SoundDeviceObjectDeclareLibrary;
-using audioDeviceLibrary;
-using System.Data;
-using System.Windows.Forms;
 using CreateAudioDeviceList;
-using NAudio.Wave;
 using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
-using MainForm;
-using System;
-using NAudio.CoreAudioApi;
-using static System.Windows.Forms.DataFormats;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.ComponentModel;
 using System.Reflection;
-using Newtonsoft.Json;
-using static System.Windows.Forms.Design.AxImporter;
 using System.Text.Json;
 
+namespace MainForm;
 public partial class SoundSwapMainForm : Form
 {
     private List<SoundDevice> listOfSoundDevices;
-    private HotkeyListener hotkeyListener;
+    public HotkeyListener hkl = new HotkeyListener();
 
     public SoundSwapMainForm()
     {
-        //ListManager.CreateListFromJson(); //returns null
         listOfSoundDevices = new List<SoundDevice>();
         ListManager.CreateListFromJson();
         PopulateAudioDeviceData();
@@ -35,9 +20,9 @@ public partial class SoundSwapMainForm : Form
         PopulateDataGridView();
         DataGridViewStyling();
         AudioDeviceGridView.EditingControlShowing += AudioDeviceGridView_EditingControlShowing;
-        hotkeyListener = new HotkeyListener();
-        var hkl = new HotkeyListener();
+        AppendHotkeyListener();
         hkl.HotkeyPressed += Hkl_HotkeyPressed;
+
     }
     private void DataGridViewStyling()
     {
@@ -73,8 +58,10 @@ public partial class SoundSwapMainForm : Form
     }
     private void PopulateDataGridView()
     {
+        AudioDeviceGridView.Rows.Clear();
         foreach (SoundDevice soundDevice in listOfSoundDevices)
         {
+            
             //if (soundDevice.Hotkey == null)
             //{
             //    AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
@@ -142,21 +129,31 @@ public partial class SoundSwapMainForm : Form
             File.WriteAllText(fileName, jsonString);
         }
         listOfSoundDevices = WriteJsonList;
+        AppendHotkeyListener();
     }
     private void Hkl_HotkeyPressed(object sender, HotkeyEventArgs e)
     {
-        foreach (SoundDevice soundDevice in listOfSoundDevices)
+        var soundDevicesCopy = new List<SoundDevice>(listOfSoundDevices);
+        foreach (SoundDevice soundDevice in soundDevicesCopy)
         {
             if (e.Hotkey == soundDevice.Hotkey)
             {
-                // SET ACTIVE AUDIO DEVICE TO HOTKEYDEVICE PRESSED
-                // SET OTHER NON ACTIVES TO FALSE
-                // POTENTIALLY USE IDS TO SAVE MEMORY
+                foreach (SoundDevice curDev in soundDevicesCopy)
+                {
+                    if (curDev.AudioDevice != soundDevice.AudioDevice)
+                    {
+                        curDev.IsPlaying = false;
+                    }
+                    else
+                    {
+                        soundDevice.IsPlaying = true;
+                    }
+                }
             }
         }
-
+        listOfSoundDevices = soundDevicesCopy;
+        PopulateDataGridView();
     }
-
     private void AudioDeviceGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
     {
         DataGridView dataGridView = (DataGridView)sender;
@@ -173,6 +170,19 @@ public partial class SoundSwapMainForm : Form
                         DataGridViewCheckBoxCell checkBoxCell = row.Cells[e.ColumnIndex] as DataGridViewCheckBoxCell;
                         checkBoxCell.Value = false;
                     }
+                }
+            }
+        }
+    }
+    private void AppendHotkeyListener()
+    {
+        if (listOfSoundDevices.Count != 0)
+        {
+            for (int i = 0; i < listOfSoundDevices.Count; i++)
+            {
+                if (listOfSoundDevices[i].Hotkey is Hotkey)
+                {
+                    hkl.Add(listOfSoundDevices[i].Hotkey);
                 }
             }
         }

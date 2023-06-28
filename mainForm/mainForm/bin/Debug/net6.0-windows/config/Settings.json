@@ -4,7 +4,7 @@
     "IsActive": true,
     "IsPlaying": false,
     "Hotkey": {
-      "KeyCode": 68,
+      "KeyCode": 87,
       "Modifiers": 0,
       "Suspended": false
     }
@@ -14,7 +14,7 @@
     "IsActive": true,
     "IsPlaying": false,
     "Hotkey": {
-      "KeyCode": 32,
+      "KeyCode": 65,
       "Modifiers": 0,
       "Suspended": false
     }
@@ -24,7 +24,7 @@
     "IsActive": true,
     "IsPlaying": false,
     "Hotkey": {
-      "KeyCode": 70,
+      "KeyCode": 83,
       "Modifiers": 0,
       "Suspended": false
     }
@@ -34,7 +34,7 @@
     "IsActive": true,
     "IsPlaying": true,
     "Hotkey": {
-      "KeyCode": 70,
+      "KeyCode": 68,
       "Modifiers": 0,
       "Suspended": false
     }
