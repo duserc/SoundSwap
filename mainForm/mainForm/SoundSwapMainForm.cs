@@ -36,7 +36,8 @@ public partial class SoundSwapMainForm : Form
         DataGridViewStyling();
         AudioDeviceGridView.EditingControlShowing += AudioDeviceGridView_EditingControlShowing;
         hotkeyListener = new HotkeyListener();
-        
+        var hkl = new HotkeyListener();
+        hkl.HotkeyPressed += Hkl_HotkeyPressed;
     }
     private void DataGridViewStyling()
     {
@@ -74,14 +75,11 @@ public partial class SoundSwapMainForm : Form
     {
         foreach (SoundDevice soundDevice in listOfSoundDevices)
         {
-            if (soundDevice.Hotkey == null)
-            {
-                AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
-            }
-            else
-            {
-                AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
-            }
+            //if (soundDevice.Hotkey == null)
+            //{
+            //    AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
+            //}
+           AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
         }
     }
     private void AudioDeviceGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
@@ -102,7 +100,7 @@ public partial class SoundSwapMainForm : Form
             var AudioDevice = string.Empty;
             bool enabledBool = false;
             var currentlyPlayingBool = false;
-            string? hotkeyString = string.Empty;
+            Hotkey? hotkeyString = null;
             foreach (DataGridViewCell dc in dr.Cells)
             {
                 if (dc.OwningColumn == AudioDeviceColumn)
@@ -119,7 +117,17 @@ public partial class SoundSwapMainForm : Form
                 }
                 if (dc.OwningColumn == hotkeyStringColumn)
                 {
-                    hotkeyString = dc.Value as string;
+                    if (dc.Value != null)
+                    {
+                        if (dc.Value is Hotkey)
+                        {
+                            hotkeyString = dc.Value as Hotkey;
+                        }
+                        else if (dc.Value is string hotkeyText)
+                        {
+                            hotkeyString = new Hotkey(hotkeyText);
+                        }
+                    }
                 }
             }
             SoundDevice soundDevice = new SoundDevice(AudioDevice, enabledBool, currentlyPlayingBool, hotkeyString);
@@ -133,5 +141,20 @@ public partial class SoundSwapMainForm : Form
             string jsonString = System.Text.Json.JsonSerializer.Serialize(WriteJsonList, options);
             File.WriteAllText(fileName, jsonString);
         }
+        listOfSoundDevices = WriteJsonList;
     }
+    private void Hkl_HotkeyPressed(object sender, HotkeyEventArgs e)
+    {
+        foreach (SoundDevice soundDevice in listOfSoundDevices)
+        {
+            if (e.Hotkey == soundDevice.Hotkey)
+            {
+                // SET ACTIVE AUDIO DEVICE TO HOTKEYDEVICE PRESSED
+                // SET OTHER NON ACTIVES TO FALSE
+                // POTENTIALLY USE IDS TO SAVE MEMORY
+            }
+        }
+
+    }
+
 }
