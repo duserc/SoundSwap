@@ -1,9 +1,9 @@
-using SoundDeviceObjectDeclareLibrary;
 using CreateAudioDeviceList;
-using WK.Libraries.HotkeyListenerNS;
-using static audioDeviceLibrary.audioDevices;
+using SoundDeviceObjectDeclareLibrary;
 using System.Reflection;
 using System.Text.Json;
+using WK.Libraries.HotkeyListenerNS;
+using static audioDeviceLibrary.audioDevices;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -61,7 +61,6 @@ public partial class SoundSwapMainForm : Form
         AudioDeviceGridView.Rows.Clear();
         foreach (SoundDevice soundDevice in listOfSoundDevices)
         {
-            
             //if (soundDevice.Hotkey == null)
             //{
             //    AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
@@ -121,7 +120,16 @@ public partial class SoundSwapMainForm : Form
             WriteJsonList.Add(soundDevice);
         }
         var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-        string fileName = $"{path}\\config\\Settings.json";
+        string directoryPath = Path.Combine(path, "config");
+        string fileName = Path.Combine(directoryPath, "Settings.json");
+        if (!File.Exists(fileName))
+        {
+            Directory.CreateDirectory(directoryPath);
+            using (File.Create(fileName))
+            {
+                //create file and close it.
+            }
+        }
         if (File.Exists(fileName))
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
