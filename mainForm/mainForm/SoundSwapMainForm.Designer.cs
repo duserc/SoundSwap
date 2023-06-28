@@ -54,6 +54,7 @@
             AudioDeviceGridView.RowTemplate.Height = 25;
             AudioDeviceGridView.Size = new Size(735, 307);
             AudioDeviceGridView.TabIndex = 0;
+            AudioDeviceGridView.CellContentClick += AudioDeviceGridView_CellContentClick;
             // 
             // AudioDeviceColumn
             // 

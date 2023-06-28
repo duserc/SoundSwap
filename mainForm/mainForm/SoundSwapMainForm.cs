@@ -79,7 +79,7 @@ public partial class SoundSwapMainForm : Form
             //{
             //    AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
             //}
-           AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
+            AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
         }
     }
     private void AudioDeviceGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
@@ -157,4 +157,24 @@ public partial class SoundSwapMainForm : Form
 
     }
 
+    private void AudioDeviceGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    {
+        DataGridView dataGridView = (DataGridView)sender;
+
+        if (dataGridView.Columns[e.ColumnIndex] is DataGridViewCheckBoxColumn checkBoxColumn)
+        {
+            if (checkBoxColumn.Name == "currentlyPlayingBoolCollumn")
+            {
+                // Clear all checkboxes in the column
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    if (row.Index != e.RowIndex) // Skip the clicked row
+                    {
+                        DataGridViewCheckBoxCell checkBoxCell = row.Cells[e.ColumnIndex] as DataGridViewCheckBoxCell;
+                        checkBoxCell.Value = false;
+                    }
+                }
+            }
+        }
+    }
 }

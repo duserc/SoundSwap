@@ -4,7 +4,7 @@
     "IsActive": true,
     "IsPlaying": false,
     "Hotkey": {
-      "KeyCode": 32,
+      "KeyCode": 68,
       "Modifiers": 0,
       "Suspended": false
     }
@@ -14,7 +14,7 @@
     "IsActive": true,
     "IsPlaying": false,
     "Hotkey": {
-      "KeyCode": 65,
+      "KeyCode": 32,
       "Modifiers": 0,
       "Suspended": false
     }
@@ -24,17 +24,17 @@
     "IsActive": true,
     "IsPlaying": false,
     "Hotkey": {
-      "KeyCode": 66,
+      "KeyCode": 70,
       "Modifiers": 0,
       "Suspended": false
     }
   },
   {
     "AudioDevice": "Speakers (Realtek High Definition Audio)",
-    "IsActive": false,
+    "IsActive": true,
     "IsPlaying": true,
     "Hotkey": {
-      "KeyCode": 67,
+      "KeyCode": 70,
       "Modifiers": 0,
       "Suspended": false
     }
