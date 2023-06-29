@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SoundSwapMainForm));
             AudioDeviceGridView = new DataGridView();
             AudioDeviceColumn = new DataGridViewTextBoxColumn();
             enabledBoolColumn = new DataGridViewCheckBoxColumn();
             currentlyPlayingBoolCollumn = new DataGridViewCheckBoxColumn();
             hotkeyStringColumn = new DataGridViewTextBoxColumn();
             saveButton = new Button();
+            SoundSwapIcon = new NotifyIcon(components);
             ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
             SuspendLayout();
             // 
@@ -94,6 +97,13 @@
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += saveButton_Click;
             // 
+            // SoundSwapIcon
+            // 
+            SoundSwapIcon.Icon = (Icon)resources.GetObject("SoundSwapIcon.Icon");
+            SoundSwapIcon.Text = "SoundSwap";
+            SoundSwapIcon.Visible = true;
+            SoundSwapIcon.DoubleClick += NotifyIcon_DoubleClick;
+            // 
             // SoundSwapMainForm
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -103,9 +113,12 @@
             Controls.Add(saveButton);
             Controls.Add(AudioDeviceGridView);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5);
             Name = "SoundSwapMainForm";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "SoundSwap";
+            FormClosing += SoundSwapMainForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).EndInit();
             ResumeLayout(false);
         }
@@ -118,5 +131,6 @@
         private DataGridViewCheckBoxColumn enabledBoolColumn;
         private DataGridViewCheckBoxColumn currentlyPlayingBoolCollumn;
         private DataGridViewTextBoxColumn hotkeyStringColumn;
+        private NotifyIcon SoundSwapIcon;
     }
 }

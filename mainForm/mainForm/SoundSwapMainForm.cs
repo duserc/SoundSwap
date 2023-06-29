@@ -5,6 +5,7 @@ using System.Text.Json;
 using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
 using ChangeDefualtAudioDeviceLibrary;
+using System.Windows.Forms;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -21,7 +22,6 @@ public partial class SoundSwapMainForm : Form
         PopulateDataGridView();
         DataGridViewStyling();
         AppendHotkeyListener();
-        hkl.HotkeyPressed += Hkl_HotkeyPressed;
 
     }
     private void DataGridViewStyling()
@@ -201,6 +201,25 @@ public partial class SoundSwapMainForm : Form
                     hkl.Add(listOfSoundDevices[i].Hotkey);
                 }
             }
+        }
+    }
+
+    private void NotifyIcon_DoubleClick(object sender, EventArgs e)
+    {
+        // Restore the form when the NotifyIcon is double-clicked
+        Show();
+        WindowState = FormWindowState.Normal;
+    }
+
+    private void SoundSwapMainForm_FormClosing(object sender, FormClosingEventArgs e)
+    {
+        if (e.CloseReason == CloseReason.UserClosing)
+        {
+            e.Cancel = true; // Cancel the form closing
+
+            // Minimize to the system tray
+            Hide();
+            SoundSwapIcon.ShowBalloonTip(500, "SoundSwap", "Minimized to system tray", ToolTipIcon.Info);
         }
     }
 }

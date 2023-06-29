@@ -8,8 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="AudioSwitcher.AudioApi.CoreAudio" Version="3.0.3" />
-    <PackageReference Include="NAudio" Version="2.1.0" />
-    <PackageReference Include="NAudio.Core" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>

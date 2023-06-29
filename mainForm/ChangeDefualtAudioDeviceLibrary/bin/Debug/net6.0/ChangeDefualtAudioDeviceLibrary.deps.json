@@ -9,8 +9,6 @@
       "ChangeDefualtAudioDeviceLibrary/1.0.0": {
         "dependencies": {
           "AudioSwitcher.AudioApi.CoreAudio": "3.0.3",
-          "NAudio": "2.1.0",
-          "NAudio.Core": "2.1.0",
           "SoundDeviceObjectDeclareLibrary": "1.0.0"
         },
         "runtime": {

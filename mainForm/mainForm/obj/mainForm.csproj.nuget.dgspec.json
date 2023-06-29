@@ -116,14 +116,6 @@
             "AudioSwitcher.AudioApi.CoreAudio": {
               "target": "Package",
               "version": "[3.0.3, )"
-            },
-            "NAudio": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "NAudio.Core": {
-              "target": "Package",
-              "version": "[2.1.0, )"
             }
           },
           "imports": [
