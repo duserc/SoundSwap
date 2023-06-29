@@ -25,6 +25,7 @@ public partial class SoundSwapMainForm : Form
         AppendHotkeyListener();
         hkl.HotkeyPressed += Hkl_HotkeyPressed;
         SoundSwapIcon.ContextMenuStrip = SoundSwapContextMenuStrip;
+        //ShowIcon = true;
     }
     private void DataGridViewStyling()
     {

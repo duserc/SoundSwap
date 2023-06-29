@@ -255,10 +255,11 @@
             Controls.Add(AudioDeviceGridView);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            ImeMode = ImeMode.NoControl;
             MainMenuStrip = SoundSwapMainMenuStrip;
             Margin = new Padding(5);
             Name = "SoundSwapMainForm";
-            ShowIcon = false;
+            ShowIcon = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SoundSwap";
             FormClosing += SoundSwapMainForm_FormClosing;
@@ -274,7 +275,6 @@
 
         private DataGridView AudioDeviceGridView;
         private Button saveButton;
-        private NotifyIcon SoundSwapIcon;
         private ContextMenuStrip SoundSwapContextMenuStrip;
         private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
@@ -290,5 +290,6 @@
         private DataGridViewCheckBoxColumn enabledBoolColumn;
         private DataGridViewCheckBoxColumn currentlyPlayingBoolCollumn;
         private DataGridViewTextBoxColumn hotkeyStringColumn;
+        private NotifyIcon SoundSwapIcon;
     }
 }
