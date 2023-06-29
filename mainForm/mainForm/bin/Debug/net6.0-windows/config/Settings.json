@@ -1,7 +1,7 @@
 [
   {
     "AudioDevice": "Speakers (G432 Gaming Headset)",
-    "IsActive": false,
+    "IsActive": true,
     "IsPlaying": false,
     "Hotkey": {
       "KeyCode": 87,
@@ -14,7 +14,7 @@
     "IsActive": false,
     "IsPlaying": false,
     "Hotkey": {
-      "KeyCode": 65,
+      "KeyCode": 70,
       "Modifiers": 0,
       "Suspended": false
     }

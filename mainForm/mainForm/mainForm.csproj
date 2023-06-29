@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\audioDeviceLibrary\audioDeviceLibrary.csproj" />
+    <ProjectReference Include="..\ChangeDefualtAudioDeviceLibrary\ChangeDefualtAudioDeviceLibrary.csproj" />
     <ProjectReference Include="..\CreateAudioDeviceList\CreateAudioDeviceListLibrary.csproj" />
     <ProjectReference Include="..\SoundDevice\SoundDeviceObjectDeclareLibrary.csproj" />
   </ItemGroup>

@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Text.Json;
 using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
+using ChangeDefualtAudioDeviceLibrary;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -19,7 +20,6 @@ public partial class SoundSwapMainForm : Form
         InitializeComponent();
         PopulateDataGridView();
         DataGridViewStyling();
-        AudioDeviceGridView.EditingControlShowing += AudioDeviceGridView_EditingControlShowing;
         AppendHotkeyListener();
         hkl.HotkeyPressed += Hkl_HotkeyPressed;
 
@@ -154,7 +154,15 @@ public partial class SoundSwapMainForm : Form
                     }
                     else
                     {
-                        soundDevice.IsPlaying = true;
+                        if (soundDevice.IsActive == true)
+                        {
+                            soundDevice.IsPlaying = true;
+                            ChangeDevice.ChangeDefaultDevice(soundDevice);
+                        }
+                        else
+                        {
+                            soundDevice.IsPlaying = false;
+                        }
                     }
                 }
             }

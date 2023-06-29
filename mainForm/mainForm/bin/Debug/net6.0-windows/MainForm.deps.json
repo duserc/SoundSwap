@@ -8,12 +8,32 @@
     ".NETCoreApp,Version=v6.0": {
       "MainForm/1.0.0": {
         "dependencies": {
+          "ChangeDefualtAudioDeviceLibrary": "1.0.0",
           "CreateAudioDeviceListLibrary": "1.0.0",
           "SoundDeviceObjectDeclareLibrary": "1.0.0",
           "audioDeviceLibrary": "1.0.0"
         },
         "runtime": {
           "MainForm.dll": {}
+        }
+      },
+      "AudioSwitcher.AudioApi/3.0.0": {
+        "runtime": {
+          "lib/net40/AudioSwitcher.AudioApi.dll": {
+            "assemblyVersion": "3.0.0.209",
+            "fileVersion": "3.0.0.256"
+          }
+        }
+      },
+      "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
+        "dependencies": {
+          "AudioSwitcher.AudioApi": "3.0.0"
+        },
+        "runtime": {
+          "lib/net452/AudioSwitcher.AudioApi.CoreAudio.dll": {
+            "assemblyVersion": "3.0.0.209",
+            "fileVersion": "3.0.3.420"
+          }
         }
       },
       "HotkeyListener/1.9.0": {
@@ -137,6 +157,17 @@
           "audioDeviceLibrary.dll": {}
         }
       },
+      "ChangeDefualtAudioDeviceLibrary/1.0.0": {
+        "dependencies": {
+          "AudioSwitcher.AudioApi.CoreAudio": "3.0.3",
+          "NAudio": "2.1.0",
+          "NAudio.Core": "2.1.0",
+          "SoundDeviceObjectDeclareLibrary": "1.0.0"
+        },
+        "runtime": {
+          "ChangeDefualtAudioDeviceLibrary.dll": {}
+        }
+      },
       "CreateAudioDeviceListLibrary/1.0.0": {
         "dependencies": {
           "JsonDeseralizerLibrary": "1.0.0",
@@ -174,6 +205,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AudioSwitcher.AudioApi/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AiYO8fCawsu/v6rZgDWta55GYzh9vs/FocW9xKhEGF3xsUJIgPaVsWeeBwoexMttueW6E8RS0Vp0o8w8dodjyQ==",
+      "path": "audioswitcher.audioapi/3.0.0",
+      "hashPath": "audioswitcher.audioapi.3.0.0.nupkg.sha512"
+    },
+    "AudioSwitcher.AudioApi.CoreAudio/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O0XrFLuND0Ti/UmW24PvX36Tfhify6jOBpuIKw0wmWemzKQ6fS1uH36a+bNRny9LdqPGIQnFfDyieLo1otb/Lw==",
+      "path": "audioswitcher.audioapi.coreaudio/3.0.3",
+      "hashPath": "audioswitcher.audioapi.coreaudio.3.0.3.nupkg.sha512"
     },
     "HotkeyListener/1.9.0": {
       "type": "package",
@@ -267,6 +312,11 @@
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
     "audioDeviceLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ChangeDefualtAudioDeviceLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

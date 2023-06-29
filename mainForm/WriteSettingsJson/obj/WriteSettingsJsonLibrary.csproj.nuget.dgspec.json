@@ -371,9 +371,6 @@
             "projectReferences": {
               "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\MainForm.csproj": {
                 "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\MainForm.csproj"
-              },
-              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
-                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"
               }
             }
           }

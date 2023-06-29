@@ -46,12 +46,13 @@
             AudioDeviceGridView.AllowUserToResizeRows = false;
             AudioDeviceGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             AudioDeviceGridView.Columns.AddRange(new DataGridViewColumn[] { AudioDeviceColumn, enabledBoolColumn, currentlyPlayingBoolCollumn, hotkeyStringColumn });
+            AudioDeviceGridView.Dock = DockStyle.Fill;
             AudioDeviceGridView.GridColor = Color.DimGray;
             AudioDeviceGridView.Location = new Point(0, 0);
             AudioDeviceGridView.Name = "AudioDeviceGridView";
             AudioDeviceGridView.RowHeadersVisible = false;
             AudioDeviceGridView.RowTemplate.Height = 25;
-            AudioDeviceGridView.Size = new Size(723, 198);
+            AudioDeviceGridView.Size = new Size(735, 307);
             AudioDeviceGridView.TabIndex = 0;
             AudioDeviceGridView.CellContentClick += AudioDeviceGridView_CellContentClick;
             // 
