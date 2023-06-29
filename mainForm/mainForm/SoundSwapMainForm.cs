@@ -222,7 +222,7 @@ public partial class SoundSwapMainForm : Form
 
             // Minimize to the system tray
             Hide();
-            SoundSwapIcon.Visible = true;
+            //SoundSwapIcon.Visible = true;
         }
     }
 
@@ -234,6 +234,28 @@ public partial class SoundSwapMainForm : Form
 
     private void quitToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
     {
+        SoundSwapIcon.Visible = false;
+        SoundSwapIcon.Dispose();
+        Application.Exit();
+    }
+
+    private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        if (AudioDeviceGridView.CurrentCell != null)
+        {
+            AudioDeviceGridView.EndEdit(); // Commit the current cell's value
+        }
+        saveButton_Click(sender, e);
+    }
+
+    private void toSystemTrayToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        Hide();
+    }
+
+    private void quitToolStripMenuItem1_Click(object sender, EventArgs e)
+    {
+        SoundSwapIcon.Visible = false;
         SoundSwapIcon.Dispose();
         Application.Exit();
     }

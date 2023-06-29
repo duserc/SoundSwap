@@ -91,7 +91,8 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             AudioDeviceGridView.DefaultCellStyle = dataGridViewCellStyle3;
             AudioDeviceGridView.GridColor = Color.Black;
-            AudioDeviceGridView.Location = new Point(12, 40);
+            AudioDeviceGridView.Location = new Point(19, 40);
+            AudioDeviceGridView.Margin = new Padding(10, 3, 10, 3);
             AudioDeviceGridView.Name = "AudioDeviceGridView";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.ControlDarkDark;
@@ -109,10 +110,10 @@
             AudioDeviceGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             AudioDeviceGridView.RowTemplate.ContextMenuStrip = SoundSwapContextMenuStrip;
             AudioDeviceGridView.RowTemplate.Height = 25;
-            AudioDeviceGridView.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            AudioDeviceGridView.Size = new Size(619, 226);
+            AudioDeviceGridView.Size = new Size(616, 226);
             AudioDeviceGridView.TabIndex = 0;
             AudioDeviceGridView.CellContentClick += AudioDeviceGridView_CellContentClick;
+            AudioDeviceGridView.EditingControlShowing += AudioDeviceGridView_EditingControlShowing;
             // 
             // AudioDeviceColumn
             // 
@@ -120,7 +121,7 @@
             AudioDeviceColumn.HeaderText = "Audio Device";
             AudioDeviceColumn.Name = "AudioDeviceColumn";
             AudioDeviceColumn.ReadOnly = true;
-            AudioDeviceColumn.Width = 337;
+            AudioDeviceColumn.Width = 335;
             // 
             // enabledBoolColumn
             // 
@@ -166,7 +167,7 @@
             // 
             // saveButton
             // 
-            saveButton.Location = new Point(535, 272);
+            saveButton.Location = new Point(539, 272);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(96, 37);
             saveButton.TabIndex = 1;
@@ -188,7 +189,7 @@
             SoundSwapMainMenuStrip.Location = new Point(0, 0);
             SoundSwapMainMenuStrip.Name = "SoundSwapMainMenuStrip";
             SoundSwapMainMenuStrip.RenderMode = ToolStripRenderMode.System;
-            SoundSwapMainMenuStrip.Size = new Size(655, 24);
+            SoundSwapMainMenuStrip.Size = new Size(654, 24);
             SoundSwapMainMenuStrip.TabIndex = 2;
             SoundSwapMainMenuStrip.Text = "SoundSwapMainMenuStrip";
             // 
@@ -205,28 +206,31 @@
             saveToolStripMenuItem.BackColor = Color.DarkGray;
             saveToolStripMenuItem.ImageTransparentColor = Color.DimGray;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(98, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "&Save";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.BackColor = Color.DarkGray;
             exitToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toSystemTrayToolStripMenuItem, quitToolStripMenuItem1 });
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(98, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "&Exit";
             // 
             // toSystemTrayToolStripMenuItem
             // 
             toSystemTrayToolStripMenuItem.Name = "toSystemTrayToolStripMenuItem";
-            toSystemTrayToolStripMenuItem.Size = new Size(151, 22);
+            toSystemTrayToolStripMenuItem.Size = new Size(180, 22);
             toSystemTrayToolStripMenuItem.Text = "&To System Tray";
+            toSystemTrayToolStripMenuItem.Click += toSystemTrayToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem1
             // 
             quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            quitToolStripMenuItem1.Size = new Size(151, 22);
+            quitToolStripMenuItem1.Size = new Size(180, 22);
             quitToolStripMenuItem1.Text = "&Quit";
+            quitToolStripMenuItem1.Click += quitToolStripMenuItem1_Click;
             // 
             // helpToolStripMenuItem
             // 
@@ -249,17 +253,15 @@
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
-            ClientSize = new Size(655, 321);
+            ClientSize = new Size(654, 321);
             Controls.Add(SoundSwapMainMenuStrip);
             Controls.Add(saveButton);
             Controls.Add(AudioDeviceGridView);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            ImeMode = ImeMode.NoControl;
             MainMenuStrip = SoundSwapMainMenuStrip;
             Margin = new Padding(5);
             Name = "SoundSwapMainForm";
-            ShowIcon = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SoundSwap";
             FormClosing += SoundSwapMainForm_FormClosing;

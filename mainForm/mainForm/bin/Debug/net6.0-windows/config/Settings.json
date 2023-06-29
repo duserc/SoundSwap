@@ -1,41 +1,41 @@
 [
   {
     "AudioDevice": "Speakers (G432 Gaming Headset)",
-    "IsActive": false,
+    "IsActive": true,
     "IsPlaying": false,
     "Hotkey": {
-      "KeyCode": 87,
-      "Modifiers": 0,
+      "KeyCode": 49,
+      "Modifiers": 131072,
       "Suspended": false
     }
   },
   {
     "AudioDevice": "Intel(R) Display Audio HDMI 2 (Intel(R) Display Audio)",
-    "IsActive": false,
-    "IsPlaying": false,
+    "IsActive": true,
+    "IsPlaying": true,
     "Hotkey": {
-      "KeyCode": 70,
-      "Modifiers": 0,
+      "KeyCode": 50,
+      "Modifiers": 131072,
       "Suspended": false
     }
   },
   {
     "AudioDevice": "Realtek Digital Output (Realtek High Definition Audio)",
-    "IsActive": false,
+    "IsActive": true,
     "IsPlaying": false,
     "Hotkey": {
-      "KeyCode": 83,
-      "Modifiers": 0,
+      "KeyCode": 51,
+      "Modifiers": 131072,
       "Suspended": false
     }
   },
   {
     "AudioDevice": "Speakers (Realtek High Definition Audio)",
-    "IsActive": false,
-    "IsPlaying": true,
+    "IsActive": true,
+    "IsPlaying": false,
     "Hotkey": {
-      "KeyCode": 68,
-      "Modifiers": 0,
+      "KeyCode": 52,
+      "Modifiers": 131072,
       "Suspended": false
     }
   }
