@@ -37,3 +37,4 @@ C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.0-windows\AudioSwitcher.AudioApi.CoreAudio.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.0-windows\ChangeDefualtAudioDeviceLibrary.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.0-windows\ChangeDefualtAudioDeviceLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Debug\net6.0-windows\MainForm.Properties.Resources.resources

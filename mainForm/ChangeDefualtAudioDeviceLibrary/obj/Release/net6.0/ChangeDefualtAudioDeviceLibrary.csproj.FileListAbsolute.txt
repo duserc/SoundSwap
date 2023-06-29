@@ -1,0 +1,15 @@
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\bin\Release\net6.0\ChangeDefualtAudioDeviceLibrary.deps.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\bin\Release\net6.0\ChangeDefualtAudioDeviceLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\bin\Release\net6.0\ChangeDefualtAudioDeviceLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\bin\Release\net6.0\SoundDeviceObjectDeclareLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\bin\Release\net6.0\SoundDeviceObjectDeclareLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\obj\Release\net6.0\ChangeDefualtAudioDeviceLibrary.csproj.AssemblyReference.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\obj\Release\net6.0\ChangeDefualtAudioDeviceLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\obj\Release\net6.0\ChangeDefualtAudioDeviceLibrary.AssemblyInfoInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\obj\Release\net6.0\ChangeDefualtAudioDeviceLibrary.AssemblyInfo.cs
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\obj\Release\net6.0\ChangeDefualtAudioDeviceLibrary.csproj.CoreCompileInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\obj\Release\net6.0\ChangeDefualtAudioDeviceLibrary.csproj.CopyComplete
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\obj\Release\net6.0\ChangeDefualtAudioDeviceLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\obj\Release\net6.0\refint\ChangeDefualtAudioDeviceLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\obj\Release\net6.0\ChangeDefualtAudioDeviceLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeDefualtAudioDeviceLibrary\obj\Release\net6.0\ref\ChangeDefualtAudioDeviceLibrary.dll

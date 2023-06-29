@@ -6,6 +6,7 @@ using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
 using ChangeDefualtAudioDeviceLibrary;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -22,7 +23,8 @@ public partial class SoundSwapMainForm : Form
         PopulateDataGridView();
         DataGridViewStyling();
         AppendHotkeyListener();
-
+        hkl.HotkeyPressed += Hkl_HotkeyPressed;
+        SoundSwapIcon.ContextMenuStrip = SoundSwapContextMenuStrip;
     }
     private void DataGridViewStyling()
     {
@@ -219,7 +221,19 @@ public partial class SoundSwapMainForm : Form
 
             // Minimize to the system tray
             Hide();
-            SoundSwapIcon.ShowBalloonTip(500, "SoundSwap", "Minimized to system tray", ToolTipIcon.Info);
+            SoundSwapIcon.Visible = true;
         }
+    }
+
+    private void openToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        Show();
+        WindowState = FormWindowState.Normal;
+    }
+
+    private void quitToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+    {
+        SoundSwapIcon.Dispose();
+        Application.Exit();
     }
 }

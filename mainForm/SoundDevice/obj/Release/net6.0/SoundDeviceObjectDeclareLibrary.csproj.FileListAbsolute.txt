@@ -1,0 +1,12 @@
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\bin\Release\net6.0\SoundDeviceObjectDeclareLibrary.deps.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\bin\Release\net6.0\SoundDeviceObjectDeclareLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\bin\Release\net6.0\SoundDeviceObjectDeclareLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\obj\Release\net6.0\SoundDeviceObjectDeclareLibrary.csproj.AssemblyReference.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\obj\Release\net6.0\SoundDeviceObjectDeclareLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\obj\Release\net6.0\SoundDeviceObjectDeclareLibrary.AssemblyInfoInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\obj\Release\net6.0\SoundDeviceObjectDeclareLibrary.AssemblyInfo.cs
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\obj\Release\net6.0\SoundDeviceObjectDeclareLibrary.csproj.CoreCompileInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\obj\Release\net6.0\SoundDeviceObjectDeclareLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\obj\Release\net6.0\refint\SoundDeviceObjectDeclareLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\obj\Release\net6.0\SoundDeviceObjectDeclareLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundDevice\obj\Release\net6.0\ref\SoundDeviceObjectDeclareLibrary.dll
