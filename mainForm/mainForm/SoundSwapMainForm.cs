@@ -19,7 +19,6 @@ public partial class SoundSwapMainForm : Form
     public SoundSwapMainForm()
     {
         listOfSoundDevices = new List<SoundDevice>();
-        //ListManager.CreateListFromJson();
         PopulateAudioDeviceData();
         InitializeComponent();
         PopulateDataGridView();
@@ -303,6 +302,18 @@ public partial class SoundSwapMainForm : Form
 
     private void detectNewAudioDeviceToolStripMenuItem_Click(object sender, EventArgs e)
     {
+        Application.Restart();
+    }
+
+    private void resetConfigToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+        string directoryPath = Path.Combine(path, "config");
+        string fileName = Path.Combine(directoryPath, "Settings.json");
+        if (File.Exists(fileName))
+        {
+            File.Delete(fileName);
+        }
         Application.Restart();
     }
 }

@@ -48,6 +48,8 @@
             SoundSwapMainMenuStrip = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem1 = new ToolStripMenuItem();
+            detectNewAudioDeviceToolStripMenuItem = new ToolStripMenuItem();
+            resetConfigToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             exitToolStripMenuItem = new ToolStripMenuItem();
@@ -58,8 +60,6 @@
             statusStrip1 = new StatusStrip();
             toolStripProgressBar1 = new ToolStripProgressBar();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
-            detectNewAudioDeviceToolStripMenuItem = new ToolStripMenuItem();
-            resetConfigToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
             SoundSwapContextMenuStrip.SuspendLayout();
             SoundSwapMainMenuStrip.SuspendLayout();
@@ -216,6 +216,20 @@
             newToolStripMenuItem1.Size = new Size(180, 22);
             newToolStripMenuItem1.Text = "&New";
             // 
+            // detectNewAudioDeviceToolStripMenuItem
+            // 
+            detectNewAudioDeviceToolStripMenuItem.Name = "detectNewAudioDeviceToolStripMenuItem";
+            detectNewAudioDeviceToolStripMenuItem.Size = new Size(213, 22);
+            detectNewAudioDeviceToolStripMenuItem.Text = "&Detect New Audio Device";
+            detectNewAudioDeviceToolStripMenuItem.Click += detectNewAudioDeviceToolStripMenuItem_Click;
+            // 
+            // resetConfigToolStripMenuItem
+            // 
+            resetConfigToolStripMenuItem.Name = "resetConfigToolStripMenuItem";
+            resetConfigToolStripMenuItem.Size = new Size(213, 22);
+            resetConfigToolStripMenuItem.Text = "&Reset Config and Program";
+            resetConfigToolStripMenuItem.Click += resetConfigToolStripMenuItem_Click;
+            // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.BackColor = Color.DarkGray;
@@ -241,14 +255,14 @@
             // toSystemTrayToolStripMenuItem
             // 
             toSystemTrayToolStripMenuItem.Name = "toSystemTrayToolStripMenuItem";
-            toSystemTrayToolStripMenuItem.Size = new Size(180, 22);
+            toSystemTrayToolStripMenuItem.Size = new Size(151, 22);
             toSystemTrayToolStripMenuItem.Text = "&To System Tray";
             toSystemTrayToolStripMenuItem.Click += toSystemTrayToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem1
             // 
             quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            quitToolStripMenuItem1.Size = new Size(180, 22);
+            quitToolStripMenuItem1.Size = new Size(151, 22);
             quitToolStripMenuItem1.Text = "&Quit";
             quitToolStripMenuItem1.Click += quitToolStripMenuItem1_Click;
             // 
@@ -288,19 +302,6 @@
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             toolStripStatusLabel1.Size = new Size(39, 17);
             toolStripStatusLabel1.Text = "Ready";
-            // 
-            // detectNewAudioDeviceToolStripMenuItem
-            // 
-            detectNewAudioDeviceToolStripMenuItem.Name = "detectNewAudioDeviceToolStripMenuItem";
-            detectNewAudioDeviceToolStripMenuItem.Size = new Size(213, 22);
-            detectNewAudioDeviceToolStripMenuItem.Text = "&Detect New Audio Device";
-            detectNewAudioDeviceToolStripMenuItem.Click += detectNewAudioDeviceToolStripMenuItem_Click;
-            // 
-            // resetConfigToolStripMenuItem
-            // 
-            resetConfigToolStripMenuItem.Name = "resetConfigToolStripMenuItem";
-            resetConfigToolStripMenuItem.Size = new Size(213, 22);
-            resetConfigToolStripMenuItem.Text = "&Reset Config and Program";
             // 
             // SoundSwapMainForm
             // 
