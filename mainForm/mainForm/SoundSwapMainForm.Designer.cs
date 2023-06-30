@@ -101,6 +101,8 @@
             AudioDeviceGridView.GridColor = Color.Black;
             AudioDeviceGridView.Location = new Point(19, 40);
             AudioDeviceGridView.Margin = new Padding(10, 3, 10, 3);
+            AudioDeviceGridView.MaximumSize = new Size(616, 226);
+            AudioDeviceGridView.MinimumSize = new Size(616, 226);
             AudioDeviceGridView.Name = "AudioDeviceGridView";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.ControlDarkDark;
@@ -175,9 +177,12 @@
             // 
             // saveButton
             // 
-            saveButton.Location = new Point(539, 272);
+            saveButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            saveButton.Location = new Point(549, 272);
+            saveButton.MaximumSize = new Size(86, 40);
+            saveButton.MinimumSize = new Size(86, 40);
             saveButton.Name = "saveButton";
-            saveButton.Size = new Size(96, 37);
+            saveButton.Size = new Size(86, 40);
             saveButton.TabIndex = 1;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
@@ -213,7 +218,7 @@
             // 
             newToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { detectNewAudioDeviceToolStripMenuItem, resetConfigToolStripMenuItem });
             newToolStripMenuItem1.Name = "newToolStripMenuItem1";
-            newToolStripMenuItem1.Size = new Size(180, 22);
+            newToolStripMenuItem1.Size = new Size(98, 22);
             newToolStripMenuItem1.Text = "&New";
             // 
             // detectNewAudioDeviceToolStripMenuItem
@@ -235,21 +240,21 @@
             saveToolStripMenuItem.BackColor = Color.DarkGray;
             saveToolStripMenuItem.ImageTransparentColor = Color.DimGray;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(98, 22);
             saveToolStripMenuItem.Text = "&Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(95, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.BackColor = Color.DarkGray;
             exitToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toSystemTrayToolStripMenuItem, quitToolStripMenuItem1 });
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(98, 22);
             exitToolStripMenuItem.Text = "E&xit";
             // 
             // toSystemTrayToolStripMenuItem
@@ -289,6 +294,7 @@
             statusStrip1.Location = new Point(0, 315);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(654, 22);
+            statusStrip1.SizingGrip = false;
             statusStrip1.TabIndex = 3;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -314,6 +320,7 @@
             Controls.Add(saveButton);
             Controls.Add(AudioDeviceGridView);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = SoundSwapMainMenuStrip;
             Margin = new Padding(5);

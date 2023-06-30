@@ -22,17 +22,10 @@ public partial class SoundSwapMainForm : Form
         PopulateAudioDeviceData();
         InitializeComponent();
         PopulateDataGridView();
-        DataGridViewStyling();
         AppendHotkeyListener();
         hkl.HotkeyPressed += Hkl_HotkeyPressed;
         SoundSwapIcon.ContextMenuStrip = SoundSwapContextMenuStrip;
-        //ShowIcon = true;
     }
-    private void DataGridViewStyling()
-    {
-        //
-    }
-
     private void PopulateAudioDeviceData()
     {
         listOfSoundDevices.Clear();
@@ -241,6 +234,11 @@ public partial class SoundSwapMainForm : Form
             Hide();
             //SoundSwapIcon.Visible = true;
         }
+        else
+        {
+            SoundSwapIcon.Dispose();
+            Application.Exit();
+        }
     }
 
     private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -319,11 +317,5 @@ public partial class SoundSwapMainForm : Form
             }
             Application.Restart();
         }
-        //else if (result == DialogResult.No)
-        //{
-        //    // do nothing
-        //}
-
-
     }
 }
