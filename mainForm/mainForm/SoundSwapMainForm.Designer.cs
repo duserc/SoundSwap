@@ -47,7 +47,9 @@
             SoundSwapIcon = new NotifyIcon(components);
             SoundSwapMainMenuStrip = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
+            newToolStripMenuItem1 = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
             exitToolStripMenuItem = new ToolStripMenuItem();
             toSystemTrayToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem1 = new ToolStripMenuItem();
@@ -56,6 +58,8 @@
             statusStrip1 = new StatusStrip();
             toolStripProgressBar1 = new ToolStripProgressBar();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            detectNewAudioDeviceToolStripMenuItem = new ToolStripMenuItem();
+            resetConfigToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
             SoundSwapContextMenuStrip.SuspendLayout();
             SoundSwapMainMenuStrip.SuspendLayout();
@@ -199,11 +203,18 @@
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { saveToolStripMenuItem, exitToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem1, saveToolStripMenuItem, toolStripSeparator1, exitToolStripMenuItem });
             fileToolStripMenuItem.ForeColor = Color.WhiteSmoke;
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(37, 20);
             fileToolStripMenuItem.Text = "&File";
+            // 
+            // newToolStripMenuItem1
+            // 
+            newToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { detectNewAudioDeviceToolStripMenuItem, resetConfigToolStripMenuItem });
+            newToolStripMenuItem1.Name = "newToolStripMenuItem1";
+            newToolStripMenuItem1.Size = new Size(180, 22);
+            newToolStripMenuItem1.Text = "&New";
             // 
             // saveToolStripMenuItem
             // 
@@ -213,6 +224,11 @@
             saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "&Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
@@ -273,6 +289,19 @@
             toolStripStatusLabel1.Size = new Size(39, 17);
             toolStripStatusLabel1.Text = "Ready";
             // 
+            // detectNewAudioDeviceToolStripMenuItem
+            // 
+            detectNewAudioDeviceToolStripMenuItem.Name = "detectNewAudioDeviceToolStripMenuItem";
+            detectNewAudioDeviceToolStripMenuItem.Size = new Size(213, 22);
+            detectNewAudioDeviceToolStripMenuItem.Text = "&Detect New Audio Device";
+            detectNewAudioDeviceToolStripMenuItem.Click += detectNewAudioDeviceToolStripMenuItem_Click;
+            // 
+            // resetConfigToolStripMenuItem
+            // 
+            resetConfigToolStripMenuItem.Name = "resetConfigToolStripMenuItem";
+            resetConfigToolStripMenuItem.Size = new Size(213, 22);
+            resetConfigToolStripMenuItem.Text = "&Reset Config and Program";
+            // 
             // SoundSwapMainForm
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -324,5 +353,9 @@
         private StatusStrip statusStrip1;
         private ToolStripProgressBar toolStripProgressBar1;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripMenuItem newToolStripMenuItem1;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem detectNewAudioDeviceToolStripMenuItem;
+        private ToolStripMenuItem resetConfigToolStripMenuItem;
     }
 }

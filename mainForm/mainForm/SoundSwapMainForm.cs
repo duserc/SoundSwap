@@ -19,7 +19,7 @@ public partial class SoundSwapMainForm : Form
     public SoundSwapMainForm()
     {
         listOfSoundDevices = new List<SoundDevice>();
-        ListManager.CreateListFromJson();
+        //ListManager.CreateListFromJson();
         PopulateAudioDeviceData();
         InitializeComponent();
         PopulateDataGridView();
@@ -36,6 +36,8 @@ public partial class SoundSwapMainForm : Form
 
     private void PopulateAudioDeviceData()
     {
+        listOfSoundDevices.Clear();
+        ListManager.CreateListFromJson();
         //getting the name of each audio device plugged into PC
         foreach (AudioDeviceInfo audioDevice in EnumberateAudioDevices())
         {
@@ -296,6 +298,11 @@ public partial class SoundSwapMainForm : Form
             await Task.Delay(1000);
             statusStripReset();
         }
-        
+
+    }
+
+    private void detectNewAudioDeviceToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        Application.Restart();
     }
 }

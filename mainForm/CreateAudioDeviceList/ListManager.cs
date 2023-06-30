@@ -10,6 +10,7 @@ public class ListManager
     public static List<SoundDevice> ListDatabase = new List<SoundDevice>();
     public static void CreateListFromJson()
     {
+        ListDatabase.Clear();
         var devices = Program.ReadJsonSoundDeviceObject();
         if (devices != null)
         {
