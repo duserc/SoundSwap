@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\mainForm",
-    "\\mainForm\\MainForm"
+    "\\mainForm"
   ],
-  "SelectedNode": "\\mainForm\\MainForm\\MainForm.csproj",
   "PreviewInSolutionExplorer": false
 }
