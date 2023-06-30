@@ -29,11 +29,7 @@ public partial class SoundSwapMainForm : Form
     }
     private void DataGridViewStyling()
     {
-        //AudioDeviceGridView.RowHeadersVisible = false;
-        //AudioDeviceGridView.AllowUserToAddRows = false;
-        //AudioDeviceGridView.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-        //AudioDeviceGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-        //AudioDeviceGridView.Columns[2].Visible = false;
+        //
     }
 
     private void PopulateAudioDeviceData()
@@ -195,13 +191,20 @@ public partial class SoundSwapMainForm : Form
     }
     private void AppendHotkeyListener()
     {
+
         if (listOfSoundDevices.Count != 0)
         {
             for (int i = 0; i < listOfSoundDevices.Count; i++)
             {
                 if (listOfSoundDevices[i].Hotkey is Hotkey)
                 {
-                    hkl.Add(listOfSoundDevices[i].Hotkey);
+                    {
+                        if (listOfSoundDevices[i].Hotkey.KeyCode != 0)
+                        {
+                            hkl.Add(listOfSoundDevices[i].Hotkey);
+                        }
+
+                    }
                 }
             }
         }

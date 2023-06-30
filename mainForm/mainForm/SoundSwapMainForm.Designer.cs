@@ -53,9 +53,13 @@
             quitToolStripMenuItem1 = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             readMeToolStripMenuItem = new ToolStripMenuItem();
+            statusStrip1 = new StatusStrip();
+            toolStripProgressBar1 = new ToolStripProgressBar();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
             SoundSwapContextMenuStrip.SuspendLayout();
             SoundSwapMainMenuStrip.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // AudioDeviceGridView
@@ -206,7 +210,7 @@
             saveToolStripMenuItem.BackColor = Color.DarkGray;
             saveToolStripMenuItem.ImageTransparentColor = Color.DimGray;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(98, 22);
             saveToolStripMenuItem.Text = "&Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
@@ -215,20 +219,20 @@
             exitToolStripMenuItem.BackColor = Color.DarkGray;
             exitToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toSystemTrayToolStripMenuItem, quitToolStripMenuItem1 });
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
-            exitToolStripMenuItem.Text = "&Exit";
+            exitToolStripMenuItem.Size = new Size(98, 22);
+            exitToolStripMenuItem.Text = "E&xit";
             // 
             // toSystemTrayToolStripMenuItem
             // 
             toSystemTrayToolStripMenuItem.Name = "toSystemTrayToolStripMenuItem";
-            toSystemTrayToolStripMenuItem.Size = new Size(180, 22);
+            toSystemTrayToolStripMenuItem.Size = new Size(151, 22);
             toSystemTrayToolStripMenuItem.Text = "&To System Tray";
             toSystemTrayToolStripMenuItem.Click += toSystemTrayToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem1
             // 
             quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            quitToolStripMenuItem1.Size = new Size(180, 22);
+            quitToolStripMenuItem1.Size = new Size(151, 22);
             quitToolStripMenuItem1.Text = "&Quit";
             quitToolStripMenuItem1.Click += quitToolStripMenuItem1_Click;
             // 
@@ -248,12 +252,34 @@
             readMeToolStripMenuItem.Size = new Size(117, 22);
             readMeToolStripMenuItem.Text = "&ReadMe";
             // 
+            // statusStrip1
+            // 
+            statusStrip1.BackColor = Color.DarkGray;
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripProgressBar1, toolStripStatusLabel1 });
+            statusStrip1.Location = new Point(0, 299);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(654, 22);
+            statusStrip1.TabIndex = 3;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripProgressBar1
+            // 
+            toolStripProgressBar1.Name = "toolStripProgressBar1";
+            toolStripProgressBar1.Size = new Size(100, 16);
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(39, 17);
+            toolStripStatusLabel1.Text = "Ready";
+            // 
             // SoundSwapMainForm
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
             ClientSize = new Size(654, 321);
+            Controls.Add(statusStrip1);
             Controls.Add(SoundSwapMainMenuStrip);
             Controls.Add(saveButton);
             Controls.Add(AudioDeviceGridView);
@@ -269,6 +295,8 @@
             SoundSwapContextMenuStrip.ResumeLayout(false);
             SoundSwapMainMenuStrip.ResumeLayout(false);
             SoundSwapMainMenuStrip.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -293,5 +321,8 @@
         private DataGridViewCheckBoxColumn currentlyPlayingBoolCollumn;
         private DataGridViewTextBoxColumn hotkeyStringColumn;
         private NotifyIcon SoundSwapIcon;
+        private StatusStrip statusStrip1;
+        private ToolStripProgressBar toolStripProgressBar1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
