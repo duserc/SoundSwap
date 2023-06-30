@@ -172,7 +172,15 @@ public partial class SoundSwapMainForm : Form
             }
         }
         listOfSoundDevices = soundDevicesCopy;
-        statusStripProgress(100, $"Hotkey Registered: {ActivatedDevice}");
+        if (ActivatedDevice == null)
+        {
+            statusStripProgress(100, "Inactive Hotkey Registered");
+        }
+        else
+        {
+            statusStripProgress(100, $"Hotkey Registered: {ActivatedDevice}");
+        }
+        
         PopulateDataGridView();
     }
     private void AudioDeviceGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
