@@ -210,7 +210,7 @@
             saveToolStripMenuItem.BackColor = Color.DarkGray;
             saveToolStripMenuItem.ImageTransparentColor = Color.DimGray;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(98, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "&Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
@@ -219,20 +219,20 @@
             exitToolStripMenuItem.BackColor = Color.DarkGray;
             exitToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toSystemTrayToolStripMenuItem, quitToolStripMenuItem1 });
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(98, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "E&xit";
             // 
             // toSystemTrayToolStripMenuItem
             // 
             toSystemTrayToolStripMenuItem.Name = "toSystemTrayToolStripMenuItem";
-            toSystemTrayToolStripMenuItem.Size = new Size(151, 22);
+            toSystemTrayToolStripMenuItem.Size = new Size(180, 22);
             toSystemTrayToolStripMenuItem.Text = "&To System Tray";
             toSystemTrayToolStripMenuItem.Click += toSystemTrayToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem1
             // 
             quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            quitToolStripMenuItem1.Size = new Size(151, 22);
+            quitToolStripMenuItem1.Size = new Size(180, 22);
             quitToolStripMenuItem1.Text = "&Quit";
             quitToolStripMenuItem1.Click += quitToolStripMenuItem1_Click;
             // 
@@ -256,7 +256,7 @@
             // 
             statusStrip1.BackColor = Color.DarkGray;
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripProgressBar1, toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 299);
+            statusStrip1.Location = new Point(0, 315);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(654, 22);
             statusStrip1.TabIndex = 3;
@@ -278,7 +278,7 @@
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
-            ClientSize = new Size(654, 321);
+            ClientSize = new Size(654, 337);
             Controls.Add(statusStrip1);
             Controls.Add(SoundSwapMainMenuStrip);
             Controls.Add(saveButton);

@@ -7,6 +7,8 @@ using static audioDeviceLibrary.audioDevices;
 using ChangeDefualtAudioDeviceLibrary;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using System.Threading.Tasks;
+using System;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -60,10 +62,6 @@ public partial class SoundSwapMainForm : Form
         AudioDeviceGridView.Rows.Clear();
         foreach (SoundDevice soundDevice in listOfSoundDevices)
         {
-            //if (soundDevice.Hotkey == null)
-            //{
-            //    AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), ("Unbound"));
-            //}
             AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
         }
     }
@@ -79,6 +77,7 @@ public partial class SoundSwapMainForm : Form
 
     public void saveButton_Click(object sender, EventArgs e)
     {
+        statusStripProgress(0, "Save Start");
         List<SoundDevice> WriteJsonList = new List<SoundDevice>();
         foreach (DataGridViewRow dr in AudioDeviceGridView.Rows)
         {
@@ -115,8 +114,10 @@ public partial class SoundSwapMainForm : Form
                     }
                 }
             }
+            statusStripProgress(50, "Hotkey Assigned");
             SoundDevice soundDevice = new SoundDevice(AudioDevice, enabledBool, currentlyPlayingBool, hotkeyString);
             WriteJsonList.Add(soundDevice);
+            statusStripProgress(60, "Hotkey List Appeneded");
         }
         var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
         string directoryPath = Path.Combine(path, "config");
@@ -135,12 +136,19 @@ public partial class SoundSwapMainForm : Form
             string jsonString = System.Text.Json.JsonSerializer.Serialize(WriteJsonList, options);
             File.WriteAllText(fileName, jsonString);
         }
+        statusStripProgress(80, "Config Saved");
         listOfSoundDevices = WriteJsonList;
         AppendHotkeyListener();
+        statusStripProgress(90, "Listening for correct hotkeys");
+        statusStripProgress(100, "Save Complete");
     }
     private void Hkl_HotkeyPressed(object sender, HotkeyEventArgs e)
     {
+        statusStripProgress(0, "Hotkey Pressed");
         var soundDevicesCopy = new List<SoundDevice>(listOfSoundDevices);
+        float statusCount = 90 / soundDevicesCopy.Count;
+        int i = 0;
+        string? ActivatedDevice = null;
         foreach (SoundDevice soundDevice in soundDevicesCopy)
         {
             if (e.Hotkey == soundDevice.Hotkey)
@@ -156,6 +164,7 @@ public partial class SoundSwapMainForm : Form
                         if (soundDevice.IsActive == true)
                         {
                             soundDevice.IsPlaying = true;
+                            ActivatedDevice = curDev.AudioDevice;
                             ChangeDevice.ChangeDefaultDevice(soundDevice);
                         }
                         else
@@ -165,8 +174,12 @@ public partial class SoundSwapMainForm : Form
                     }
                 }
             }
+            i++;
+            int progressCount = ((int)(Math.Round(statusCount) * i));
+            statusStripProgress((progressCount), $"Checking Device {i} for matching hotkey");
         }
         listOfSoundDevices = soundDevicesCopy;
+        statusStripProgress(100, $"Hotkey Registered: {ActivatedDevice}");
         PopulateDataGridView();
     }
     private void AudioDeviceGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -191,7 +204,7 @@ public partial class SoundSwapMainForm : Form
     }
     private void AppendHotkeyListener()
     {
-
+        hkl.RemoveAll();
         if (listOfSoundDevices.Count != 0)
         {
             for (int i = 0; i < listOfSoundDevices.Count; i++)
@@ -261,5 +274,28 @@ public partial class SoundSwapMainForm : Form
         SoundSwapIcon.Visible = false;
         SoundSwapIcon.Dispose();
         Application.Exit();
+    }
+    private void statusStripReset()
+    {
+        toolStripStatusLabel1.Text = "Ready";
+        toolStripProgressBar1.Value = 0;
+    }
+    private async Task statusStripProgress(int progress, string? status)
+    {
+        if (progress == 0)
+        {
+            statusStripReset();
+        }
+        if (progress > 0 || progress < 100)
+        {
+            toolStripStatusLabel1.Text = $"{status}";
+            toolStripProgressBar1.Value = progress;
+        }
+        if (progress == 100)
+        {
+            await Task.Delay(1000);
+            statusStripReset();
+        }
+        
     }
 }
