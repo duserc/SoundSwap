@@ -214,8 +214,7 @@ public partial class SoundSwapMainForm : Form
             }
         }
     }
-
-    private void NotifyIcon_DoubleClick(object sender, EventArgs e)
+    private void SoundSwapIcon_MouseDoubleClick(object sender, MouseEventArgs e)
     {
         Show();
         WindowState = FormWindowState.Normal;
@@ -262,12 +261,13 @@ public partial class SoundSwapMainForm : Form
         Hide();
     }
 
-    private void quitToolStripMenuItem1_Click(object sender, EventArgs e)
+    private void quitToolStripMenuItem_Click(object sender, EventArgs e)
     {
         SoundSwapIcon.Visible = false;
         SoundSwapIcon.Dispose();
         Application.Exit();
     }
+
     private void statusStripReset()
     {
         toolStripStatusLabel1.Text = "Ready";

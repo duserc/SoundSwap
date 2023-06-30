@@ -159,20 +159,21 @@
             // 
             SoundSwapContextMenuStrip.Items.AddRange(new ToolStripItem[] { openToolStripMenuItem, quitToolStripMenuItem });
             SoundSwapContextMenuStrip.Name = "SoundSwapContextMenuStrip";
-            SoundSwapContextMenuStrip.Size = new Size(104, 48);
+            SoundSwapContextMenuStrip.Size = new Size(181, 70);
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(103, 22);
+            openToolStripMenuItem.Size = new Size(180, 22);
             openToolStripMenuItem.Text = "&Open";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            quitToolStripMenuItem.Size = new Size(103, 22);
+            quitToolStripMenuItem.Size = new Size(180, 22);
             quitToolStripMenuItem.Text = "&Quit";
+            quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             quitToolStripMenuItem.MouseDown += quitToolStripMenuItem_MouseDown;
             // 
             // saveButton
@@ -193,6 +194,7 @@
             SoundSwapIcon.Icon = (Icon)resources.GetObject("SoundSwapIcon.Icon");
             SoundSwapIcon.Text = "SoundSwap";
             SoundSwapIcon.Visible = true;
+            SoundSwapIcon.MouseDoubleClick += SoundSwapIcon_MouseDoubleClick;
             // 
             // SoundSwapMainMenuStrip
             // 
@@ -217,7 +219,7 @@
             // 
             newToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { detectNewAudioDeviceToolStripMenuItem, resetConfigToolStripMenuItem });
             newToolStripMenuItem1.Name = "newToolStripMenuItem1";
-            newToolStripMenuItem1.Size = new Size(98, 22);
+            newToolStripMenuItem1.Size = new Size(180, 22);
             newToolStripMenuItem1.Text = "&New";
             // 
             // detectNewAudioDeviceToolStripMenuItem
@@ -239,21 +241,21 @@
             saveToolStripMenuItem.BackColor = Color.DarkGray;
             saveToolStripMenuItem.ImageTransparentColor = Color.DimGray;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(98, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "&Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(95, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.BackColor = Color.DarkGray;
             exitToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toSystemTrayToolStripMenuItem, quitToolStripMenuItem1 });
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(98, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "E&xit";
             // 
             // toSystemTrayToolStripMenuItem
@@ -268,7 +270,6 @@
             quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
             quitToolStripMenuItem1.Size = new Size(151, 22);
             quitToolStripMenuItem1.Text = "&Quit";
-            quitToolStripMenuItem1.Click += quitToolStripMenuItem1_Click;
             // 
             // helpToolStripMenuItem
             // 
