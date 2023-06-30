@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonDeseralizerLibrary", "J
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainForm", "MainForm\MainForm.csproj", "{F1437A00-9410-4010-81F6-CDA93657E5D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeDefualtAudioDeviceLibrary", "ChangeDefualtAudioDeviceLibrary\ChangeDefualtAudioDeviceLibrary.csproj", "{2009896C-DADC-4605-8B4B-D54058AC9004}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeDefualtAudioDeviceLibrary", "ChangeDefualtAudioDeviceLibrary\ChangeDefualtAudioDeviceLibrary.csproj", "{2009896C-DADC-4605-8B4B-D54058AC9004}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

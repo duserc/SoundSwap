@@ -297,7 +297,6 @@ public partial class SoundSwapMainForm : Form
             await Task.Delay(1000);
             statusStripReset();
         }
-
     }
 
     private void detectNewAudioDeviceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -307,13 +306,24 @@ public partial class SoundSwapMainForm : Form
 
     private void resetConfigToolStripMenuItem_Click(object sender, EventArgs e)
     {
-        var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-        string directoryPath = Path.Combine(path, "config");
-        string fileName = Path.Combine(directoryPath, "Settings.json");
-        if (File.Exists(fileName))
+        DialogResult result = MessageBox.Show("Resetting the Config will remove all saved settings. Continue?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+
+        if (result == DialogResult.Yes)
         {
-            File.Delete(fileName);
+            var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            string directoryPath = Path.Combine(path, "config");
+            string settingsFile = Path.Combine(directoryPath, "Settings.json");
+            if (File.Exists(settingsFile))
+            {
+                File.Delete(settingsFile);
+            }
+            Application.Restart();
         }
-        Application.Restart();
+        //else if (result == DialogResult.No)
+        //{
+        //    // do nothing
+        //}
+
+
     }
 }
