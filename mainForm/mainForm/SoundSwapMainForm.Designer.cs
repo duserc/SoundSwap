@@ -193,7 +193,6 @@
             SoundSwapIcon.Icon = (Icon)resources.GetObject("SoundSwapIcon.Icon");
             SoundSwapIcon.Text = "SoundSwap";
             SoundSwapIcon.Visible = true;
-            SoundSwapIcon.DoubleClick += NotifyIcon_DoubleClick;
             // 
             // SoundSwapMainMenuStrip
             // 

@@ -5,10 +5,6 @@ using System.Text.Json;
 using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
 using ChangeDefualtAudioDeviceLibrary;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
-using System.Threading.Tasks;
-using System;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -121,7 +117,7 @@ public partial class SoundSwapMainForm : Form
             Directory.CreateDirectory(directoryPath);
             using (File.Create(fileName))
             {
-                //create file and close it.
+                statusStripProgress(70, "Settings.Json Created");
             }
         }
         if (File.Exists(fileName))
@@ -170,7 +166,10 @@ public partial class SoundSwapMainForm : Form
             }
             i++;
             int progressCount = ((int)(Math.Round(statusCount) * i));
-            statusStripProgress((progressCount), $"Checking Device {i} for matching hotkey");
+            if (progressCount < 100)
+            {
+                statusStripProgress((progressCount), $"Checking Device {i} for matching hotkey");
+            }
         }
         listOfSoundDevices = soundDevicesCopy;
         statusStripProgress(100, $"Hotkey Registered: {ActivatedDevice}");
@@ -184,10 +183,9 @@ public partial class SoundSwapMainForm : Form
         {
             if (checkBoxColumn.Name == "currentlyPlayingBoolCollumn")
             {
-                // Clear all checkboxes in the column
                 foreach (DataGridViewRow row in dataGridView.Rows)
                 {
-                    if (row.Index != e.RowIndex) // Skip the clicked row
+                    if (row.Index != e.RowIndex)
                     {
                         DataGridViewCheckBoxCell checkBoxCell = row.Cells[e.ColumnIndex] as DataGridViewCheckBoxCell;
                         checkBoxCell.Value = false;
@@ -219,7 +217,6 @@ public partial class SoundSwapMainForm : Form
 
     private void NotifyIcon_DoubleClick(object sender, EventArgs e)
     {
-        // Restore the form when the NotifyIcon is double-clicked
         Show();
         WindowState = FormWindowState.Normal;
     }
@@ -228,11 +225,8 @@ public partial class SoundSwapMainForm : Form
     {
         if (e.CloseReason == CloseReason.UserClosing)
         {
-            e.Cancel = true; // Cancel the form closing
-
-            // Minimize to the system tray
+            e.Cancel = true;
             Hide();
-            //SoundSwapIcon.Visible = true;
         }
         else
         {
@@ -258,7 +252,7 @@ public partial class SoundSwapMainForm : Form
     {
         if (AudioDeviceGridView.CurrentCell != null)
         {
-            AudioDeviceGridView.EndEdit(); // Commit the current cell's value
+            AudioDeviceGridView.EndEdit();
         }
         saveButton_Click(sender, e);
     }
