@@ -1,9 +1,6 @@
-﻿namespace SoundDeviceObjectDeclareLibrary;
+﻿using WK.Libraries.HotkeyListenerNS;
 
-using System.Reflection;
-using WK.Libraries.HotkeyListenerNS;
-
-
+namespace SoundDeviceObjectDeclareLibrary;
 public class SoundDevice
 {
     public string? AudioDevice { get; set; }

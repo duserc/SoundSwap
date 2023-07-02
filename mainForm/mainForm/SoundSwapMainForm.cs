@@ -137,7 +137,7 @@ public partial class SoundSwapMainForm : Form
         statusStripProgress(0, "Hotkey Pressed");
         var soundDevicesCopy = new List<SoundDevice>(listOfSoundDevices);
         float statusCount = 90 / soundDevicesCopy.Count;
-        int i = 0;
+        int deviceCounter = 0;
         string? ActivatedDevice = null;
         foreach (SoundDevice soundDevice in soundDevicesCopy)
         {
@@ -164,11 +164,11 @@ public partial class SoundSwapMainForm : Form
                     }
                 }
             }
-            i++;
-            int progressCount = ((int)(Math.Round(statusCount) * i));
+            deviceCounter++;
+            int progressCount = (int)(Math.Round(statusCount) * deviceCounter);
             if (progressCount < 100)
             {
-                statusStripProgress((progressCount), $"Checking Device {i} for matching hotkey");
+                statusStripProgress((progressCount), $"Checking Device {deviceCounter} for matching hotkey");
             }
         }
         listOfSoundDevices = soundDevicesCopy;
