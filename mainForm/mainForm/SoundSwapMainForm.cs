@@ -5,6 +5,7 @@ using System.Text.Json;
 using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
 using ChangeDefualtAudioDeviceLibrary;
+using SetFileLibrary;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -180,7 +181,7 @@ public partial class SoundSwapMainForm : Form
         {
             statusStripProgress(100, $"Hotkey Registered: {ActivatedDevice}");
         }
-        
+
         PopulateDataGridView();
     }
     private void AudioDeviceGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -306,13 +307,11 @@ public partial class SoundSwapMainForm : Form
 
     private void resetConfigToolStripMenuItem_Click(object sender, EventArgs e)
     {
-        DialogResult result = MessageBox.Show("Resetting the Config will remove all saved settings. Continue?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+        DialogResult result = MessageBox.Show("Resetting the Config will remove all saved settings. Are you sure?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+        string settingsFile = SetFileClass.setFile();
 
         if (result == DialogResult.Yes)
         {
-            var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-            string directoryPath = Path.Combine(path, "config");
-            string settingsFile = Path.Combine(directoryPath, "Settings.json");
             if (File.Exists(settingsFile))
             {
                 File.Delete(settingsFile);

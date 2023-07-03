@@ -6,13 +6,19 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-	<ApplicationIcon>Icons\SoundSwapicon2.ico</ApplicationIcon><!--test icon addition-->
+	<ApplicationIcon>Icons\SoundSwapicon2.ico</ApplicationIcon>
+	<ApplicationManifest>C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundSwap.exe.manifest</ApplicationManifest><!--test icon addition-->
   </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Remove="C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SoundSwap.exe.manifest" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\audioDeviceLibrary\audioDeviceLibrary.csproj" />
     <ProjectReference Include="..\ChangeDefualtAudioDeviceLibrary\ChangeDefualtAudioDeviceLibrary.csproj" />
     <ProjectReference Include="..\CreateAudioDeviceList\CreateAudioDeviceListLibrary.csproj" />
+    <ProjectReference Include="..\SetFileLibrary\SetFileLibrary.csproj" />
     <ProjectReference Include="..\SoundDevice\SoundDeviceObjectDeclareLibrary.csproj" />
   </ItemGroup>
 

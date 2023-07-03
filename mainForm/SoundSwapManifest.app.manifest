@@ -1,0 +1,10 @@
+<!--<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestversion="1.0">
+  <assemblyidentity version="1.0.0.0" name="MyApplication.app" />
+  <trustinfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedprivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <requestedexecutionlevel level="requireAdministrator" uiaccess="false" />
+      </requestedprivileges>
+    </security>
+  </trustinfo>
+</assembly>-->

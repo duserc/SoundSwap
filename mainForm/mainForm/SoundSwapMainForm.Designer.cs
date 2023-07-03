@@ -159,19 +159,19 @@
             // 
             SoundSwapContextMenuStrip.Items.AddRange(new ToolStripItem[] { openToolStripMenuItem, quitToolStripMenuItem });
             SoundSwapContextMenuStrip.Name = "SoundSwapContextMenuStrip";
-            SoundSwapContextMenuStrip.Size = new Size(181, 70);
+            SoundSwapContextMenuStrip.Size = new Size(104, 48);
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Size = new Size(103, 22);
             openToolStripMenuItem.Text = "&Open";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            quitToolStripMenuItem.Size = new Size(180, 22);
+            quitToolStripMenuItem.Size = new Size(103, 22);
             quitToolStripMenuItem.Text = "&Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             quitToolStripMenuItem.MouseDown += quitToolStripMenuItem_MouseDown;
@@ -257,19 +257,21 @@
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "E&xit";
+            exitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
             // toSystemTrayToolStripMenuItem
             // 
             toSystemTrayToolStripMenuItem.Name = "toSystemTrayToolStripMenuItem";
-            toSystemTrayToolStripMenuItem.Size = new Size(151, 22);
+            toSystemTrayToolStripMenuItem.Size = new Size(180, 22);
             toSystemTrayToolStripMenuItem.Text = "&To System Tray";
             toSystemTrayToolStripMenuItem.Click += toSystemTrayToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem1
             // 
             quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            quitToolStripMenuItem1.Size = new Size(151, 22);
+            quitToolStripMenuItem1.Size = new Size(180, 22);
             quitToolStripMenuItem1.Text = "&Quit";
+            quitToolStripMenuItem1.Click += quitToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 

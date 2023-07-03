@@ -18,9 +18,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD63B787-92D6-4E53-A762-58841001ADC7}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		SoundSwapManifest.app.manifest = SoundSwapManifest.app.manifest
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SoundSwapLibraries", "SoundSwapLibraries", "{B5CFEEDA-D123-48F3-A349-46C69953DAAC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SetFileLibrary", "SetFileLibrary\SetFileLibrary.csproj", "{8FAC7126-3E1C-458F-BEF0-3C957BC94E46}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SoundSwapSetup", "SoundSwapInstaller\SoundSwapInstaller.vdproj", "{78762867-2644-4763-9905-B576070AAC11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +57,12 @@ Global
 		{2009896C-DADC-4605-8B4B-D54058AC9004}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2009896C-DADC-4605-8B4B-D54058AC9004}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2009896C-DADC-4605-8B4B-D54058AC9004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FAC7126-3E1C-458F-BEF0-3C957BC94E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FAC7126-3E1C-458F-BEF0-3C957BC94E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FAC7126-3E1C-458F-BEF0-3C957BC94E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FAC7126-3E1C-458F-BEF0-3C957BC94E46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78762867-2644-4763-9905-B576070AAC11}.Debug|Any CPU.ActiveCfg = Debug
+		{78762867-2644-4763-9905-B576070AAC11}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +74,7 @@ Global
 		{0301FC62-183C-46CB-A8C6-8A902598EDF7} = {B5CFEEDA-D123-48F3-A349-46C69953DAAC}
 		{2009896C-DADC-4605-8B4B-D54058AC9004} = {B5CFEEDA-D123-48F3-A349-46C69953DAAC}
 		{AD63B787-92D6-4E53-A762-58841001ADC7} = {B5CFEEDA-D123-48F3-A349-46C69953DAAC}
+		{8FAC7126-3E1C-458F-BEF0-3C957BC94E46} = {B5CFEEDA-D123-48F3-A349-46C69953DAAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F5FB6E6F-F43F-4F0C-9C49-4DF11FA17A8F}
