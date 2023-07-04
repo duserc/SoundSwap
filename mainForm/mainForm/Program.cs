@@ -16,12 +16,20 @@ internal static class Program
 
         return principal.IsInRole(WindowsBuiltInRole.Administrator);
     }
+    static bool IsStartupLaunch()
+    {
+        string[] commandLineArgs = Environment.GetCommandLineArgs();
+        return commandLineArgs.Contains("startup");
+    }
     /// <summary>
     ///  The main entry point for the application.
     /// </summary>
     [STAThread]
     static void Main(string[] args)
+
     {
+        bool isStartupLaunch = IsStartupLaunch();
+
         AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal);
 
         if (args.Length > 0 && args[0] == "admin")
@@ -40,6 +48,27 @@ internal static class Program
         RequestAdministrator.request = false;
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
+
+
+        SoundSwapMainForm SoundSwapMainForm = new SoundSwapMainForm();
+
+        if (isStartupLaunch)
+        {
+            SoundSwapMainForm.WindowState = FormWindowState.Minimized;
+        }
+
+        Application.Run(SoundSwapMainForm);
+
+
+
+
+
+
+
+
+
+
+
         Application.Run(new SoundSwapMainForm());
     }
 

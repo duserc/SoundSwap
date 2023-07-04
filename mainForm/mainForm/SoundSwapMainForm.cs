@@ -6,7 +6,7 @@ using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
 using ChangeDefualtAudioDeviceLibrary;
 using SetFileLibrary;
-
+using Microsoft.Win32;
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
 {
@@ -328,5 +328,17 @@ public partial class SoundSwapMainForm : Form
             Application.Restart();
         }
         statusStripProgress(100, "Aborting Reset");
+    }
+
+    private void yesToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+        reg.SetValue("SoundSwap", Application.ExecutablePath.ToString());
+    }
+
+    private void noToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+        reg.DeleteValue("SoundSwap");
     }
 }
