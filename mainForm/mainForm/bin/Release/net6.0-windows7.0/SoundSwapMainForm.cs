@@ -304,11 +304,13 @@ public partial class SoundSwapMainForm : Form
 
     private void detectNewAudioDeviceToolStripMenuItem_Click(object sender, EventArgs e)
     {
+        statusStripProgress(100, "Detecting New Audio Devices...");
         Application.Restart();
     }
 
     private void resetConfigToolStripMenuItem_Click(object sender, EventArgs e)
     {
+        statusStripProgress(25, "Prompting user...");
         DialogResult result = MessageBox.Show("Resetting the Config will remove all saved settings. Are you sure?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
         string settingsFile = SetFileClass.setFile();
 
@@ -316,9 +318,12 @@ public partial class SoundSwapMainForm : Form
         {
             if (File.Exists(settingsFile))
             {
+                statusStripProgress(50, "Deleting User Config...");
                 File.Delete(settingsFile);
             }
+            statusStripProgress(100, "Restarting Application");
             Application.Restart();
         }
+        statusStripProgress(100, "Aborting Reset");
     }
 }
