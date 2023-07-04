@@ -18,7 +18,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD63B787-92D6-4E53-A762-58841001ADC7}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		SoundSwapManifest.app.manifest = SoundSwapManifest.app.manifest
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SoundSwapLibraries", "SoundSwapLibraries", "{B5CFEEDA-D123-48F3-A349-46C69953DAAC}"

@@ -10,9 +10,9 @@
         "dependencies": {
           "ChangeDefualtAudioDeviceLibrary": "1.0.0",
           "CreateAudioDeviceListLibrary": "1.0.0",
+          "SetFileLibrary": "1.0.0",
           "SoundDeviceObjectDeclareLibrary": "1.0.0",
           "audioDeviceLibrary": "1.0.0",
-          "SetFileLibrary": "1.0.0.0",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.22621.28"
         },
         "runtime": {
@@ -200,6 +200,11 @@
           "JsonDeseralizerLibrary.dll": {}
         }
       },
+      "SetFileLibrary/1.0.0": {
+        "runtime": {
+          "SetFileLibrary.dll": {}
+        }
+      },
       "SoundDeviceObjectDeclareLibrary/1.0.0": {
         "dependencies": {
           "HotkeyListener": "1.9.0",
@@ -208,14 +213,6 @@
         },
         "runtime": {
           "SoundDeviceObjectDeclareLibrary.dll": {}
-        }
-      },
-      "SetFileLibrary/1.0.0.0": {
-        "runtime": {
-          "SetFileLibrary.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
         }
       }
     }
@@ -356,13 +353,13 @@
       "serviceable": false,
       "sha512": ""
     },
-    "SoundDeviceObjectDeclareLibrary/1.0.0": {
+    "SetFileLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "SetFileLibrary/1.0.0.0": {
-      "type": "reference",
+    "SoundDeviceObjectDeclareLibrary/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

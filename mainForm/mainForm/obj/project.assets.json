@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows10.0.22621": {
+    "net6.0-windows7.0": {
       "AudioSwitcher.AudioApi/3.0.0": {
         "type": "package",
         "compile": {
@@ -283,6 +283,16 @@
         },
         "runtime": {
           "bin/placeholder/JsonDeseralizerLibrary.dll": {}
+        }
+      },
+      "SetFileLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/SetFileLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SetFileLibrary.dll": {}
         }
       },
       "SoundDeviceObjectDeclareLibrary/1.0.0": {
@@ -660,6 +670,11 @@
       "path": "../JsonDeseralizerLibrary/JsonDeseralizerLibrary.csproj",
       "msbuildProject": "../JsonDeseralizerLibrary/JsonDeseralizerLibrary.csproj"
     },
+    "SetFileLibrary/1.0.0": {
+      "type": "project",
+      "path": "../SetFileLibrary/SetFileLibrary.csproj",
+      "msbuildProject": "../SetFileLibrary/SetFileLibrary.csproj"
+    },
     "SoundDeviceObjectDeclareLibrary/1.0.0": {
       "type": "project",
       "path": "../SoundDevice/SoundDeviceObjectDeclareLibrary.csproj",
@@ -667,9 +682,10 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0-windows10.0.22621": [
+    "net6.0-windows7.0": [
       "ChangeDefualtAudioDeviceLibrary >= 1.0.0",
       "CreateAudioDeviceListLibrary >= 1.0.0",
+      "SetFileLibrary >= 1.0.0",
       "SoundDeviceObjectDeclareLibrary >= 1.0.0",
       "audioDeviceLibrary >= 1.0.0"
     ]
@@ -691,15 +707,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows10.0.22621.0"
+        "net6.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows10.0.22621": {
-          "targetAlias": "net6.0-windows10.0.22621.0",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows7.0",
           "projectReferences": {
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj"
@@ -709,6 +725,9 @@
             },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj"
+            },
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SetFileLibrary\\SetFileLibrary.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SetFileLibrary\\SetFileLibrary.csproj"
             },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SoundDevice\\SoundDeviceObjectDeclareLibrary.csproj"
@@ -723,8 +742,8 @@
       }
     },
     "frameworks": {
-      "net6.0-windows10.0.22621": {
-        "targetAlias": "net6.0-windows10.0.22621.0",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows7.0",
         "imports": [
           "net461",
           "net462",
@@ -736,17 +755,8 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.Windows.SDK.NET.Ref",
-            "version": "[10.0.22621.28, 10.0.22621.28]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          },
-          "Microsoft.Windows.SDK.NET.Ref": {
             "privateAssets": "all"
           },
           "Microsoft.WindowsDesktop.App.WindowsForms": {
@@ -762,30 +772,30 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'AudioSwitcher.AudioApi 3.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows10.0.22621'. This package may not be fully compatible with your project.",
+      "message": "Package 'AudioSwitcher.AudioApi 3.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "AudioSwitcher.AudioApi",
       "targetGraphs": [
-        "net6.0-windows10.0.22621"
+        "net6.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'AudioSwitcher.AudioApi.CoreAudio 3.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows10.0.22621'. This package may not be fully compatible with your project.",
+      "message": "Package 'AudioSwitcher.AudioApi.CoreAudio 3.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "AudioSwitcher.AudioApi.CoreAudio",
       "targetGraphs": [
-        "net6.0-windows10.0.22621"
+        "net6.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'HotkeyListener 1.9.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows10.0.22621'. This package may not be fully compatible with your project.",
+      "message": "Package 'HotkeyListener 1.9.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "HotkeyListener",
       "targetGraphs": [
-        "net6.0-windows10.0.22621"
+        "net6.0-windows7.0"
       ]
     }
   ]

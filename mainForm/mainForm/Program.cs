@@ -1,17 +1,46 @@
-namespace MainForm
+using System.Diagnostics;
+using System.Security.Principal;
+
+namespace MainForm;
+
+public static class RequestAdministrator
 {
-    internal static class Program
+    public static bool request = false;
+}
+internal static class Program
+{
+    static bool IsAdministrator()
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new SoundSwapMainForm());
-        }
+        var identity = WindowsIdentity.GetCurrent();
+        var principal = new WindowsPrincipal(identity);
+
+        return principal.IsInRole(WindowsBuiltInRole.Administrator);
     }
+    /// <summary>
+    ///  The main entry point for the application.
+    /// </summary>
+    [STAThread]
+    static void Main(string[] args)
+    {
+        AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal);
+
+        if (args.Length > 0 && args[0] == "admin")
+        {
+            RequestAdministrator.request = true;
+        }
+        else if (IsAdministrator() == false)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName, "admin");
+            startInfo.UseShellExecute = true;
+            startInfo.Verb = "runas";
+            System.Diagnostics.Process.Start(startInfo);
+            return; // Exit the current process without launching the application
+        }
+
+        RequestAdministrator.request = false;
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new SoundSwapMainForm());
+    }
+
 }

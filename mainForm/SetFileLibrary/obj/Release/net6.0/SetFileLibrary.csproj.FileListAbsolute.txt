@@ -1,0 +1,12 @@
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\bin\Release\net6.0\SetFileLibrary.deps.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\bin\Release\net6.0\SetFileLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\bin\Release\net6.0\SetFileLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\obj\Release\net6.0\SetFileLibrary.csproj.AssemblyReference.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\obj\Release\net6.0\SetFileLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\obj\Release\net6.0\SetFileLibrary.AssemblyInfoInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\obj\Release\net6.0\SetFileLibrary.AssemblyInfo.cs
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\obj\Release\net6.0\SetFileLibrary.csproj.CoreCompileInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\obj\Release\net6.0\SetFileLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\obj\Release\net6.0\refint\SetFileLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\obj\Release\net6.0\SetFileLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\SetFileLibrary\obj\Release\net6.0\ref\SetFileLibrary.dll
