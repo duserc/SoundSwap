@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SoundSwapMainForm));
             AudioDeviceGridView = new DataGridView();
             AudioDeviceColumn = new DataGridViewTextBoxColumn();
@@ -49,21 +49,21 @@
             fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem1 = new ToolStripMenuItem();
             detectNewAudioDeviceToolStripMenuItem = new ToolStripMenuItem();
-            resetConfigToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             exitToolStripMenuItem = new ToolStripMenuItem();
             toSystemTrayToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem1 = new ToolStripMenuItem();
+            settingsToolStripMenuItem = new ToolStripMenuItem();
+            launchOnSystemStartupToolStripMenuItem = new ToolStripMenuItem();
+            yesToolStripMenuItem = new ToolStripMenuItem();
+            noToolStripMenuItem = new ToolStripMenuItem();
+            resetConfigToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             readMeToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             toolStripProgressBar1 = new ToolStripProgressBar();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
-            settingsToolStripMenuItem = new ToolStripMenuItem();
-            launchOnSystemStartupToolStripMenuItem = new ToolStripMenuItem();
-            yesToolStripMenuItem = new ToolStripMenuItem();
-            noToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
             SoundSwapContextMenuStrip.SuspendLayout();
             SoundSwapMainMenuStrip.SuspendLayout();
@@ -76,52 +76,52 @@
             AudioDeviceGridView.AllowUserToDeleteRows = false;
             AudioDeviceGridView.AllowUserToResizeColumns = false;
             AudioDeviceGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.BackColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle21.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle21.SelectionBackColor = Color.LightSteelBlue;
-            AudioDeviceGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle6.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle6.SelectionBackColor = Color.LightSteelBlue;
+            AudioDeviceGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             AudioDeviceGridView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             AudioDeviceGridView.BackgroundColor = Color.FromArgb(64, 64, 64);
             AudioDeviceGridView.BorderStyle = BorderStyle.Fixed3D;
             AudioDeviceGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle22.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle22.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle22.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.True;
-            AudioDeviceGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            AudioDeviceGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             AudioDeviceGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             AudioDeviceGridView.Columns.AddRange(new DataGridViewColumn[] { AudioDeviceColumn, enabledBoolColumn, currentlyPlayingBoolCollumn, hotkeyStringColumn });
-            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = SystemColors.Window;
-            dataGridViewCellStyle23.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle23.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.False;
-            AudioDeviceGridView.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = SystemColors.Window;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            AudioDeviceGridView.DefaultCellStyle = dataGridViewCellStyle8;
             AudioDeviceGridView.GridColor = Color.Black;
             AudioDeviceGridView.Location = new Point(19, 40);
             AudioDeviceGridView.Margin = new Padding(10, 3, 10, 3);
             AudioDeviceGridView.MaximumSize = new Size(616, 226);
             AudioDeviceGridView.MinimumSize = new Size(616, 226);
             AudioDeviceGridView.Name = "AudioDeviceGridView";
-            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = SystemColors.ControlDarkDark;
-            dataGridViewCellStyle24.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle24.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle24.SelectionBackColor = Color.LightSteelBlue;
-            dataGridViewCellStyle24.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.True;
-            AudioDeviceGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle9.SelectionBackColor = Color.LightSteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            AudioDeviceGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             AudioDeviceGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle25.BackColor = Color.Gray;
-            dataGridViewCellStyle25.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle25.SelectionBackColor = Color.LightSteelBlue;
-            dataGridViewCellStyle25.SelectionForeColor = Color.Black;
-            AudioDeviceGridView.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle10.BackColor = Color.Gray;
+            dataGridViewCellStyle10.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle10.SelectionBackColor = Color.LightSteelBlue;
+            dataGridViewCellStyle10.SelectionForeColor = Color.Black;
+            AudioDeviceGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
             AudioDeviceGridView.RowTemplate.ContextMenuStrip = SoundSwapContextMenuStrip;
             AudioDeviceGridView.RowTemplate.Height = 25;
             AudioDeviceGridView.Size = new Size(616, 226);
@@ -203,7 +203,7 @@
             // SoundSwapMainMenuStrip
             // 
             SoundSwapMainMenuStrip.BackColor = Color.DimGray;
-            SoundSwapMainMenuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem, settingsToolStripMenuItem });
+            SoundSwapMainMenuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, settingsToolStripMenuItem, helpToolStripMenuItem });
             SoundSwapMainMenuStrip.Location = new Point(0, 0);
             SoundSwapMainMenuStrip.Name = "SoundSwapMainMenuStrip";
             SoundSwapMainMenuStrip.RenderMode = ToolStripRenderMode.System;
@@ -221,7 +221,7 @@
             // 
             // newToolStripMenuItem1
             // 
-            newToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { detectNewAudioDeviceToolStripMenuItem, resetConfigToolStripMenuItem });
+            newToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { detectNewAudioDeviceToolStripMenuItem });
             newToolStripMenuItem1.Name = "newToolStripMenuItem1";
             newToolStripMenuItem1.Size = new Size(180, 22);
             newToolStripMenuItem1.Text = "&New";
@@ -229,16 +229,9 @@
             // detectNewAudioDeviceToolStripMenuItem
             // 
             detectNewAudioDeviceToolStripMenuItem.Name = "detectNewAudioDeviceToolStripMenuItem";
-            detectNewAudioDeviceToolStripMenuItem.Size = new Size(213, 22);
+            detectNewAudioDeviceToolStripMenuItem.Size = new Size(208, 22);
             detectNewAudioDeviceToolStripMenuItem.Text = "&Detect New Audio Device";
             detectNewAudioDeviceToolStripMenuItem.Click += detectNewAudioDeviceToolStripMenuItem_Click;
-            // 
-            // resetConfigToolStripMenuItem
-            // 
-            resetConfigToolStripMenuItem.Name = "resetConfigToolStripMenuItem";
-            resetConfigToolStripMenuItem.Size = new Size(213, 22);
-            resetConfigToolStripMenuItem.Text = "&Reset Config and Program";
-            resetConfigToolStripMenuItem.Click += resetConfigToolStripMenuItem_Click;
             // 
             // saveToolStripMenuItem
             // 
@@ -266,16 +259,52 @@
             // toSystemTrayToolStripMenuItem
             // 
             toSystemTrayToolStripMenuItem.Name = "toSystemTrayToolStripMenuItem";
-            toSystemTrayToolStripMenuItem.Size = new Size(180, 22);
+            toSystemTrayToolStripMenuItem.Size = new Size(151, 22);
             toSystemTrayToolStripMenuItem.Text = "&To System Tray";
             toSystemTrayToolStripMenuItem.Click += toSystemTrayToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem1
             // 
             quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            quitToolStripMenuItem1.Size = new Size(180, 22);
+            quitToolStripMenuItem1.Size = new Size(151, 22);
             quitToolStripMenuItem1.Text = "&Quit";
             quitToolStripMenuItem1.Click += quitToolStripMenuItem_Click;
+            // 
+            // settingsToolStripMenuItem
+            // 
+            settingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { launchOnSystemStartupToolStripMenuItem, resetConfigToolStripMenuItem });
+            settingsToolStripMenuItem.ForeColor = Color.WhiteSmoke;
+            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            settingsToolStripMenuItem.Size = new Size(61, 20);
+            settingsToolStripMenuItem.Text = "S&ettings";
+            // 
+            // launchOnSystemStartupToolStripMenuItem
+            // 
+            launchOnSystemStartupToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { yesToolStripMenuItem, noToolStripMenuItem });
+            launchOnSystemStartupToolStripMenuItem.Name = "launchOnSystemStartupToolStripMenuItem";
+            launchOnSystemStartupToolStripMenuItem.Size = new Size(217, 22);
+            launchOnSystemStartupToolStripMenuItem.Text = "&Launch on System Startup?";
+            // 
+            // yesToolStripMenuItem
+            // 
+            yesToolStripMenuItem.Name = "yesToolStripMenuItem";
+            yesToolStripMenuItem.Size = new Size(91, 22);
+            yesToolStripMenuItem.Text = "&Yes";
+            yesToolStripMenuItem.Click += yesToolStripMenuItem_Click;
+            // 
+            // noToolStripMenuItem
+            // 
+            noToolStripMenuItem.Name = "noToolStripMenuItem";
+            noToolStripMenuItem.Size = new Size(91, 22);
+            noToolStripMenuItem.Text = "&No";
+            noToolStripMenuItem.Click += noToolStripMenuItem_Click;
+            // 
+            // resetConfigToolStripMenuItem
+            // 
+            resetConfigToolStripMenuItem.Name = "resetConfigToolStripMenuItem";
+            resetConfigToolStripMenuItem.Size = new Size(217, 22);
+            resetConfigToolStripMenuItem.Text = "&Reset Config and Program";
+            resetConfigToolStripMenuItem.Click += resetConfigToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
@@ -290,7 +319,7 @@
             // 
             readMeToolStripMenuItem.BackColor = Color.DarkGray;
             readMeToolStripMenuItem.Name = "readMeToolStripMenuItem";
-            readMeToolStripMenuItem.Size = new Size(180, 22);
+            readMeToolStripMenuItem.Size = new Size(117, 22);
             readMeToolStripMenuItem.Text = "&ReadMe";
             // 
             // statusStrip1
@@ -314,35 +343,6 @@
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             toolStripStatusLabel1.Size = new Size(39, 17);
             toolStripStatusLabel1.Text = "Ready";
-            // 
-            // settingsToolStripMenuItem
-            // 
-            settingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { launchOnSystemStartupToolStripMenuItem });
-            settingsToolStripMenuItem.ForeColor = Color.WhiteSmoke;
-            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(61, 20);
-            settingsToolStripMenuItem.Text = "S&ettings";
-            // 
-            // launchOnSystemStartupToolStripMenuItem
-            // 
-            launchOnSystemStartupToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { yesToolStripMenuItem, noToolStripMenuItem });
-            launchOnSystemStartupToolStripMenuItem.Name = "launchOnSystemStartupToolStripMenuItem";
-            launchOnSystemStartupToolStripMenuItem.Size = new Size(217, 22);
-            launchOnSystemStartupToolStripMenuItem.Text = "&Launch on System Startup?";
-            // 
-            // yesToolStripMenuItem
-            // 
-            yesToolStripMenuItem.Name = "yesToolStripMenuItem";
-            yesToolStripMenuItem.Size = new Size(180, 22);
-            yesToolStripMenuItem.Text = "&Yes";
-            yesToolStripMenuItem.Click += yesToolStripMenuItem_Click;
-            // 
-            // noToolStripMenuItem
-            // 
-            noToolStripMenuItem.Name = "noToolStripMenuItem";
-            noToolStripMenuItem.Size = new Size(180, 22);
-            noToolStripMenuItem.Text = "&No";
-            noToolStripMenuItem.Click += noToolStripMenuItem_Click;
             // 
             // SoundSwapMainForm
             // 
@@ -399,10 +399,10 @@
         private ToolStripMenuItem newToolStripMenuItem1;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem detectNewAudioDeviceToolStripMenuItem;
-        private ToolStripMenuItem resetConfigToolStripMenuItem;
         private ToolStripMenuItem settingsToolStripMenuItem;
         private ToolStripMenuItem launchOnSystemStartupToolStripMenuItem;
         private ToolStripMenuItem yesToolStripMenuItem;
         private ToolStripMenuItem noToolStripMenuItem;
+        private ToolStripMenuItem resetConfigToolStripMenuItem;
     }
 }

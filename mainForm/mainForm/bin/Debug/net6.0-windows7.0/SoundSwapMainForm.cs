@@ -6,7 +6,7 @@ using WK.Libraries.HotkeyListenerNS;
 using static audioDeviceLibrary.audioDevices;
 using ChangeDefualtAudioDeviceLibrary;
 using SetFileLibrary;
-
+using Microsoft.Win32;
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
 {
@@ -213,8 +213,9 @@ public partial class SoundSwapMainForm : Form
             {
                 if (listOfSoundDevices[i].Hotkey is Hotkey)
                 {
+                    if (listOfSoundDevices[i].Hotkey.KeyCode != 0)
                     {
-                        if (listOfSoundDevices[i].Hotkey.KeyCode != 0)
+                        if (listOfSoundDevices[i].IsActive == true)
                         {
                             hkl.Add(listOfSoundDevices[i].Hotkey);
                         }
@@ -240,6 +241,7 @@ public partial class SoundSwapMainForm : Form
         else
         {
             SoundSwapIcon.Dispose();
+            statusStripProgress(100, "Closing SoundSwap");
             Application.Exit();
         }
     }
@@ -254,6 +256,7 @@ public partial class SoundSwapMainForm : Form
     {
         SoundSwapIcon.Visible = false;
         SoundSwapIcon.Dispose();
+        statusStripProgress(100, "Closing SoundSwap");
         Application.Exit();
     }
 
@@ -275,6 +278,7 @@ public partial class SoundSwapMainForm : Form
     {
         SoundSwapIcon.Visible = false;
         SoundSwapIcon.Dispose();
+        statusStripProgress(100, "Closing SoundSwap");
         Application.Exit();
     }
 
@@ -303,11 +307,13 @@ public partial class SoundSwapMainForm : Form
 
     private void detectNewAudioDeviceToolStripMenuItem_Click(object sender, EventArgs e)
     {
+        statusStripProgress(100, "Detecting New Audio Devices...");
         Application.Restart();
     }
 
     private void resetConfigToolStripMenuItem_Click(object sender, EventArgs e)
     {
+        statusStripProgress(25, "Prompting user...");
         DialogResult result = MessageBox.Show("Resetting the Config will remove all saved settings. Are you sure?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
         string settingsFile = SetFileClass.setFile();
 
@@ -315,9 +321,24 @@ public partial class SoundSwapMainForm : Form
         {
             if (File.Exists(settingsFile))
             {
+                statusStripProgress(50, "Deleting User Config...");
                 File.Delete(settingsFile);
             }
+            statusStripProgress(100, "Restarting Application");
             Application.Restart();
         }
+        statusStripProgress(100, "Aborting Reset");
+    }
+
+    private void yesToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+        reg.SetValue("SoundSwap", Application.ExecutablePath.ToString());
+    }
+
+    private void noToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+        reg.DeleteValue("SoundSwap");
     }
 }
