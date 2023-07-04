@@ -213,8 +213,9 @@ public partial class SoundSwapMainForm : Form
             {
                 if (listOfSoundDevices[i].Hotkey is Hotkey)
                 {
+                    if (listOfSoundDevices[i].Hotkey.KeyCode != 0)
                     {
-                        if (listOfSoundDevices[i].Hotkey.KeyCode != 0)
+                        if (listOfSoundDevices[i].IsActive == true)
                         {
                             hkl.Add(listOfSoundDevices[i].Hotkey);
                         }
