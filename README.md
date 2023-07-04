@@ -2,10 +2,10 @@
 
 ## Index
 
-[About SoundSwap](#what-is-soundswap)
-[SoundSwap Features](#features)
-[Installation](#installation)
-[Usage](#usage)
+- [About SoundSwap](#what-is-soundswap)
+- [SoundSwap Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
 
 ### What is SoundSwap?
 
