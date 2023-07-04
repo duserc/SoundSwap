@@ -241,6 +241,7 @@ public partial class SoundSwapMainForm : Form
         else
         {
             SoundSwapIcon.Dispose();
+            statusStripProgress(100, "Closing SoundSwap");
             Application.Exit();
         }
     }
@@ -255,6 +256,7 @@ public partial class SoundSwapMainForm : Form
     {
         SoundSwapIcon.Visible = false;
         SoundSwapIcon.Dispose();
+        statusStripProgress(100, "Closing SoundSwap");
         Application.Exit();
     }
 
@@ -276,6 +278,7 @@ public partial class SoundSwapMainForm : Form
     {
         SoundSwapIcon.Visible = false;
         SoundSwapIcon.Dispose();
+        statusStripProgress(100, "Closing SoundSwap");
         Application.Exit();
     }
 
