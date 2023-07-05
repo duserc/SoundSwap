@@ -8,8 +8,6 @@ using ChangeDefualtAudioDeviceLibrary;
 using SetFileLibrary;
 using Microsoft.Win32;
 using System.Diagnostics;
-using System.IO;
-using System.IO.Compression;
 using System.Net;
 
 namespace MainForm;
@@ -18,7 +16,7 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    public string version = "1.0.2";
+    public string version = "1.0.4";
     public SoundSwapMainForm()
     {
         CheckForUpdates();
@@ -374,8 +372,9 @@ public partial class SoundSwapMainForm : Form
                     process.StartInfo.FileName = "msiexec";
                     process.StartInfo.Arguments = String.Format("/i SoundSwapSetup.msi");
 
-                    this.Close();
                     process.Start();
+                    this.Close();
+                    
                 }
                 catch
                 {

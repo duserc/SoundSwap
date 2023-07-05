@@ -11,6 +11,10 @@
 	<NoWin32Manifest>true</NoWin32Manifest>
 	<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 	<Description>Audio Design switcher, created by duserc</Description>
+	<AssemblyVersion>1.0.4</AssemblyVersion>
+	<FileVersion>1.0.4</FileVersion>
+	<Version>1.0.4</Version>
+	<RepositoryUrl>https://github.com/duserc/SoundSwap</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

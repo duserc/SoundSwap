@@ -41,3 +41,7 @@ C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Release\net
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Release\net6.0-windows7.0\SoundSwap.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Release\net6.0-windows7.0\SoundSwap.genruntimeconfig.cache
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Release\net6.0-windows7.0\ref\SoundSwap.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\SoundSwap.dll.manifest
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\SoundSwap.application
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Release\net6.0-windows7.0\SoundSwap.dll.manifest
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Release\net6.0-windows7.0\SoundSwap.application

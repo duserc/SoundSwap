@@ -7,9 +7,13 @@
   },
   {
     "AudioDevice": "Intel(R) Display Audio HDMI 2 (Intel(R) Display Audio)",
-    "IsActive": false,
+    "IsActive": true,
     "IsPlaying": false,
-    "Hotkey": null
+    "Hotkey": {
+      "KeyCode": 122,
+      "Modifiers": 0,
+      "Suspended": false
+    }
   },
   {
     "AudioDevice": "Realtek Digital Output (Realtek High Definition Audio)",
@@ -21,6 +25,10 @@
     "AudioDevice": "Speakers (Realtek High Definition Audio)",
     "IsActive": true,
     "IsPlaying": true,
-    "Hotkey": null
+    "Hotkey": {
+      "KeyCode": 121,
+      "Modifiers": 0,
+      "Suspended": false
+    }
   }
 ]
