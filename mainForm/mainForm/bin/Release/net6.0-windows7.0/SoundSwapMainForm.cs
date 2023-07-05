@@ -8,8 +8,6 @@ using ChangeDefualtAudioDeviceLibrary;
 using SetFileLibrary;
 using Microsoft.Win32;
 using System.Diagnostics;
-using System.IO;
-using System.IO.Compression;
 using System.Net;
 
 namespace MainForm;
@@ -18,7 +16,8 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    public string version = "1.0.3";
+    public string version = "1.0.4";
+    public bool latest = true;
     public SoundSwapMainForm()
     {
         CheckForUpdates();
@@ -380,14 +379,30 @@ public partial class SoundSwapMainForm : Form
                 }
                 catch
                 {
-
+                    latest = false;
                 }
             }
+            else
+            {
+                latest = false;
+            }
+        }
+        else 
+        {
+            latest = false;
         }
     }
     private void AppendVersion()
     {
-        VersionNumbertoolStripStatusLabel.Text = $"Version: {version}";
+        if (latest == true)
+        {
+            VersionNumbertoolStripStatusLabel.Text = $"Version: {version} - Latest";
+        }
+        else
+        {
+            VersionNumbertoolStripStatusLabel.Text = $"Version: {version} - Outdated";
+        }
+        
     }
 
 }
