@@ -40,6 +40,17 @@ internal static class Program
         RequestAdministrator.request = false;
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
+
+        bool isNewInstance;
+        Mutex mutex = new Mutex(true, "SoundSwap", out isNewInstance);
+
+        if (!isNewInstance)
+        {
+            // Another instance of the application is already running
+            MessageBox.Show("Another instance of SoundSwap is already running.");
+            return;
+        }
         Application.Run(new SoundSwapMainForm());
+        mutex.ReleaseMutex();
     }
 }

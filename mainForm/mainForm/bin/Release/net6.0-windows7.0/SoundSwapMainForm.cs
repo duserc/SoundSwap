@@ -16,7 +16,7 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    public string version = "1.0.6";
+    public string version = "1.0.7";
     public bool latest = true;
     public SoundSwapMainForm()
     {
@@ -345,7 +345,10 @@ public partial class SoundSwapMainForm : Form
     private void noToolStripMenuItem_Click(object sender, EventArgs e)
     {
         RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-        reg.DeleteValue("SoundSwap");
+        if (reg.GetValue("SoundSwap") != null)
+        {
+            reg.DeleteValue("SoundSwap");
+        }
     }
 
     private void readMeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -375,7 +378,6 @@ public partial class SoundSwapMainForm : Form
 
                     process.Start();
                     this.Close();
-                    
                 }
                 catch
                 {
@@ -398,7 +400,5 @@ public partial class SoundSwapMainForm : Form
         {
             VersionNumbertoolStripStatusLabel.Text = $"Version: {version} - Outdated";
         }
-        
     }
-
 }
