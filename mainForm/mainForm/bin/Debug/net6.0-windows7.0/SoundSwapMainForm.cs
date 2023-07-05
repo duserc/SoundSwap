@@ -7,6 +7,8 @@ using static audioDeviceLibrary.audioDevices;
 using ChangeDefualtAudioDeviceLibrary;
 using SetFileLibrary;
 using Microsoft.Win32;
+using System.Diagnostics;
+
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
 {
@@ -340,5 +342,14 @@ public partial class SoundSwapMainForm : Form
     {
         RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         reg.DeleteValue("SoundSwap");
+    }
+
+    private void readMeToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        Process.Start(new ProcessStartInfo
+        {
+            FileName = "https://github.com/duserc/SoundSwap#readme",
+            UseShellExecute = true
+        });
     }
 }

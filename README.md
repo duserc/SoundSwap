@@ -36,19 +36,19 @@ Due to the nature of being a program that is "always on" and "always listening" 
             - `New`
                 - `Detect new audio device`
                     - This button is programmed using an event listener to detect any changes with audio devices, included the addition, or ejection of any audio devices within the system, then restarting the application with the correct interface.
-                - `Save`
-                    - This button provides the same utility as the main save button found on the mainForm
-                - `Exit`
-                    - `To System Tray`
-                        - This will hide the main form and fully minimize the application to the system tray.
-                            - The Icon residing in the system tray still retains full functionality regarding any hotkey events and hotkey listeners. This is a vital feature of the product, maintaining very minimal impact on the pc.
-                            - The system tray Icon contains its own `menu strip`, with its own `Double Click Event`
-                                - System  Tray Menu Strip
-                                    - The menuStrip can be opened by right clicking the systemtrayIcon, containg the SoundSwap icon.
-                                        - `Open`
-                                            - This button, when clicked, returns the SoundSwap application to the normal window status.
-                                        - `Quit`
-                                            - This button, when clicked, fully closes the application.
+            - `Save`
+                - This button provides the same utility as the main save button found on the mainForm
+            - `Exit`
+                - `To System Tray`
+                    - This will hide the main form and fully minimize the application to the system tray.
+                        - The Icon residing in the system tray still retains full functionality regarding any hotkey events and hotkey listeners. This is a vital feature of the product, maintaining very minimal impact on the pc.
+                        - The system tray Icon contains its own `menu strip`, with its own `Double Click Event`
+                            - System  Tray Menu Strip
+                                - The menuStrip can be opened by right clicking the systemtrayIcon, containg the SoundSwap icon.
+                                    - `Open`
+                                        - This button, when clicked, returns the SoundSwap application to the normal window status.
+                                    - `Quit`
+                                        - This button, when clicked, fully closes the application.
         - `Help`
             - `ReadMe`
                 - This button will link the user to this ReadMe.md file, `WIP` <---WIP>//
@@ -70,6 +70,8 @@ Due to the nature of being a program that is "always on" and "always listening" 
         - Another feature that would not work without admin rights is ofcourse the "Launch on startup" option found in the settings menu.
 - Fully customized GUI
     - Using winforms, the application has underwent full ui changes in an attempt to make the application very appealing and easy to understand. This was an important design goal for me to achieve, as mentioned above, I do intend on using this application in the future.
+- Installer
+    - SoundSwap also comes with an installer and an uninstaller. This creates the application with the relevant icons and shortcuts about the users pc.
 
 ### Installation
 
