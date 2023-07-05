@@ -64,6 +64,7 @@
             statusStrip1 = new StatusStrip();
             toolStripProgressBar1 = new ToolStripProgressBar();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            VersionNumbertoolStripStatusLabel = new ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
             SoundSwapContextMenuStrip.SuspendLayout();
             SoundSwapMainMenuStrip.SuspendLayout();
@@ -223,7 +224,7 @@
             // 
             newToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { detectNewAudioDeviceToolStripMenuItem });
             newToolStripMenuItem1.Name = "newToolStripMenuItem1";
-            newToolStripMenuItem1.Size = new Size(180, 22);
+            newToolStripMenuItem1.Size = new Size(98, 22);
             newToolStripMenuItem1.Text = "&New";
             // 
             // detectNewAudioDeviceToolStripMenuItem
@@ -238,21 +239,21 @@
             saveToolStripMenuItem.BackColor = Color.DarkGray;
             saveToolStripMenuItem.ImageTransparentColor = Color.DimGray;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(98, 22);
             saveToolStripMenuItem.Text = "&Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(95, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.BackColor = Color.DarkGray;
             exitToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toSystemTrayToolStripMenuItem, quitToolStripMenuItem1 });
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(98, 22);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
@@ -319,14 +320,14 @@
             // 
             readMeToolStripMenuItem.BackColor = Color.DarkGray;
             readMeToolStripMenuItem.Name = "readMeToolStripMenuItem";
-            readMeToolStripMenuItem.Size = new Size(180, 22);
+            readMeToolStripMenuItem.Size = new Size(117, 22);
             readMeToolStripMenuItem.Text = "&ReadMe";
             readMeToolStripMenuItem.Click += readMeToolStripMenuItem_Click;
             // 
             // statusStrip1
             // 
             statusStrip1.BackColor = Color.DarkGray;
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripProgressBar1, toolStripStatusLabel1 });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripProgressBar1, toolStripStatusLabel1, VersionNumbertoolStripStatusLabel });
             statusStrip1.Location = new Point(0, 315);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(654, 22);
@@ -344,6 +345,14 @@
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             toolStripStatusLabel1.Size = new Size(39, 17);
             toolStripStatusLabel1.Text = "Ready";
+            // 
+            // VersionNumbertoolStripStatusLabel
+            // 
+            VersionNumbertoolStripStatusLabel.Name = "VersionNumbertoolStripStatusLabel";
+            VersionNumbertoolStripStatusLabel.Size = new Size(467, 17);
+            VersionNumbertoolStripStatusLabel.Spring = true;
+            VersionNumbertoolStripStatusLabel.Text = "Version: ";
+            VersionNumbertoolStripStatusLabel.TextAlign = ContentAlignment.MiddleRight;
             // 
             // SoundSwapMainForm
             // 
@@ -405,5 +414,6 @@
         private ToolStripMenuItem yesToolStripMenuItem;
         private ToolStripMenuItem noToolStripMenuItem;
         private ToolStripMenuItem resetConfigToolStripMenuItem;
+        private ToolStripStatusLabel VersionNumbertoolStripStatusLabel;
     }
 }

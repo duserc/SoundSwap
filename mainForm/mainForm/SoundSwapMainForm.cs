@@ -18,13 +18,14 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-
+    public string version = "1.0.2";
     public SoundSwapMainForm()
     {
         CheckForUpdates();
         listOfSoundDevices = new List<SoundDevice>();
         PopulateAudioDeviceData();
         InitializeComponent();
+        AppendVersion();
         PopulateDataGridView();
         AppendHotkeyListener();
         hkl.HotkeyPressed += Hkl_HotkeyPressed;
@@ -360,16 +361,14 @@ public partial class SoundSwapMainForm : Form
     {
         WebClient webClient = new WebClient(); ;
         var client = new WebClient();
-        if (!webClient.DownloadString("///").Contains("1.0.0"))
+        if (!webClient.DownloadString("https://www.dropbox.com/s/u00yxxksk79vnn3/Update.txt?dl=1").Contains(version))
         {
-            if (MessageBox.Show("A New version of SoundSwap is available! Do you want to update?", "SoundSwap", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes){
+            if (MessageBox.Show("A New version of SoundSwap is available! Do you want to update?", "SoundSwap", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
                 try
                 {
                     if (File.Exists(@".\SoundSwapSetup.msi")) { File.Delete(@".\SoundSwapSetup.msi"); }
-                    client.DownloadFile("link", @"SoundSwapSetup.zip");
-                    string zipPath = @".\SoundSwapSetup.zip";
-                    string extractPath = @".\";
-                    ZipFile.ExtractToDirectory(zipPath, extractPath);
+                    client.DownloadFile("https://www.dropbox.com/s/n5xun8rxcn1i8mi/SoundSwapSetup.msi?dl=1", @"SoundSwapSetup.msi");
 
                     Process process = new Process();
                     process.StartInfo.FileName = "msiexec";
@@ -385,4 +384,9 @@ public partial class SoundSwapMainForm : Form
             }
         }
     }
+    private void AppendVersion()
+    {
+        VersionNumbertoolStripStatusLabel.Text = $"Version: {version}";
+    }
+
 }
