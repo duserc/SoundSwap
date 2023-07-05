@@ -9,6 +9,8 @@
 	<ApplicationIcon>Icons\SoundSwapicon2.ico</ApplicationIcon>
 	<SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
 	<NoWin32Manifest>true</NoWin32Manifest>
+	<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+	<Description>Audio Design switcher, created by duserc</Description>
   </PropertyGroup>
 
   <ItemGroup>
