@@ -16,7 +16,7 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    public string version = "1.0.4";
+    public string version = "1.0.5";
     public bool latest = true;
     public SoundSwapMainForm()
     {
