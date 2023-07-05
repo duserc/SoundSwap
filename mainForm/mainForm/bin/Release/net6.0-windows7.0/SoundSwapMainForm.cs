@@ -7,6 +7,11 @@ using static audioDeviceLibrary.audioDevices;
 using ChangeDefualtAudioDeviceLibrary;
 using SetFileLibrary;
 using Microsoft.Win32;
+using System.Diagnostics;
+using System.IO;
+using System.IO.Compression;
+using System.Net;
+
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
 {
@@ -16,6 +21,7 @@ public partial class SoundSwapMainForm : Form
 
     public SoundSwapMainForm()
     {
+        CheckForUpdates();
         listOfSoundDevices = new List<SoundDevice>();
         PopulateAudioDeviceData();
         InitializeComponent();
@@ -340,5 +346,43 @@ public partial class SoundSwapMainForm : Form
     {
         RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         reg.DeleteValue("SoundSwap");
+    }
+
+    private void readMeToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        Process.Start(new ProcessStartInfo
+        {
+            FileName = "https://github.com/duserc/SoundSwap#readme",
+            UseShellExecute = true
+        });
+    }
+    private void CheckForUpdates()
+    {
+        WebClient webClient = new WebClient(); ;
+        var client = new WebClient();
+        if (!webClient.DownloadString("///").Contains("1.0.0"))
+        {
+            if (MessageBox.Show("A New version of SoundSwap is available! Do you want to update?", "SoundSwap", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes){
+                try
+                {
+                    if (File.Exists(@".\SoundSwapSetup.msi")) { File.Delete(@".\SoundSwapSetup.msi"); }
+                    client.DownloadFile("link", @"SoundSwapSetup.zip");
+                    string zipPath = @".\SoundSwapSetup.zip";
+                    string extractPath = @".\";
+                    ZipFile.ExtractToDirectory(zipPath, extractPath);
+
+                    Process process = new Process();
+                    process.StartInfo.FileName = "msiexec";
+                    process.StartInfo.Arguments = String.Format("/i SoundSwapSetup.msi");
+
+                    this.Close();
+                    process.Start();
+                }
+                catch
+                {
+
+                }
+            }
+        }
     }
 }
