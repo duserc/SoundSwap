@@ -1,0 +1,12 @@
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\bin\Release\net6.0\getDevNameLibrary.deps.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\bin\Release\net6.0\getDevNameLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\bin\Release\net6.0\getDevNameLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\obj\Release\net6.0\getDevNameLibrary.csproj.AssemblyReference.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\obj\Release\net6.0\getDevNameLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\obj\Release\net6.0\getDevNameLibrary.AssemblyInfoInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\obj\Release\net6.0\getDevNameLibrary.AssemblyInfo.cs
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\obj\Release\net6.0\getDevNameLibrary.csproj.CoreCompileInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\obj\Release\net6.0\getDevNameLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\obj\Release\net6.0\refint\getDevNameLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\obj\Release\net6.0\getDevNameLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\getDevNameLibrary\obj\Release\net6.0\ref\getDevNameLibrary.dll

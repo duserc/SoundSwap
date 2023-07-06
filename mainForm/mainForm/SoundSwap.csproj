@@ -11,9 +11,9 @@
 	<NoWin32Manifest>true</NoWin32Manifest>
 	<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 	<Description>Audio Design switcher, created by duserc</Description>
-	<AssemblyVersion>1.0.7</AssemblyVersion>
-	<FileVersion>1.0.7</FileVersion>
-	<Version>1.0.7</Version>
+	<AssemblyVersion>1.0.9</AssemblyVersion>
+	<FileVersion>1.0.9</FileVersion>
+	<Version>1.0.9</Version>
 	<RepositoryUrl>https://github.com/duserc/SoundSwap</RepositoryUrl>
   </PropertyGroup>
 
@@ -21,6 +21,8 @@
     <ProjectReference Include="..\audioDeviceLibrary\audioDeviceLibrary.csproj" />
     <ProjectReference Include="..\ChangeDefualtAudioDeviceLibrary\ChangeDefualtAudioDeviceLibrary.csproj" />
     <ProjectReference Include="..\CreateAudioDeviceList\CreateAudioDeviceListLibrary.csproj" />
+    <ProjectReference Include="..\getDevNameLibrary\getDevNameLibrary.csproj" />
+    <ProjectReference Include="..\NotificationForm\NotificationForm.csproj" />
     <ProjectReference Include="..\SetFileLibrary\SetFileLibrary.csproj" />
     <ProjectReference Include="..\SoundDevice\SoundDeviceObjectDeclareLibrary.csproj" />
   </ItemGroup>

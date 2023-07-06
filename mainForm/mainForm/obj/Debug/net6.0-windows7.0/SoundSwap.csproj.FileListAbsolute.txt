@@ -41,3 +41,10 @@ C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Debug\net6.
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Debug\net6.0-windows7.0\SoundSwap.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Debug\net6.0-windows7.0\SoundSwap.genruntimeconfig.cache
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\obj\Debug\net6.0-windows7.0\ref\SoundSwap.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.0-windows7.0\NotificationForm.deps.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.0-windows7.0\NotificationForm.runtimeconfig.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.0-windows7.0\NotificationForm.exe
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.0-windows7.0\getDevNameLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.0-windows7.0\NotificationForm.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.0-windows7.0\getDevNameLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Debug\net6.0-windows7.0\NotificationForm.pdb

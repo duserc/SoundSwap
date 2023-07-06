@@ -9,6 +9,8 @@ using SetFileLibrary;
 using Microsoft.Win32;
 using System.Diagnostics;
 using System.Net;
+using NotificationForm;
+using getDevNameLibrary;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -16,7 +18,7 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    public string version = "1.0.7";
+    public string version = "1.0.9";
     public bool latest = true;
     public SoundSwapMainForm()
     {
@@ -187,6 +189,9 @@ public partial class SoundSwapMainForm : Form
         else
         {
             statusStripProgress(100, $"Hotkey Registered: {ActivatedDevice}");
+            DeviceName.soundDeviceName = ActivatedDevice;
+            SoundSwapNotification notificationForm = new SoundSwapNotification();
+            notificationForm.Show();
         }
 
         PopulateDataGridView();
@@ -399,6 +404,16 @@ public partial class SoundSwapMainForm : Form
         else
         {
             VersionNumbertoolStripStatusLabel.Text = $"Version: {version} - Outdated";
+        }
+    }
+
+    private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        statusStripProgress(5, "Checking for updates");
+        CheckForUpdates();
+        if (latest == true)
+        {
+            statusStripProgress(100, "Application up to Date");
         }
     }
 }

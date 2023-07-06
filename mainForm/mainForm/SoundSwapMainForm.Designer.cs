@@ -65,6 +65,7 @@
             toolStripProgressBar1 = new ToolStripProgressBar();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             VersionNumbertoolStripStatusLabel = new ToolStripStatusLabel();
+            updateToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
             SoundSwapContextMenuStrip.SuspendLayout();
             SoundSwapMainMenuStrip.SuspendLayout();
@@ -214,7 +215,7 @@
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem1, saveToolStripMenuItem, toolStripSeparator1, exitToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem1, updateToolStripMenuItem, saveToolStripMenuItem, toolStripSeparator1, exitToolStripMenuItem });
             fileToolStripMenuItem.ForeColor = Color.WhiteSmoke;
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(37, 20);
@@ -224,7 +225,7 @@
             // 
             newToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { detectNewAudioDeviceToolStripMenuItem });
             newToolStripMenuItem1.Name = "newToolStripMenuItem1";
-            newToolStripMenuItem1.Size = new Size(98, 22);
+            newToolStripMenuItem1.Size = new Size(180, 22);
             newToolStripMenuItem1.Text = "&New";
             // 
             // detectNewAudioDeviceToolStripMenuItem
@@ -239,21 +240,21 @@
             saveToolStripMenuItem.BackColor = Color.DarkGray;
             saveToolStripMenuItem.ImageTransparentColor = Color.DimGray;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(98, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "&Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(95, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.BackColor = Color.DarkGray;
             exitToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toSystemTrayToolStripMenuItem, quitToolStripMenuItem1 });
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(98, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
@@ -320,7 +321,7 @@
             // 
             readMeToolStripMenuItem.BackColor = Color.DarkGray;
             readMeToolStripMenuItem.Name = "readMeToolStripMenuItem";
-            readMeToolStripMenuItem.Size = new Size(117, 22);
+            readMeToolStripMenuItem.Size = new Size(180, 22);
             readMeToolStripMenuItem.Text = "&ReadMe";
             readMeToolStripMenuItem.Click += readMeToolStripMenuItem_Click;
             // 
@@ -349,10 +350,17 @@
             // VersionNumbertoolStripStatusLabel
             // 
             VersionNumbertoolStripStatusLabel.Name = "VersionNumbertoolStripStatusLabel";
-            VersionNumbertoolStripStatusLabel.Size = new Size(467, 17);
+            VersionNumbertoolStripStatusLabel.Size = new Size(498, 17);
             VersionNumbertoolStripStatusLabel.Spring = true;
             VersionNumbertoolStripStatusLabel.Text = "Version: ";
             VersionNumbertoolStripStatusLabel.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // updateToolStripMenuItem
+            // 
+            updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            updateToolStripMenuItem.Size = new Size(180, 22);
+            updateToolStripMenuItem.Text = "&Check For Updates";
+            updateToolStripMenuItem.Click += updateToolStripMenuItem_Click;
             // 
             // SoundSwapMainForm
             // 
@@ -415,5 +423,6 @@
         private ToolStripMenuItem noToolStripMenuItem;
         private ToolStripMenuItem resetConfigToolStripMenuItem;
         private ToolStripStatusLabel VersionNumbertoolStripStatusLabel;
+        private ToolStripMenuItem updateToolStripMenuItem;
     }
 }

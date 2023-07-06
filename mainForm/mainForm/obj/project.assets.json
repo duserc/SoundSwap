@@ -269,6 +269,16 @@
           "bin/placeholder/CreateAudioDeviceListLibrary.dll": {}
         }
       },
+      "getDevNameLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/getDevNameLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/getDevNameLibrary.dll": {}
+        }
+      },
       "JsonDeseralizerLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -284,6 +294,23 @@
         "runtime": {
           "bin/placeholder/JsonDeseralizerLibrary.dll": {}
         }
+      },
+      "NotificationForm/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "getDevNameLibrary": "1.0.0",
+          "naudio.winforms": "2.1.0"
+        },
+        "compile": {
+          "bin/placeholder/NotificationForm.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NotificationForm.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       },
       "SetFileLibrary/1.0.0": {
         "type": "project",
@@ -665,10 +692,20 @@
       "path": "../CreateAudioDeviceList/CreateAudioDeviceListLibrary.csproj",
       "msbuildProject": "../CreateAudioDeviceList/CreateAudioDeviceListLibrary.csproj"
     },
+    "getDevNameLibrary/1.0.0": {
+      "type": "project",
+      "path": "../getDevNameLibrary/getDevNameLibrary.csproj",
+      "msbuildProject": "../getDevNameLibrary/getDevNameLibrary.csproj"
+    },
     "JsonDeseralizerLibrary/1.0.0": {
       "type": "project",
       "path": "../JsonDeseralizerLibrary/JsonDeseralizerLibrary.csproj",
       "msbuildProject": "../JsonDeseralizerLibrary/JsonDeseralizerLibrary.csproj"
+    },
+    "NotificationForm/1.0.0": {
+      "type": "project",
+      "path": "../NotificationForm/NotificationForm.csproj",
+      "msbuildProject": "../NotificationForm/NotificationForm.csproj"
     },
     "SetFileLibrary/1.0.0": {
       "type": "project",
@@ -685,16 +722,18 @@
     "net6.0-windows7.0": [
       "ChangeDefualtAudioDeviceLibrary >= 1.0.0",
       "CreateAudioDeviceListLibrary >= 1.0.0",
+      "NotificationForm >= 1.0.0",
       "SetFileLibrary >= 1.0.0",
       "SoundDeviceObjectDeclareLibrary >= 1.0.0",
-      "audioDeviceLibrary >= 1.0.0"
+      "audioDeviceLibrary >= 1.0.0",
+      "getDevNameLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
     "C:\\Users\\danie\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.7",
+    "version": "1.0.9",
     "restore": {
       "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\SoundSwap.csproj",
       "projectName": "SoundSwap",
@@ -725,6 +764,12 @@
             },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\CreateAudioDeviceList\\CreateAudioDeviceListLibrary.csproj"
+            },
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\getDevNameLibrary\\getDevNameLibrary.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\getDevNameLibrary\\getDevNameLibrary.csproj"
+            },
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\NotificationForm\\NotificationForm.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\NotificationForm\\NotificationForm.csproj"
             },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SetFileLibrary\\SetFileLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\SetFileLibrary\\SetFileLibrary.csproj"
