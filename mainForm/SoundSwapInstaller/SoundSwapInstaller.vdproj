@@ -198,15 +198,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SoundSwapSetup"
-        "ProductCode" = "8:{8320FA15-E5F3-4EB0-BD0C-4DF68A7D340F}"
-        "PackageCode" = "8:{A590ECB6-2E2D-40F8-B91B-BD65DC2349ED}"
+        "ProductCode" = "8:{8351D796-A379-46C9-A296-BA3ED1ADC1C7}"
+        "PackageCode" = "8:{1D20BACD-77F2-4A12-943B-E0723FF6894A}"
         "UpgradeCode" = "8:{4ABD3296-0B01-40A7-BD4A-8C9F102B522E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.9"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:duserc"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -748,7 +748,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_70E2D0710AA5453DB5F367DB08C565DB"
             {
-            "SourcePath" = "8:..\\MainForm\\obj\\Debug\\net6.0-windows7.0\\apphost.exe"
+            "SourcePath" = "8:..\\MainForm\\obj\\Release\\net6.0-windows7.0\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_87BF6D756CD64BA5A0A3F139802F18B5"

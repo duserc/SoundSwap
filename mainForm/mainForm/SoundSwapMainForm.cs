@@ -18,7 +18,7 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    public string version = "1.0.9";
+    public string version = "1.1.0";
     public bool latest = true;
     public SoundSwapMainForm()
     {
@@ -393,6 +393,10 @@ public partial class SoundSwapMainForm : Form
         if (webClient.DownloadString("https://www.dropbox.com/s/u00yxxksk79vnn3/Update.txt?dl=1").Contains(version))
         {
             latest = true;
+        }
+        else
+        {
+            latest = false;
         }
     }
     private void AppendVersion()
