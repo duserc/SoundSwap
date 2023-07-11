@@ -11,6 +11,8 @@ using System.Diagnostics;
 using System.Net;
 using NotificationForm;
 using getDevNameLibrary;
+using System.CodeDom;
+using System.Data;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -18,15 +20,16 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    public string version = "1.0.9";
-    public bool latest = true;
+    private string version = "1.1.1";
+    private bool latest = true;
+    private bool offline = false;
     public SoundSwapMainForm()
     {
-        CheckForUpdates();
         listOfSoundDevices = new List<SoundDevice>();
-        PopulateAudioDeviceData();
         InitializeComponent();
+        CheckForUpdates();
         AppendVersion();
+        PopulateAudioDeviceData();
         PopulateDataGridView();
         AppendHotkeyListener();
         hkl.HotkeyPressed += Hkl_HotkeyPressed;
@@ -366,33 +369,55 @@ public partial class SoundSwapMainForm : Form
     }
     private void CheckForUpdates()
     {
+        statusStripProgress(5, "Checking for updates");
         WebClient webClient = new WebClient(); ;
         var client = new WebClient();
-        if (!webClient.DownloadString("https://www.dropbox.com/s/u00yxxksk79vnn3/Update.txt?dl=1").Contains(version))
+        offline = false;
+        try
         {
-            if (MessageBox.Show("A New version of SoundSwap is available! Do you want to update?", "SoundSwap", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (!webClient.DownloadString("https://www.dropbox.com/s/u00yxxksk79vnn3/Update.txt?dl=1").Contains(version))
             {
-                try
+                if (MessageBox.Show("A New version of SoundSwap is available! Do you want to update?", "SoundSwap", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (File.Exists(@".\SoundSwapSetup.msi")) { File.Delete(@".\SoundSwapSetup.msi"); }
-                    client.DownloadFile("https://www.dropbox.com/s/n5xun8rxcn1i8mi/SoundSwapSetup.msi?dl=1", @"SoundSwapSetup.msi");
+                    try
+                    {
+                        if (File.Exists(@".\SoundSwapSetup.msi")) { File.Delete(@".\SoundSwapSetup.msi"); }
+                        client.DownloadFile("https://www.dropbox.com/s/n5xun8rxcn1i8mi/SoundSwapSetup.msi?dl=1", @"SoundSwapSetup.msi");
 
-                    Process process = new Process();
-                    process.StartInfo.FileName = "msiexec";
-                    process.StartInfo.Arguments = String.Format("/i SoundSwapSetup.msi");
+                        Process process = new Process();
+                        process.StartInfo.FileName = "msiexec";
+                        process.StartInfo.Arguments = String.Format("/i SoundSwapSetup.msi");
 
-                    process.Start();
-                    this.Close();
-                }
-                catch
-                {
+                        process.Start();
+                        this.Close();
+                    }
+                    catch
+                    {
 
+                    }
                 }
             }
+            else
+            {
+                statusStripProgress(100, "Using latest version");
+            }
         }
-        if (webClient.DownloadString("https://www.dropbox.com/s/u00yxxksk79vnn3/Update.txt?dl=1").Contains(version))
+        catch
         {
-            latest = true;
+            statusStripProgress(100, "No internet connection");
+            offline = true;
+        }
+        finally
+        {
+            AppendVersion();
+        }
+        if (offline == false)
+        {
+            if (!webClient.DownloadString("https://www.dropbox.com/s/u00yxxksk79vnn3/Update.txt?dl=1").Contains(version))
+            {
+                latest = false;
+                AppendVersion();
+            }
         }
     }
     private void AppendVersion()
@@ -405,15 +430,14 @@ public partial class SoundSwapMainForm : Form
         {
             VersionNumbertoolStripStatusLabel.Text = $"Version: {version} - Outdated";
         }
+        if (offline == true)
+        {
+            VersionNumbertoolStripStatusLabel.Text = $"Version: {version} - Offline";
+        }
     }
 
     private void updateToolStripMenuItem_Click(object sender, EventArgs e)
     {
-        statusStripProgress(5, "Checking for updates");
         CheckForUpdates();
-        if (latest == true)
-        {
-            statusStripProgress(100, "Application up to Date");
-        }
     }
 }

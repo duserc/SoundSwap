@@ -1,0 +1,26 @@
+[
+  {
+    "AudioDevice": "Speakers (G432 Gaming Headset)",
+    "IsActive": false,
+    "IsPlaying": false,
+    "Hotkey": null
+  },
+  {
+    "AudioDevice": "Intel(R) Display Audio HDMI 2 (Intel(R) Display Audio)",
+    "IsActive": true,
+    "IsPlaying": true,
+    "Hotkey": null
+  },
+  {
+    "AudioDevice": "Realtek Digital Output (Realtek High Definition Audio)",
+    "IsActive": false,
+    "IsPlaying": false,
+    "Hotkey": null
+  },
+  {
+    "AudioDevice": "Speakers (Realtek High Definition Audio)",
+    "IsActive": false,
+    "IsPlaying": false,
+    "Hotkey": null
+  }
+]
