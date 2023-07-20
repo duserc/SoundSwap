@@ -1,17 +1,12 @@
-﻿namespace JsonDeseralizerLibrary;
-
-using SoundDeviceObjectDeclareLibrary;
-using System;
-using System.Collections.Generic;
+﻿using SoundDeviceObjectDeclareLibrary;
 using Newtonsoft.Json;
-using System.IO;
 using System.Reflection;
 
+namespace JsonDeseralizerLibrary;
 
 [Serializable]
 public class Program
 {
-
     public static List<SoundDevice> ReadJsonSoundDeviceObject()
     {
         var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
@@ -24,6 +19,5 @@ public class Program
             return device;
         }
         return null;
-
     }
 }

@@ -11,8 +11,6 @@ using System.Diagnostics;
 using System.Net;
 using NotificationForm;
 using getDevNameLibrary;
-using System.CodeDom;
-using System.Data;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -196,7 +194,6 @@ public partial class SoundSwapMainForm : Form
             SoundSwapNotification notificationForm = new SoundSwapNotification();
             notificationForm.Show();
         }
-
         PopulateDataGridView();
     }
     private void AudioDeviceGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

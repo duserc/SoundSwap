@@ -1,7 +1,6 @@
 ﻿namespace audioDeviceLibrary;
 
 using NAudio.CoreAudioApi;
-using System.Xml.Linq;
 
 public class audioDevices
 {
@@ -24,10 +23,8 @@ public class audioDevices
                 Name = device.FriendlyName,
                 IsDefaultDevice = device.State == DeviceState.Active && device.ID == defaultDevice.ID
             };
-
             audioDevices.Add(deviceInfo);
         }
-
         return audioDevices;
     }
 }

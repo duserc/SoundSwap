@@ -37,7 +37,5 @@ public partial class SoundSwapNotification : Form
             Opacity = 1.00 - (i*0.01);
         }
         this.Close();
-
     }
-
 }

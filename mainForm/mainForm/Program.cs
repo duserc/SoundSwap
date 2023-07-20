@@ -16,12 +16,12 @@ internal static class Program
 
         return principal.IsInRole(WindowsBuiltInRole.Administrator);
     }
+
     /// <summary>
     ///  The main entry point for the application.
     /// </summary>
     [STAThread]
     static void Main(string[] args)
-
     {
         AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal);
 

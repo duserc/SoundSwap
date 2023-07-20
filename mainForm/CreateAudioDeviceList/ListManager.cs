@@ -1,10 +1,7 @@
-﻿namespace CreateAudioDeviceList;
-    
-using SoundDeviceObjectDeclareLibrary;
+﻿using SoundDeviceObjectDeclareLibrary;
 using JsonDeseralizerLibrary;
 
-//public static List<SoundDevice> ListDatabase = new List<SoundDevice>();
-
+namespace CreateAudioDeviceList;
 public class ListManager
 {
     public static List<SoundDevice> ListDatabase = new List<SoundDevice>();
@@ -19,6 +16,5 @@ public class ListManager
                 ListDatabase.Add(devices[i]);
             }
         }
-
     }
 }

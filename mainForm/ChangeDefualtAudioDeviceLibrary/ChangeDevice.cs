@@ -5,7 +5,7 @@ namespace ChangeDefualtAudioDeviceLibrary;
 
 public class ChangeDevice
 {
-    public static void ChangeDefaultDevice(SoundDevice soundDevice) //sound device is the device that had the hotkeypressed
+    public static void ChangeDefaultDevice(SoundDevice soundDevice)
     {
         var controller = new CoreAudioController();
         var devices = controller.GetDevices();
