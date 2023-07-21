@@ -29,17 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SoundSwapMainForm));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SoundSwapMainForm));
-            AudioDeviceGridView = new DataGridView();
-            AudioDeviceColumn = new DataGridViewTextBoxColumn();
-            enabledBoolColumn = new DataGridViewCheckBoxColumn();
-            currentlyPlayingBoolCollumn = new DataGridViewCheckBoxColumn();
-            hotkeyStringColumn = new DataGridViewTextBoxColumn();
             SoundSwapContextMenuStrip = new ContextMenuStrip(components);
             openToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
@@ -66,100 +61,18 @@
             toolStripProgressBar1 = new ToolStripProgressBar();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             VersionNumbertoolStripStatusLabel = new ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
+            volumeSlider = new TrackBar();
+            AudioDeviceGridView = new DataGridView();
+            AudioDeviceColumn = new DataGridViewTextBoxColumn();
+            enabledBoolColumn = new DataGridViewCheckBoxColumn();
+            currentlyPlayingBoolCollumn = new DataGridViewCheckBoxColumn();
+            hotkeyStringColumn = new DataGridViewTextBoxColumn();
             SoundSwapContextMenuStrip.SuspendLayout();
             SoundSwapMainMenuStrip.SuspendLayout();
             statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)volumeSlider).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).BeginInit();
             SuspendLayout();
-            // 
-            // AudioDeviceGridView
-            // 
-            AudioDeviceGridView.AllowUserToAddRows = false;
-            AudioDeviceGridView.AllowUserToDeleteRows = false;
-            AudioDeviceGridView.AllowUserToResizeColumns = false;
-            AudioDeviceGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle1.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightSteelBlue;
-            AudioDeviceGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            AudioDeviceGridView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            AudioDeviceGridView.BackgroundColor = Color.FromArgb(64, 64, 64);
-            AudioDeviceGridView.BorderStyle = BorderStyle.Fixed3D;
-            AudioDeviceGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            AudioDeviceGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            AudioDeviceGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            AudioDeviceGridView.Columns.AddRange(new DataGridViewColumn[] { AudioDeviceColumn, enabledBoolColumn, currentlyPlayingBoolCollumn, hotkeyStringColumn });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            AudioDeviceGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            AudioDeviceGridView.GridColor = Color.Black;
-            AudioDeviceGridView.Location = new Point(19, 40);
-            AudioDeviceGridView.Margin = new Padding(10, 3, 10, 3);
-            AudioDeviceGridView.MaximumSize = new Size(616, 226);
-            AudioDeviceGridView.MinimumSize = new Size(616, 226);
-            AudioDeviceGridView.Name = "AudioDeviceGridView";
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionBackColor = Color.LightSteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            AudioDeviceGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            AudioDeviceGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = Color.Gray;
-            dataGridViewCellStyle5.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle5.SelectionBackColor = Color.LightSteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = Color.Black;
-            AudioDeviceGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            AudioDeviceGridView.RowTemplate.ContextMenuStrip = SoundSwapContextMenuStrip;
-            AudioDeviceGridView.RowTemplate.Height = 25;
-            AudioDeviceGridView.Size = new Size(616, 226);
-            AudioDeviceGridView.TabIndex = 0;
-            AudioDeviceGridView.CellContentClick += AudioDeviceGridView_CellContentClick;
-            AudioDeviceGridView.EditingControlShowing += AudioDeviceGridView_EditingControlShowing;
-            // 
-            // AudioDeviceColumn
-            // 
-            AudioDeviceColumn.Frozen = true;
-            AudioDeviceColumn.HeaderText = "Audio Device";
-            AudioDeviceColumn.Name = "AudioDeviceColumn";
-            AudioDeviceColumn.ReadOnly = true;
-            AudioDeviceColumn.Width = 335;
-            // 
-            // enabledBoolColumn
-            // 
-            enabledBoolColumn.HeaderText = "Enabled";
-            enabledBoolColumn.Name = "enabledBoolColumn";
-            enabledBoolColumn.Resizable = DataGridViewTriState.True;
-            enabledBoolColumn.Width = 93;
-            // 
-            // currentlyPlayingBoolCollumn
-            // 
-            currentlyPlayingBoolCollumn.HeaderText = "Currently Playing Audio";
-            currentlyPlayingBoolCollumn.Name = "currentlyPlayingBoolCollumn";
-            currentlyPlayingBoolCollumn.Resizable = DataGridViewTriState.True;
-            currentlyPlayingBoolCollumn.SortMode = DataGridViewColumnSortMode.Automatic;
-            currentlyPlayingBoolCollumn.Visible = false;
-            currentlyPlayingBoolCollumn.Width = 93;
-            // 
-            // hotkeyStringColumn
-            // 
-            hotkeyStringColumn.HeaderText = "Hotkey";
-            hotkeyStringColumn.Name = "hotkeyStringColumn";
-            hotkeyStringColumn.Width = 185;
             // 
             // SoundSwapContextMenuStrip
             // 
@@ -357,10 +270,107 @@
             // VersionNumbertoolStripStatusLabel
             // 
             VersionNumbertoolStripStatusLabel.Name = "VersionNumbertoolStripStatusLabel";
-            VersionNumbertoolStripStatusLabel.Size = new Size(467, 17);
+            VersionNumbertoolStripStatusLabel.Size = new Size(498, 17);
             VersionNumbertoolStripStatusLabel.Spring = true;
             VersionNumbertoolStripStatusLabel.Text = "Version: ";
             VersionNumbertoolStripStatusLabel.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // volumeSlider
+            // 
+            volumeSlider.Location = new Point(19, 267);
+            volumeSlider.Maximum = 100;
+            volumeSlider.Name = "volumeSlider";
+            volumeSlider.Size = new Size(524, 45);
+            volumeSlider.TabIndex = 5;
+            volumeSlider.ValueChanged += volumeSlider_ValueChanged;
+            // 
+            // AudioDeviceGridView
+            // 
+            AudioDeviceGridView.AllowUserToAddRows = false;
+            AudioDeviceGridView.AllowUserToDeleteRows = false;
+            AudioDeviceGridView.AllowUserToResizeColumns = false;
+            AudioDeviceGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle1.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = Color.LightSteelBlue;
+            AudioDeviceGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            AudioDeviceGridView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            AudioDeviceGridView.BackgroundColor = Color.FromArgb(64, 64, 64);
+            AudioDeviceGridView.BorderStyle = BorderStyle.Fixed3D;
+            AudioDeviceGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            AudioDeviceGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            AudioDeviceGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            AudioDeviceGridView.Columns.AddRange(new DataGridViewColumn[] { AudioDeviceColumn, enabledBoolColumn, currentlyPlayingBoolCollumn, hotkeyStringColumn });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            AudioDeviceGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            AudioDeviceGridView.GridColor = Color.Black;
+            AudioDeviceGridView.Location = new Point(19, 40);
+            AudioDeviceGridView.Margin = new Padding(10, 3, 10, 3);
+            AudioDeviceGridView.MaximumSize = new Size(616, 226);
+            AudioDeviceGridView.MinimumSize = new Size(616, 226);
+            AudioDeviceGridView.Name = "AudioDeviceGridView";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle4.SelectionBackColor = Color.LightSteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            AudioDeviceGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            AudioDeviceGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle5.BackColor = Color.Gray;
+            dataGridViewCellStyle5.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle5.SelectionBackColor = Color.LightSteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = Color.Black;
+            AudioDeviceGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            AudioDeviceGridView.RowTemplate.ContextMenuStrip = SoundSwapContextMenuStrip;
+            AudioDeviceGridView.RowTemplate.Height = 25;
+            AudioDeviceGridView.Size = new Size(616, 226);
+            AudioDeviceGridView.TabIndex = 0;
+            AudioDeviceGridView.CellContentClick += AudioDeviceGridView_CellContentClick;
+            AudioDeviceGridView.EditingControlShowing += AudioDeviceGridView_EditingControlShowing;
+            // 
+            // AudioDeviceColumn
+            // 
+            AudioDeviceColumn.HeaderText = "Audio Device";
+            AudioDeviceColumn.Name = "AudioDeviceColumn";
+            AudioDeviceColumn.ReadOnly = true;
+            AudioDeviceColumn.Width = 335;
+            // 
+            // enabledBoolColumn
+            // 
+            enabledBoolColumn.HeaderText = "Enabled";
+            enabledBoolColumn.Name = "enabledBoolColumn";
+            enabledBoolColumn.Resizable = DataGridViewTriState.True;
+            enabledBoolColumn.Width = 93;
+            // 
+            // currentlyPlayingBoolCollumn
+            // 
+            currentlyPlayingBoolCollumn.HeaderText = "Currently Playing Audio";
+            currentlyPlayingBoolCollumn.Name = "currentlyPlayingBoolCollumn";
+            currentlyPlayingBoolCollumn.Resizable = DataGridViewTriState.True;
+            currentlyPlayingBoolCollumn.SortMode = DataGridViewColumnSortMode.Automatic;
+            currentlyPlayingBoolCollumn.Visible = false;
+            currentlyPlayingBoolCollumn.Width = 93;
+            // 
+            // hotkeyStringColumn
+            // 
+            hotkeyStringColumn.HeaderText = "Hotkey";
+            hotkeyStringColumn.Name = "hotkeyStringColumn";
+            hotkeyStringColumn.Width = 185;
             // 
             // SoundSwapMainForm
             // 
@@ -368,6 +378,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
             ClientSize = new Size(654, 337);
+            Controls.Add(volumeSlider);
             Controls.Add(statusStrip1);
             Controls.Add(SoundSwapMainMenuStrip);
             Controls.Add(saveButton);
@@ -380,20 +391,20 @@
             Name = "SoundSwapMainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SoundSwap";
+            //Activated += SoundSwapMainForm_Activated;
             FormClosing += SoundSwapMainForm_FormClosing;
-            ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).EndInit();
             SoundSwapContextMenuStrip.ResumeLayout(false);
             SoundSwapMainMenuStrip.ResumeLayout(false);
             SoundSwapMainMenuStrip.PerformLayout();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)volumeSlider).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AudioDeviceGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView AudioDeviceGridView;
         private Button saveButton;
         private ContextMenuStrip SoundSwapContextMenuStrip;
         private ToolStripMenuItem openToolStripMenuItem;
@@ -406,10 +417,6 @@
         private ToolStripMenuItem readMeToolStripMenuItem;
         private ToolStripMenuItem toSystemTrayToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem1;
-        private DataGridViewTextBoxColumn AudioDeviceColumn;
-        private DataGridViewCheckBoxColumn enabledBoolColumn;
-        private DataGridViewCheckBoxColumn currentlyPlayingBoolCollumn;
-        private DataGridViewTextBoxColumn hotkeyStringColumn;
         private NotifyIcon SoundSwapIcon;
         private StatusStrip statusStrip1;
         private ToolStripProgressBar toolStripProgressBar1;
@@ -424,5 +431,11 @@
         private ToolStripMenuItem resetConfigToolStripMenuItem;
         private ToolStripStatusLabel VersionNumbertoolStripStatusLabel;
         private ToolStripMenuItem updateToolStripMenuItem;
+        private TrackBar volumeSlider;
+        private DataGridView AudioDeviceGridView;
+        private DataGridViewTextBoxColumn AudioDeviceColumn;
+        private DataGridViewCheckBoxColumn enabledBoolColumn;
+        private DataGridViewCheckBoxColumn currentlyPlayingBoolCollumn;
+        private DataGridViewTextBoxColumn hotkeyStringColumn;
     }
 }

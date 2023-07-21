@@ -1,0 +1,5 @@
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeAudioIconLibrary\obj\Debug\net6.0\ChangeAudioIconLibrary.csproj.AssemblyReference.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeAudioIconLibrary\obj\Debug\net6.0\ChangeAudioIconLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeAudioIconLibrary\obj\Debug\net6.0\ChangeAudioIconLibrary.AssemblyInfoInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeAudioIconLibrary\obj\Debug\net6.0\ChangeAudioIconLibrary.AssemblyInfo.cs
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\ChangeAudioIconLibrary\obj\Debug\net6.0\ChangeAudioIconLibrary.csproj.CoreCompileInputs.cache

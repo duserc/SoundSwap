@@ -8,6 +8,7 @@ public class audioDevices
     {
         public string Name { get; set; }
         public bool IsDefaultDevice { get; set; }
+        public float? DeviceVolume { get; set; }
     }
     public static List<AudioDeviceInfo> EnumberateAudioDevices()
     {
@@ -21,7 +22,8 @@ public class audioDevices
             AudioDeviceInfo deviceInfo = new AudioDeviceInfo
             {
                 Name = device.FriendlyName,
-                IsDefaultDevice = device.State == DeviceState.Active && device.ID == defaultDevice.ID
+                IsDefaultDevice = device.State == DeviceState.Active && device.ID == defaultDevice.ID,
+                DeviceVolume = device.AudioEndpointVolume.MasterVolumeLevel
             };
             audioDevices.Add(deviceInfo);
         }

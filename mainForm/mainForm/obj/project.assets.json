@@ -72,6 +72,28 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "NAudio/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -180,6 +202,31 @@
           }
         }
       },
+      "System.Drawing.Common/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.AccessControl/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -239,6 +286,20 @@
         },
         "runtime": {
           "bin/placeholder/audioDeviceLibrary.dll": {}
+        }
+      },
+      "ChangeAudioVolumeLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AudioSwitcher.AudioApi.CoreAudio": "3.0.3",
+          "SoundDeviceObjectDeclareLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ChangeAudioVolumeLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ChangeAudioVolumeLibrary.dll": {}
         }
       },
       "ChangeDefualtAudioDeviceLibrary/1.0.0": {
@@ -445,6 +506,37 @@
         "version.txt"
       ]
     },
+    "Microsoft.Win32.SystemEvents/7.0.0": {
+      "sha512": "2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "NAudio/2.1.0": {
       "sha512": "iamDtIq4Tcq6BDEMatX7Wj6KI7rscECS72ZejjnL9RK8BgfrVRH2RlhlQVNxXNp9Up1eFESEiCILNBo7//Rr0g==",
       "type": "package",
@@ -577,6 +669,43 @@
         "packageIcon.png"
       ]
     },
+    "System.Drawing.Common/7.0.0": {
+      "sha512": "KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
+      "type": "package",
+      "path": "system.drawing.common/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net6.0/System.Drawing.Common.dll",
+        "lib/net6.0/System.Drawing.Common.xml",
+        "lib/net7.0/System.Drawing.Common.dll",
+        "lib/net7.0/System.Drawing.Common.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/net7.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net7.0/System.Drawing.Common.xml",
+        "system.drawing.common.7.0.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Security.AccessControl/4.7.0": {
       "sha512": "JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
       "type": "package",
@@ -682,6 +811,11 @@
       "path": "../audioDeviceLibrary/audioDeviceLibrary.csproj",
       "msbuildProject": "../audioDeviceLibrary/audioDeviceLibrary.csproj"
     },
+    "ChangeAudioVolumeLibrary/1.0.0": {
+      "type": "project",
+      "path": "../ChangeAudioVolumeLibrary/ChangeAudioVolumeLibrary.csproj",
+      "msbuildProject": "../ChangeAudioVolumeLibrary/ChangeAudioVolumeLibrary.csproj"
+    },
     "ChangeDefualtAudioDeviceLibrary/1.0.0": {
       "type": "project",
       "path": "../ChangeDefualtAudioDeviceLibrary/ChangeDefualtAudioDeviceLibrary.csproj",
@@ -720,11 +854,13 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "ChangeAudioVolumeLibrary >= 1.0.0",
       "ChangeDefualtAudioDeviceLibrary >= 1.0.0",
       "CreateAudioDeviceListLibrary >= 1.0.0",
       "NotificationForm >= 1.0.0",
       "SetFileLibrary >= 1.0.0",
       "SoundDeviceObjectDeclareLibrary >= 1.0.0",
+      "System.Drawing.Common >= 7.0.0",
       "audioDeviceLibrary >= 1.0.0",
       "getDevNameLibrary >= 1.0.0"
     ]
@@ -733,7 +869,7 @@
     "C:\\Users\\danie\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.1.1",
+    "version": "1.2.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\SoundSwap.csproj",
       "projectName": "SoundSwap",
@@ -758,6 +894,9 @@
           "projectReferences": {
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj"
+            },
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\ChangeAudioVolumeLibrary\\ChangeAudioVolumeLibrary.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\ChangeAudioVolumeLibrary\\ChangeAudioVolumeLibrary.csproj"
             },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\ChangeDefualtAudioDeviceLibrary\\ChangeDefualtAudioDeviceLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\ChangeDefualtAudioDeviceLibrary\\ChangeDefualtAudioDeviceLibrary.csproj"
@@ -789,6 +928,12 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows7.0",
+        "dependencies": {
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

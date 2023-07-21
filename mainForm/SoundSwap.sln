@@ -26,11 +26,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SetFileLibrary", "SetFileLi
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SoundSwapSetup", "SoundSwapInstaller\SoundSwapInstaller.vdproj", "{78762867-2644-4763-9905-B576070AAC11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationForm", "NotificationForm\NotificationForm.csproj", "{BF1635BB-D40F-482A-99CE-4D08362D27CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationForm", "NotificationForm\NotificationForm.csproj", "{BF1635BB-D40F-482A-99CE-4D08362D27CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getDevNameLibrary", "getDevNameLibrary\getDevNameLibrary.csproj", "{D3E6EFF7-F97C-422B-8B7F-154312157DCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "getDevNameLibrary", "getDevNameLibrary\getDevNameLibrary.csproj", "{D3E6EFF7-F97C-422B-8B7F-154312157DCC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NotificationLibary", "NotificationLibary", "{A87780A1-DF09-4024-B5F7-512D21139E4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeAudioVolumeLibrary", "ChangeAudioVolumeLibrary\ChangeAudioVolumeLibrary.csproj", "{6527B1FC-0C3C-4F6B-817B-1147A58777BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +78,10 @@ Global
 		{D3E6EFF7-F97C-422B-8B7F-154312157DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3E6EFF7-F97C-422B-8B7F-154312157DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3E6EFF7-F97C-422B-8B7F-154312157DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6527B1FC-0C3C-4F6B-817B-1147A58777BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6527B1FC-0C3C-4F6B-817B-1147A58777BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6527B1FC-0C3C-4F6B-817B-1147A58777BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6527B1FC-0C3C-4F6B-817B-1147A58777BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +96,7 @@ Global
 		{8FAC7126-3E1C-458F-BEF0-3C957BC94E46} = {B5CFEEDA-D123-48F3-A349-46C69953DAAC}
 		{D3E6EFF7-F97C-422B-8B7F-154312157DCC} = {A87780A1-DF09-4024-B5F7-512D21139E4F}
 		{A87780A1-DF09-4024-B5F7-512D21139E4F} = {B5CFEEDA-D123-48F3-A349-46C69953DAAC}
+		{6527B1FC-0C3C-4F6B-817B-1147A58777BA} = {B5CFEEDA-D123-48F3-A349-46C69953DAAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F5FB6E6F-F43F-4F0C-9C49-4DF11FA17A8F}

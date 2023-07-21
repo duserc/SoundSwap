@@ -30,6 +30,7 @@ public partial class SoundSwapMainForm : Form
         PopulateAudioDeviceData();
         PopulateDataGridView();
         AppendHotkeyListener();
+        initializeAudioSlider();
         hkl.HotkeyPressed += Hkl_HotkeyPressed;
         SoundSwapIcon.ContextMenuStrip = SoundSwapContextMenuStrip;
     }
@@ -53,7 +54,7 @@ public partial class SoundSwapMainForm : Form
             // if sound device does not have settings saved, thus brand new deivce, adds to list
             if (!listOfSoundDevices.Any(x => x.AudioDevice == audioDevice.Name))
             {
-                SoundDevice newSoundDev = new SoundDevice(audioDevice.Name, false, audioDevice.IsDefaultDevice, null);
+                SoundDevice newSoundDev = new SoundDevice(audioDevice.Name, false, audioDevice.IsDefaultDevice, null, audioDevice.DeviceVolume);
                 listOfSoundDevices.Add(newSoundDev);
             }
         }
@@ -116,7 +117,7 @@ public partial class SoundSwapMainForm : Form
                 }
             }
             statusStripProgress(50, "Hotkey Assigned");
-            SoundDevice soundDevice = new SoundDevice(AudioDevice, enabledBool, currentlyPlayingBool, hotkeyString);
+            SoundDevice soundDevice = new SoundDevice(AudioDevice, enabledBool, currentlyPlayingBool, hotkeyString, null);
             WriteJsonList.Add(soundDevice);
             statusStripProgress(60, "Hotkey List Appeneded");
         }
@@ -436,5 +437,15 @@ public partial class SoundSwapMainForm : Form
     private void updateToolStripMenuItem_Click(object sender, EventArgs e)
     {
         CheckForUpdates();
+    }
+    private void initializeAudioSlider()
+    {
+        foreach (SoundDevice soundDevice in listOfSoundDevices)
+        {
+            if (soundDevice.IsActive == true)
+            {
+                volumeSlider.Value = Convert.ToInt32(soundDevice.DeviceVolume);
+            }
+        }
     }
 }
