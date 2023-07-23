@@ -20,14 +20,14 @@
   {
     "AudioDevice": "Realtek Digital Output (Realtek High Definition Audio)",
     "IsActive": false,
-    "IsPlaying": true,
+    "IsPlaying": false,
     "Hotkey": null,
     "DeviceVolume": null
   },
   {
     "AudioDevice": "Speakers (Realtek High Definition Audio)",
     "IsActive": true,
-    "IsPlaying": false,
+    "IsPlaying": true,
     "Hotkey": {
       "KeyCode": 122,
       "Modifiers": 0,

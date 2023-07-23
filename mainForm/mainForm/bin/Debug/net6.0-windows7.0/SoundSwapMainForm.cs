@@ -20,7 +20,7 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    private string version = "1.2.0";
+    private string version = "1.2.1";
     private bool latest = true;
     private bool offline = false;
     private System.Threading.Timer volumeUpdateTimer;
@@ -304,7 +304,8 @@ public partial class SoundSwapMainForm : Form
 
     private void statusStripReset()
     {
-        toolStripStatusLabel1.Text = "Ready";
+        var activeDevice = listOfSoundDevices.First(x => x.IsPlaying == true);
+        toolStripStatusLabel1.Text = $"{activeDevice.AudioDevice}";
         toolStripProgressBar1.Value = 0;
     }
     private async Task statusStripProgress(int progress, string? status)
@@ -453,8 +454,9 @@ public partial class SoundSwapMainForm : Form
         {
             if (soundDevice.IsPlaying)
             {
-                var volume = ChangeAudioVolumeLibrary.Volume.GetDeviceVolume(soundDevice);
-                volumeSlider.Value = Convert.ToInt32(volume); // Directly set the slider value to the device volume
+                var volumeValue = ChangeAudioVolumeLibrary.Volume.GetDeviceVolume(soundDevice);
+                volumeSlider.Value = Convert.ToInt32(volumeValue); // Directly set the slider value to the device volume
+                volumeUiLabel.Text = $"Volume: {volumeValue}%";
             }
         }
     }
@@ -466,6 +468,7 @@ public partial class SoundSwapMainForm : Form
             if (soundDevice.IsPlaying == true)
             {
                 ChangeAudioVolumeLibrary.Volume.ChangeDeviceVolume(soundDevice, volumeSlider.Value);
+                volumeUiLabel.Text = $"Volume: {volumeSlider.Value}%";
             }
         }
     }
@@ -487,6 +490,7 @@ public partial class SoundSwapMainForm : Form
         volumeSlider.BeginInvoke(new Action(() =>
         {
             volumeSlider.Value = volumeValue;
+            volumeUiLabel.Text = $"Volume: {volumeValue}%";
         }));
     }
 }

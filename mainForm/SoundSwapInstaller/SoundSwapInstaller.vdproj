@@ -198,8 +198,8 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SoundSwapSetup"
-        "ProductCode" = "8:{D41B7B06-B995-4AE0-AC7C-356B3122414F}"
-        "PackageCode" = "8:{254F8CA1-810E-4D67-9AE3-5585DD4D85CB}"
+        "ProductCode" = "8:{C7553320-E13E-4A48-A547-3342EABE02B3}"
+        "PackageCode" = "8:{7F2C8997-C205-477A-929F-3946EA60F07C}"
         "UpgradeCode" = "8:{4ABD3296-0B01-40A7-BD4A-8C9F102B522E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -223,7 +223,7 @@
         "TargetPlatform" = "3:0"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
-        "RunPostBuildEvent" = "3:0"
+        "RunPostBuildEvent" = "3:1"
         }
         "Registry"
         {

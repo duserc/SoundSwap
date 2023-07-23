@@ -6,6 +6,8 @@ C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Rel
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Release\net6.0-windows\NAudio.Core.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Release\net6.0-windows\NAudio.WinForms.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Release\net6.0-windows\NAudio.WinMM.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Release\net6.0-windows\getDevNameLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Release\net6.0-windows\getDevNameLibrary.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Release\net6.0-windows\NotificationForm.csproj.AssemblyReference.cache
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Release\net6.0-windows\NotificationForm.SoundSwapNotification.resources
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Release\net6.0-windows\NotificationForm.csproj.GenerateResource.cache
@@ -19,5 +21,3 @@ C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Rel
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Release\net6.0-windows\NotificationForm.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Release\net6.0-windows\NotificationForm.genruntimeconfig.cache
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Release\net6.0-windows\ref\NotificationForm.dll
-C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Release\net6.0-windows\getDevNameLibrary.dll
-C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Release\net6.0-windows\getDevNameLibrary.pdb

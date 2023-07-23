@@ -63,6 +63,7 @@
             VersionNumbertoolStripStatusLabel = new ToolStripStatusLabel();
             volumeSlider = new TrackBar();
             AudioDeviceGridView = new DataGridView();
+            volumeUiLabel = new Label();
             AudioDeviceColumn = new DataGridViewTextBoxColumn();
             enabledBoolColumn = new DataGridViewCheckBoxColumn();
             currentlyPlayingBoolCollumn = new DataGridViewCheckBoxColumn();
@@ -280,7 +281,7 @@
             volumeSlider.Location = new Point(19, 267);
             volumeSlider.Maximum = 100;
             volumeSlider.Name = "volumeSlider";
-            volumeSlider.Size = new Size(524, 45);
+            volumeSlider.Size = new Size(363, 45);
             volumeSlider.TabIndex = 5;
             volumeSlider.ValueChanged += volumeSlider_ValueChanged;
             // 
@@ -343,6 +344,17 @@
             AudioDeviceGridView.CellContentClick += AudioDeviceGridView_CellContentClick;
             AudioDeviceGridView.EditingControlShowing += AudioDeviceGridView_EditingControlShowing;
             // 
+            // volumeUiLabel
+            // 
+            volumeUiLabel.AutoSize = true;
+            volumeUiLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            volumeUiLabel.ForeColor = Color.WhiteSmoke;
+            volumeUiLabel.Location = new Point(377, 272);
+            volumeUiLabel.Name = "volumeUiLabel";
+            volumeUiLabel.Size = new Size(166, 32);
+            volumeUiLabel.TabIndex = 6;
+            volumeUiLabel.Text = "Volume: 100%";
+            // 
             // AudioDeviceColumn
             // 
             AudioDeviceColumn.HeaderText = "Audio Device";
@@ -378,6 +390,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
             ClientSize = new Size(654, 337);
+            Controls.Add(volumeUiLabel);
             Controls.Add(volumeSlider);
             Controls.Add(statusStrip1);
             Controls.Add(SoundSwapMainMenuStrip);
@@ -391,7 +404,6 @@
             Name = "SoundSwapMainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SoundSwap";
-            //Activated += SoundSwapMainForm_Activated;
             FormClosing += SoundSwapMainForm_FormClosing;
             SoundSwapContextMenuStrip.ResumeLayout(false);
             SoundSwapMainMenuStrip.ResumeLayout(false);
@@ -433,6 +445,7 @@
         private ToolStripMenuItem updateToolStripMenuItem;
         private TrackBar volumeSlider;
         private DataGridView AudioDeviceGridView;
+        private Label volumeUiLabel;
         private DataGridViewTextBoxColumn AudioDeviceColumn;
         private DataGridViewCheckBoxColumn enabledBoolColumn;
         private DataGridViewCheckBoxColumn currentlyPlayingBoolCollumn;
