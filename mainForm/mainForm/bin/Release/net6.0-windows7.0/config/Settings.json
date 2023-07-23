@@ -3,24 +3,36 @@
     "AudioDevice": "Speakers (G432 Gaming Headset)",
     "IsActive": false,
     "IsPlaying": false,
-    "Hotkey": null
+    "Hotkey": null,
+    "DeviceVolume": null
   },
   {
-    "AudioDevice": "Intel(R) Display Audio HDMI 2 (Intel(R) Display Audio)",
+    "AudioDevice": "L32WB81 (NVIDIA High Definition Audio)",
     "IsActive": true,
-    "IsPlaying": true,
-    "Hotkey": null
+    "IsPlaying": false,
+    "Hotkey": {
+      "KeyCode": 121,
+      "Modifiers": 0,
+      "Suspended": false
+    },
+    "DeviceVolume": null
   },
   {
     "AudioDevice": "Realtek Digital Output (Realtek High Definition Audio)",
     "IsActive": false,
     "IsPlaying": false,
-    "Hotkey": null
+    "Hotkey": null,
+    "DeviceVolume": null
   },
   {
     "AudioDevice": "Speakers (Realtek High Definition Audio)",
-    "IsActive": false,
-    "IsPlaying": false,
-    "Hotkey": null
+    "IsActive": true,
+    "IsPlaying": true,
+    "Hotkey": {
+      "KeyCode": 122,
+      "Modifiers": 0,
+      "Suspended": false
+    },
+    "DeviceVolume": null
   }
 ]

@@ -11,6 +11,8 @@ using System.Diagnostics;
 using System.Net;
 using NotificationForm;
 using getDevNameLibrary;
+using audioDeviceLibrary;
+using NAudio.CoreAudioApi;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -18,9 +20,10 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    private string version = "1.1.1";
+    private string version = "1.2.0";
     private bool latest = true;
     private bool offline = false;
+
     public SoundSwapMainForm()
     {
         listOfSoundDevices = new List<SoundDevice>();
@@ -29,8 +32,10 @@ public partial class SoundSwapMainForm : Form
         AppendVersion();
         PopulateAudioDeviceData();
         PopulateDataGridView();
-        AppendHotkeyListener();
         initializeAudioSlider();
+        AppendHotkeyListener();
+
+        ChangeAudioVolumeLibrary.Volume.dev.AudioEndpointVolume.OnVolumeNotification += AudioEndpointVolume_OnVolumeNotification;
         hkl.HotkeyPressed += Hkl_HotkeyPressed;
         SoundSwapIcon.ContextMenuStrip = SoundSwapContextMenuStrip;
     }
@@ -54,7 +59,7 @@ public partial class SoundSwapMainForm : Form
             // if sound device does not have settings saved, thus brand new deivce, adds to list
             if (!listOfSoundDevices.Any(x => x.AudioDevice == audioDevice.Name))
             {
-                SoundDevice newSoundDev = new SoundDevice(audioDevice.Name, false, audioDevice.IsDefaultDevice, null, audioDevice.DeviceVolume);
+                SoundDevice newSoundDev = new SoundDevice(audioDevice.Name, false, audioDevice.IsDefaultDevice, audioDevice.DeviceVolume, null);
                 listOfSoundDevices.Add(newSoundDev);
             }
         }
@@ -66,6 +71,7 @@ public partial class SoundSwapMainForm : Form
         {
             AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
         }
+        initializeAudioSlider();
     }
     private void AudioDeviceGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
     {
@@ -79,6 +85,7 @@ public partial class SoundSwapMainForm : Form
 
     public void saveButton_Click(object sender, EventArgs e)
     {
+        initializeAudioSlider();
         statusStripProgress(0, "Save Start");
         List<SoundDevice> WriteJsonList = new List<SoundDevice>();
         foreach (DataGridViewRow dr in AudioDeviceGridView.Rows)
@@ -117,7 +124,7 @@ public partial class SoundSwapMainForm : Form
                 }
             }
             statusStripProgress(50, "Hotkey Assigned");
-            SoundDevice soundDevice = new SoundDevice(AudioDevice, enabledBool, currentlyPlayingBool, hotkeyString, null);
+            SoundDevice soundDevice = new SoundDevice(AudioDevice, enabledBool, currentlyPlayingBool, null, hotkeyString);
             WriteJsonList.Add(soundDevice);
             statusStripProgress(60, "Hotkey List Appeneded");
         }
@@ -438,13 +445,36 @@ public partial class SoundSwapMainForm : Form
     {
         CheckForUpdates();
     }
+
     private void initializeAudioSlider()
     {
         foreach (SoundDevice soundDevice in listOfSoundDevices)
         {
-            if (soundDevice.IsActive == true)
+            if (soundDevice.IsPlaying)
             {
-                volumeSlider.Value = Convert.ToInt32(soundDevice.DeviceVolume);
+                var volume = ChangeAudioVolumeLibrary.Volume.GetDeviceVolume(soundDevice);
+                volumeSlider.Value = Convert.ToInt32(volume); // Directly set the slider value to the device volume
+            }
+        }
+    }
+
+    private void volumeSlider_ValueChanged(object sender, EventArgs e)
+    {
+        foreach (SoundDevice soundDevice in listOfSoundDevices)
+        {
+            if (soundDevice.IsPlaying == true)
+            {
+                ChangeAudioVolumeLibrary.Volume.ChangeDeviceVolume(soundDevice, volumeSlider.Value);
+            }
+        }
+    }
+    private void AudioEndpointVolume_OnVolumeNotification(AudioVolumeNotificationData data)
+    {
+        foreach (SoundDevice soundDevice in listOfSoundDevices)
+        {
+            if (soundDevice.IsPlaying == true)
+            {
+                ChangeAudioVolumeLibrary.Volume.ChangeDeviceVolume(soundDevice, data.MasterVolume);
             }
         }
     }

@@ -246,6 +246,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AudioSwitcher.AudioApi.CoreAudio": "3.0.3",
+          "NAudio": "2.1.0",
           "SoundDeviceObjectDeclareLibrary": "1.0.0"
         },
         "compile": {
@@ -753,7 +754,7 @@
     "C:\\Users\\danie\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.2.0",
+    "version": "1.2.1",
     "restore": {
       "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\SoundSwap.csproj",
       "projectName": "SoundSwap",

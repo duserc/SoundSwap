@@ -6,8 +6,9 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "SoundSwap/1.1.1": {
+      "SoundSwap/1.2.0": {
         "dependencies": {
+          "ChangeAudioVolumeLibrary": "1.0.0",
           "ChangeDefualtAudioDeviceLibrary": "1.0.0",
           "CreateAudioDeviceListLibrary": "1.0.0",
           "NotificationForm": "1.0.0",
@@ -160,6 +161,16 @@
           "audioDeviceLibrary.dll": {}
         }
       },
+      "ChangeAudioVolumeLibrary/1.0.0": {
+        "dependencies": {
+          "AudioSwitcher.AudioApi.CoreAudio": "3.0.3",
+          "NAudio": "2.1.0",
+          "SoundDeviceObjectDeclareLibrary": "1.0.0"
+        },
+        "runtime": {
+          "ChangeAudioVolumeLibrary.dll": {}
+        }
+      },
       "ChangeDefualtAudioDeviceLibrary/1.0.0": {
         "dependencies": {
           "AudioSwitcher.AudioApi.CoreAudio": "3.0.3",
@@ -221,7 +232,7 @@
     }
   },
   "libraries": {
-    "SoundSwap/1.1.1": {
+    "SoundSwap/1.2.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -332,6 +343,11 @@
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
     "audioDeviceLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ChangeAudioVolumeLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -48,3 +48,5 @@ C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\NotificationForm.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\getDevNameLibrary.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\NotificationForm.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\ChangeAudioVolumeLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\ChangeAudioVolumeLibrary.pdb

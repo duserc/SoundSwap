@@ -11,7 +11,8 @@ using System.Diagnostics;
 using System.Net;
 using NotificationForm;
 using getDevNameLibrary;
-
+using audioDeviceLibrary;
+using NAudio.CoreAudioApi;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -19,9 +20,10 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    private string version = "1.2.0";
+    private string version = "1.2.1";
     private bool latest = true;
     private bool offline = false;
+    private System.Threading.Timer volumeUpdateTimer;
 
     public SoundSwapMainForm()
     {
@@ -34,6 +36,7 @@ public partial class SoundSwapMainForm : Form
         initializeAudioSlider();
         AppendHotkeyListener();
 
+        ChangeAudioVolumeLibrary.Volume.dev.AudioEndpointVolume.OnVolumeNotification += AudioEndpointVolume_OnVolumeNotification;
         hkl.HotkeyPressed += Hkl_HotkeyPressed;
         SoundSwapIcon.ContextMenuStrip = SoundSwapContextMenuStrip;
     }
@@ -465,5 +468,25 @@ public partial class SoundSwapMainForm : Form
                 ChangeAudioVolumeLibrary.Volume.ChangeDeviceVolume(soundDevice, volumeSlider.Value);
             }
         }
+    }
+    private void AudioEndpointVolume_OnVolumeNotification(AudioVolumeNotificationData data)
+    {
+        foreach (SoundDevice soundDevice in listOfSoundDevices)
+        {
+            if (soundDevice.IsPlaying)
+            {
+                volumeUpdateTimer?.Dispose();
+                volumeUpdateTimer = new System.Threading.Timer(UpdateVolumeSlider, (int)(data.MasterVolume * 100), 10, Timeout.Infinite);
+                break;
+            }
+        }
+    }
+    private void UpdateVolumeSlider(object state)
+    {
+        int volumeValue = (int)state;
+        volumeSlider.BeginInvoke(new Action(() =>
+        {
+            volumeSlider.Value = volumeValue;
+        }));
     }
 }

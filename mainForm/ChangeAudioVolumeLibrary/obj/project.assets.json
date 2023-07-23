@@ -560,6 +560,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "AudioSwitcher.AudioApi.CoreAudio >= 3.0.3",
+      "NAudio >= 2.1.0",
       "SoundDeviceObjectDeclareLibrary >= 1.0.0"
     ]
   },
@@ -609,6 +610,10 @@
           "AudioSwitcher.AudioApi.CoreAudio": {
             "target": "Package",
             "version": "[3.0.3, )"
+          },
+          "NAudio": {
+            "target": "Package",
+            "version": "[2.1.0, )"
           }
         },
         "imports": [
