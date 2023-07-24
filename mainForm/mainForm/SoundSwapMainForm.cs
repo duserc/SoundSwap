@@ -20,7 +20,7 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    private string version = "1.2.2";
+    private string version = "1.2.5";
     private bool latest = true;
     private bool offline = false;
     private System.Threading.Timer volumeUpdateTimer;
@@ -72,7 +72,6 @@ public partial class SoundSwapMainForm : Form
         {
             AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
         }
-        initializeAudioSlider();
     }
     private void AudioDeviceGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
     {
@@ -450,39 +449,21 @@ public partial class SoundSwapMainForm : Form
 
     private void initializeAudioSlider()
     {
-        foreach (SoundDevice soundDevice in listOfSoundDevices)
-        {
-            if (soundDevice.IsPlaying)
-            {
-                var volumeValue = ChangeAudioVolumeLibrary.Volume.GetDeviceVolume(soundDevice);
-                volumeSlider.Value = Convert.ToInt32(volumeValue); // Directly set the slider value to the device volume
-                volumeUiLabel.Text = $" Volume: {volumeValue}%";
-            }
-        }
+        var dev = ChangeAudioVolumeLibrary.Volume.dev;
+        var volumeValue = ChangeAudioVolumeLibrary.Volume.getDeviceVolumeUsingName(dev.FriendlyName);
+        volumeSlider.Value = Convert.ToInt32(volumeValue);
+        volumeUiLabel.Text = $" Volume: {volumeValue}%";
     }
-
     private void volumeSlider_ValueChanged(object sender, EventArgs e)
     {
-        foreach (SoundDevice soundDevice in listOfSoundDevices)
-        {
-            if (soundDevice.IsPlaying == true)
-            {
-                ChangeAudioVolumeLibrary.Volume.ChangeDeviceVolume(soundDevice, volumeSlider.Value);
-                volumeUiLabel.Text = $" Volume: {volumeSlider.Value}%";
-            }
-        }
+        var dev = ChangeAudioVolumeLibrary.Volume.dev;
+        ChangeAudioVolumeLibrary.Volume.ChangeDeviceVolumeUsingName(dev.FriendlyName, volumeSlider.Value);
+        volumeUiLabel.Text = $" Volume: {volumeSlider.Value}%";
     }
     private void AudioEndpointVolume_OnVolumeNotification(AudioVolumeNotificationData data)
     {
-        foreach (SoundDevice soundDevice in listOfSoundDevices)
-        {
-            if (soundDevice.IsPlaying)
-            {
-                volumeUpdateTimer?.Dispose();
-                volumeUpdateTimer = new System.Threading.Timer(UpdateVolumeSlider, (int)(data.MasterVolume * 100), 10, Timeout.Infinite);
-                break;
-            }
-        }
+        volumeUpdateTimer?.Dispose();
+        volumeUpdateTimer = new System.Threading.Timer(UpdateVolumeSlider, (int)(data.MasterVolume * 100), 50, Timeout.Infinite);
     }
     private void UpdateVolumeSlider(object state)
     {

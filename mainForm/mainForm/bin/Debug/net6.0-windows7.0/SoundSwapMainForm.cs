@@ -20,7 +20,7 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    private string version = "1.2.2";
+    private string version = "1.2.3";
     private bool latest = true;
     private bool offline = false;
     private System.Threading.Timer volumeUpdateTimer;
@@ -72,7 +72,6 @@ public partial class SoundSwapMainForm : Form
         {
             AudioDeviceGridView.Rows.Add((soundDevice.AudioDevice), (soundDevice.IsActive), (soundDevice.IsPlaying), (soundDevice.Hotkey));
         }
-        initializeAudioSlider();
     }
     private void AudioDeviceGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
     {
@@ -452,7 +451,7 @@ public partial class SoundSwapMainForm : Form
     {
         foreach (SoundDevice soundDevice in listOfSoundDevices)
         {
-            if (soundDevice.IsPlaying)
+            if (soundDevice.IsPlaying == true)
             {
                 var volumeValue = ChangeAudioVolumeLibrary.Volume.GetDeviceVolume(soundDevice);
                 volumeSlider.Value = Convert.ToInt32(volumeValue); // Directly set the slider value to the device volume
@@ -476,7 +475,7 @@ public partial class SoundSwapMainForm : Form
     {
         foreach (SoundDevice soundDevice in listOfSoundDevices)
         {
-            if (soundDevice.IsPlaying)
+            if (soundDevice.IsPlaying == true)
             {
                 volumeUpdateTimer?.Dispose();
                 volumeUpdateTimer = new System.Threading.Timer(UpdateVolumeSlider, (int)(data.MasterVolume * 100), 10, Timeout.Infinite);

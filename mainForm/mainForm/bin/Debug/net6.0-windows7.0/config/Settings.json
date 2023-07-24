@@ -8,13 +8,9 @@
   },
   {
     "AudioDevice": "L32WB81 (NVIDIA High Definition Audio)",
-    "IsActive": true,
+    "IsActive": false,
     "IsPlaying": false,
-    "Hotkey": {
-      "KeyCode": 121,
-      "Modifiers": 0,
-      "Suspended": false
-    },
+    "Hotkey": null,
     "DeviceVolume": null
   },
   {
@@ -26,13 +22,9 @@
   },
   {
     "AudioDevice": "Speakers (Realtek High Definition Audio)",
-    "IsActive": true,
+    "IsActive": false,
     "IsPlaying": true,
-    "Hotkey": {
-      "KeyCode": 122,
-      "Modifiers": 0,
-      "Suspended": false
-    },
+    "Hotkey": null,
     "DeviceVolume": null
   }
 ]

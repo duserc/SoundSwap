@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "SoundSwap/1.2.1": {
+      "SoundSwap/1.2.5": {
         "dependencies": {
           "ChangeAudioVolumeLibrary": "1.0.0",
           "ChangeDefualtAudioDeviceLibrary": "1.0.0",
@@ -207,6 +207,7 @@
       },
       "NotificationForm/1.0.0": {
         "dependencies": {
+          "ChangeAudioVolumeLibrary": "1.0.0",
           "getDevNameLibrary": "1.0.0",
           "NAudio.WinForms": "2.1.0"
         },
@@ -232,7 +233,7 @@
     }
   },
   "libraries": {
-    "SoundSwap/1.2.1": {
+    "SoundSwap/1.2.5": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
