@@ -314,6 +314,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "ChangeAudioVolumeLibrary": "1.0.0",
           "getDevNameLibrary": "1.0.0",
           "naudio.winforms": "2.1.0"
         },

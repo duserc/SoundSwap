@@ -504,6 +504,9 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
+              "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\ChangeAudioVolumeLibrary\\ChangeAudioVolumeLibrary.csproj": {
+                "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\ChangeAudioVolumeLibrary\\ChangeAudioVolumeLibrary.csproj"
+              },
               "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\getDevNameLibrary\\getDevNameLibrary.csproj": {
                 "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\getDevNameLibrary\\getDevNameLibrary.csproj"
               }

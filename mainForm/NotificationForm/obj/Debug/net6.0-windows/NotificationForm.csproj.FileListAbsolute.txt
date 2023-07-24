@@ -21,3 +21,15 @@ C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Deb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Debug\net6.0-windows\NotificationForm.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Debug\net6.0-windows\NotificationForm.genruntimeconfig.cache
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\obj\Debug\net6.0-windows\ref\NotificationForm.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\AudioSwitcher.AudioApi.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\AudioSwitcher.AudioApi.CoreAudio.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\HotkeyListener.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\NAudio.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\NAudio.Asio.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\NAudio.Midi.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\NAudio.Wasapi.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\ChangeAudioVolumeLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\SoundDeviceObjectDeclareLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\ChangeAudioVolumeLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\NotificationForm\bin\Debug\net6.0-windows\SoundDeviceObjectDeclareLibrary.pdb

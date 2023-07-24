@@ -456,7 +456,7 @@ public partial class SoundSwapMainForm : Form
             {
                 var volumeValue = ChangeAudioVolumeLibrary.Volume.GetDeviceVolume(soundDevice);
                 volumeSlider.Value = Convert.ToInt32(volumeValue); // Directly set the slider value to the device volume
-                volumeUiLabel.Text = $"Volume: {volumeValue}%";
+                volumeUiLabel.Text = $" Volume: {volumeValue}%";
             }
         }
     }
@@ -468,7 +468,7 @@ public partial class SoundSwapMainForm : Form
             if (soundDevice.IsPlaying == true)
             {
                 ChangeAudioVolumeLibrary.Volume.ChangeDeviceVolume(soundDevice, volumeSlider.Value);
-                volumeUiLabel.Text = $"Volume: {volumeSlider.Value}%";
+                volumeUiLabel.Text = $" Volume: {volumeSlider.Value}%";
             }
         }
     }
@@ -490,7 +490,7 @@ public partial class SoundSwapMainForm : Form
         volumeSlider.BeginInvoke(new Action(() =>
         {
             volumeSlider.Value = volumeValue;
-            volumeUiLabel.Text = $"Volume: {volumeValue}%";
+            volumeUiLabel.Text = $" Volume: {volumeValue}%";
         }));
     }
 }

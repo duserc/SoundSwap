@@ -23,9 +23,22 @@ namespace ChangeAudioVolumeLibrary
                 desiredDevice.Volume = volume;
             }
         }
+        public static void ChangeDeviceVolumeUsingName(string soundDeviceName, float volume)
+        {
+            var desiredDevice = devices.FirstOrDefault(device => device.FullName == soundDeviceName);
+            if (desiredDevice != null)
+            {
+                desiredDevice.Volume = volume;
+            }
+        }
         public static object GetDeviceVolume(SoundDevice soundDevice)
         {
             var desiredDevice = devices.FirstOrDefault(device => device.FullName == soundDevice.AudioDevice);
+            return desiredDevice.Volume;
+        }
+        public static object getDeviceVolumeUsingName(string SoundDeviceName)
+        {
+            var desiredDevice = devices.FirstOrDefault(device => device.FullName == SoundDeviceName);
             return desiredDevice.Volume;
         }
     }

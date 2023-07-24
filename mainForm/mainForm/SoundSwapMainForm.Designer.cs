@@ -63,11 +63,11 @@
             VersionNumbertoolStripStatusLabel = new ToolStripStatusLabel();
             volumeSlider = new TrackBar();
             AudioDeviceGridView = new DataGridView();
-            volumeUiLabel = new Label();
             AudioDeviceColumn = new DataGridViewTextBoxColumn();
             enabledBoolColumn = new DataGridViewCheckBoxColumn();
             currentlyPlayingBoolCollumn = new DataGridViewCheckBoxColumn();
             hotkeyStringColumn = new DataGridViewTextBoxColumn();
+            volumeUiLabel = new Label();
             SoundSwapContextMenuStrip.SuspendLayout();
             SoundSwapMainMenuStrip.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -278,10 +278,10 @@
             // 
             // volumeSlider
             // 
-            volumeSlider.Location = new Point(19, 267);
+            volumeSlider.Location = new Point(12, 272);
             volumeSlider.Maximum = 100;
             volumeSlider.Name = "volumeSlider";
-            volumeSlider.Size = new Size(363, 45);
+            volumeSlider.Size = new Size(370, 45);
             volumeSlider.TabIndex = 5;
             volumeSlider.ValueChanged += volumeSlider_ValueChanged;
             // 
@@ -344,17 +344,6 @@
             AudioDeviceGridView.CellContentClick += AudioDeviceGridView_CellContentClick;
             AudioDeviceGridView.EditingControlShowing += AudioDeviceGridView_EditingControlShowing;
             // 
-            // volumeUiLabel
-            // 
-            volumeUiLabel.AutoSize = true;
-            volumeUiLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            volumeUiLabel.ForeColor = Color.WhiteSmoke;
-            volumeUiLabel.Location = new Point(377, 272);
-            volumeUiLabel.Name = "volumeUiLabel";
-            volumeUiLabel.Size = new Size(166, 32);
-            volumeUiLabel.TabIndex = 6;
-            volumeUiLabel.Text = "Volume: 100%";
-            // 
             // AudioDeviceColumn
             // 
             AudioDeviceColumn.HeaderText = "Audio Device";
@@ -384,6 +373,17 @@
             hotkeyStringColumn.Name = "hotkeyStringColumn";
             hotkeyStringColumn.Width = 185;
             // 
+            // volumeUiLabel
+            // 
+            volumeUiLabel.AutoSize = true;
+            volumeUiLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            volumeUiLabel.ForeColor = Color.WhiteSmoke;
+            volumeUiLabel.Location = new Point(377, 272);
+            volumeUiLabel.Name = "volumeUiLabel";
+            volumeUiLabel.Size = new Size(166, 32);
+            volumeUiLabel.TabIndex = 6;
+            volumeUiLabel.Text = "Volume: 100%";
+            // 
             // SoundSwapMainForm
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -391,11 +391,11 @@
             BackColor = Color.DimGray;
             ClientSize = new Size(654, 337);
             Controls.Add(volumeUiLabel);
-            Controls.Add(volumeSlider);
             Controls.Add(statusStrip1);
             Controls.Add(SoundSwapMainMenuStrip);
             Controls.Add(saveButton);
             Controls.Add(AudioDeviceGridView);
+            Controls.Add(volumeSlider);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");

@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ChangeAudioVolumeLibrary\ChangeAudioVolumeLibrary.csproj" />
     <ProjectReference Include="..\getDevNameLibrary\getDevNameLibrary.csproj" />
   </ItemGroup>
 
