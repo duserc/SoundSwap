@@ -43,7 +43,7 @@ public partial class SoundSwapNotification : Form
 
         for (int i = 0; i < 100; i++)
         {
-            await Task.Delay(10, fadeOutCancellation.Token);
+            await Task.Delay(15, fadeOutCancellation.Token);
             Opacity = 1.00 - (i * 0.01);
 
             if (fadeOutCancellation.IsCancellationRequested)
