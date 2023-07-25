@@ -12,9 +12,17 @@ namespace ChangeAudioVolumeLibrary
         private static readonly CoreAudioController audioController = new CoreAudioController();
         private static readonly IDevice[] devices = audioController.GetDevices().ToArray();
 
-        private static MMDeviceEnumerator enumer = new MMDeviceEnumerator();
-        public  static MMDevice dev = enumer.GetDefaultAudioEndpoint(DataFlow.Render, NAudio.CoreAudioApi.Role.Multimedia);
+        public static MMDeviceEnumerator enumer = new MMDeviceEnumerator();
+        public static MMDevice dev;
 
+        public delegate void AudioDeviceChangedEventHandler(object sender, EventArgs e);
+        public static event AudioDeviceChangedEventHandler AudioDeviceChanged;
+
+        public static void updateCurrentDev()
+        {
+            dev = enumer.GetDefaultAudioEndpoint(DataFlow.Render, NAudio.CoreAudioApi.Role.Multimedia);
+            AudioDeviceChanged?.Invoke(null, EventArgs.Empty);
+        }
         public static void ChangeDeviceVolume(SoundDevice soundDevice, float volume)
         {
             var desiredDevice = devices.FirstOrDefault(device => device.FullName == soundDevice.AudioDevice);

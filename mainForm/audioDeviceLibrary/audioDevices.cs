@@ -1,4 +1,4 @@
-﻿namespace audioDeviceLibrary;
+﻿namespace audioDeviceEnumberateLibrary;
 
 using NAudio.CoreAudioApi;
 

@@ -1,0 +1,12 @@
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\bin\Debug\net6.0\audioDeviceEnumberateLibrary.deps.json
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\bin\Debug\net6.0\audioDeviceEnumberateLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\bin\Debug\net6.0\audioDeviceEnumberateLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\obj\Debug\net6.0\audioDeviceEnumberateLibrary.csproj.AssemblyReference.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\obj\Debug\net6.0\audioDeviceEnumberateLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\obj\Debug\net6.0\audioDeviceEnumberateLibrary.AssemblyInfoInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\obj\Debug\net6.0\audioDeviceEnumberateLibrary.AssemblyInfo.cs
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\obj\Debug\net6.0\audioDeviceEnumberateLibrary.csproj.CoreCompileInputs.cache
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\obj\Debug\net6.0\audioDeviceEnumberateLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\obj\Debug\net6.0\refint\audioDeviceEnumberateLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\obj\Debug\net6.0\audioDeviceEnumberateLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\audioDeviceLibrary\obj\Debug\net6.0\ref\audioDeviceEnumberateLibrary.dll

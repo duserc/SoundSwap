@@ -18,6 +18,14 @@ public partial class SoundSwapNotification : Form
         formLocation();
         setLabel();
         fadeOut();
+        Volume.AudioDeviceChanged += Volume_AudioDeviceChanged;
+        Volume.updateCurrentDev();
+        Volume.dev.AudioEndpointVolume.OnVolumeNotification += AudioEndpointVolume_OnVolumeNotification;
+    }
+    private void Volume_AudioDeviceChanged(object sender, EventArgs e)
+    {
+        Volume.dev.AudioEndpointVolume.OnVolumeNotification -= AudioEndpointVolume_OnVolumeNotification;
+        Volume.dev = Volume.enumer.GetDefaultAudioEndpoint(DataFlow.Render, NAudio.CoreAudioApi.Role.Multimedia);
         Volume.dev.AudioEndpointVolume.OnVolumeNotification += AudioEndpointVolume_OnVolumeNotification;
     }
     private void formLocation()
@@ -68,6 +76,7 @@ public partial class SoundSwapNotification : Form
     {
         volumeUpdateTimer?.Dispose();
         volumeUpdateTimer = new System.Threading.Timer(UpdateVolumeSlider, (int)(data.MasterVolume * 100), 10, Timeout.Infinite);
+
     }
     private void UpdateVolumeSlider(object state)
     {

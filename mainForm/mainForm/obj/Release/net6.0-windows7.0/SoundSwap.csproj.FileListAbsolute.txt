@@ -18,7 +18,7 @@ C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\NAudio.WinForms.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\NAudio.WinMM.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\Newtonsoft.Json.dll
-C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\audioDeviceLibrary.dll
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\audioDeviceEnumberateLibrary.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\ChangeAudioVolumeLibrary.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\ChangeDefualtAudioDeviceLibrary.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\CreateAudioDeviceListLibrary.dll
@@ -27,7 +27,7 @@ C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\NotificationForm.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\SetFileLibrary.dll
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\SoundDeviceObjectDeclareLibrary.dll
-C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\audioDeviceLibrary.pdb
+C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\audioDeviceEnumberateLibrary.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\ChangeAudioVolumeLibrary.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\ChangeDefualtAudioDeviceLibrary.pdb
 C:\Users\danie\cs\harvard final proj\SoundSwap\mainForm\MainForm\bin\Release\net6.0-windows7.0\CreateAudioDeviceListLibrary.pdb

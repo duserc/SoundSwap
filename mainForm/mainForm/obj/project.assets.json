@@ -226,7 +226,7 @@
           }
         }
       },
-      "audioDeviceLibrary/1.0.0": {
+      "audioDeviceEnumberateLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -235,10 +235,10 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
-          "bin/placeholder/audioDeviceLibrary.dll": {}
+          "bin/placeholder/audioDeviceEnumberateLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/audioDeviceLibrary.dll": {}
+          "bin/placeholder/audioDeviceEnumberateLibrary.dll": {}
         }
       },
       "ChangeAudioVolumeLibrary/1.0.0": {
@@ -693,10 +693,10 @@
         "version.txt"
       ]
     },
-    "audioDeviceLibrary/1.0.0": {
+    "audioDeviceEnumberateLibrary/1.0.0": {
       "type": "project",
-      "path": "../audioDeviceLibrary/audioDeviceLibrary.csproj",
-      "msbuildProject": "../audioDeviceLibrary/audioDeviceLibrary.csproj"
+      "path": "../audioDeviceLibrary/audioDeviceEnumberateLibrary.csproj",
+      "msbuildProject": "../audioDeviceLibrary/audioDeviceEnumberateLibrary.csproj"
     },
     "ChangeAudioVolumeLibrary/1.0.0": {
       "type": "project",
@@ -747,7 +747,7 @@
       "NotificationForm >= 1.0.0",
       "SetFileLibrary >= 1.0.0",
       "SoundDeviceObjectDeclareLibrary >= 1.0.0",
-      "audioDeviceLibrary >= 1.0.0",
+      "audioDeviceEnumberateLibrary >= 1.0.0",
       "getDevNameLibrary >= 1.0.0"
     ]
   },
@@ -755,7 +755,7 @@
     "C:\\Users\\danie\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.2.5",
+    "version": "1.3.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\MainForm\\SoundSwap.csproj",
       "projectName": "SoundSwap",
@@ -778,8 +778,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows7.0",
           "projectReferences": {
-            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj": {
-              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceLibrary.csproj"
+            "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceEnumberateLibrary.csproj": {
+              "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\audioDeviceLibrary\\audioDeviceEnumberateLibrary.csproj"
             },
             "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\ChangeAudioVolumeLibrary\\ChangeAudioVolumeLibrary.csproj": {
               "projectPath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\ChangeAudioVolumeLibrary\\ChangeAudioVolumeLibrary.csproj"

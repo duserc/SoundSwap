@@ -9,7 +9,7 @@
   {
     "AudioDevice": "L32WB81 (NVIDIA High Definition Audio)",
     "IsActive": true,
-    "IsPlaying": false,
+    "IsPlaying": true,
     "Hotkey": {
       "KeyCode": 121,
       "Modifiers": 0,
@@ -20,7 +20,7 @@
   {
     "AudioDevice": "Realtek Digital Output (Realtek High Definition Audio)",
     "IsActive": false,
-    "IsPlaying": true,
+    "IsPlaying": false,
     "Hotkey": null,
     "DeviceVolume": null
   },
