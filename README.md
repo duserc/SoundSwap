@@ -96,5 +96,12 @@ Due to the nature of being a program that is "always on" and "always listening" 
     - SoundSwap also comes with an installer and an uninstaller. This creates the application with the relevant icons and shortcuts about the users pc. The installer will also delete and replace any older versions of the program when updating / installing.
 
 ### Usage
+To use SoundSwap, simply:
+- [Install](#installation)
+- Bind your hotkeys, in the hotkey column
+- Enable the hotkey
+- Press the hotkey to swap sound devices!
 
+
+![](https://github.com/duserc/SoundSwap/blob/main/images/soundSwapAction.gif)
 ### Video Demo:  <URL HERE> WIP
