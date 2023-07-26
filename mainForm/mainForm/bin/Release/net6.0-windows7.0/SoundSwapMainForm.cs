@@ -21,7 +21,7 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    private string version = "1.3.0";
+    private string version = "1.3.1";
     private bool latest = true;
     private bool offline = false;
     private System.Threading.Timer volumeUpdateTimer;
@@ -385,7 +385,7 @@ public partial class SoundSwapMainForm : Form
                     try
                     {
                         if (File.Exists(@".\SoundSwapSetup.msi")) { File.Delete(@".\SoundSwapSetup.msi"); }
-                        client.DownloadFile("https://www.dropbox.com/s/n5xun8rxcn1i8mi/SoundSwapSetup.msi?dl=1", @"SoundSwapSetup.msi");
+                        client.DownloadFile("https://www.dropbox.com/scl/fi/wzfl37m6c9aq87pz5yl65/SoundSwapSetup.msi?rlkey=lhebk7xjt9cat4sy15hiebkmg&dl=1", @"SoundSwapSetup.msi");
 
                         Process process = new Process();
                         process.StartInfo.FileName = "msiexec";
