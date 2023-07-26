@@ -11,7 +11,9 @@
 Download SoundSwap (windows) [here](https://www.dropbox.com/scl/fi/wzfl37m6c9aq87pz5yl65/SoundSwapSetup.msi?rlkey=lhebk7xjt9cat4sy15hiebkmg&dl=1)
 
 ### What is SoundSwap?
-[SoundSwapUI](https://github.com/duserc/SoundSwap/blob/images/SoundSwap.png?raw=true)
+<picture>
+  <img alt="Screenshot of SoundSwapUI" src="https://github.com/duserc/SoundSwap/blob/main/images/SoundSwap.png">
+</picture>
 SoundSwap was programmed in `C# .net 6.0` using visual studio codes' winforms.
 
 SoundSwap is a light-weight Audio Device switcher, that operates via programmable hotkeys. SoundSwap is designed to fill a void that I have personally felt the Windows Operating system has been lacking for many years: A fast, easy way to change the default audiodevice output, without the need to navigate through the ever changing, windows GUI.
