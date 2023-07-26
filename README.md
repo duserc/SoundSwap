@@ -24,7 +24,6 @@ In the spirit of keeping the application fast and easy to run, the design philos
 Due to the nature of being a program that is "always on" and "always listening" to the assigned hotkeys, all features were added with a strong regard for memory and cpu usage.
 
 ### Features
-
 - Displays fully dynamic list of audio output devices connected to the pc, in the format of "DataGridView". This consists of three visible columns: Audio Device, Enabled, Hotkey.
     - on program startup, checks for any previous saved settings from /config/settings.json
         - if there is no saved settings for any specific device, generate defualt settings and append to a list of object: sound devices, that will later be used to save settings.json and also queried into, saving memory on unessesary readings of the json file
@@ -32,6 +31,9 @@ Due to the nature of being a program that is "always on" and "always listening" 
     - Disabling a device's hotkey also removes the hotkey listener for that specific device, saving memory and cpu usage
 - Fully Customizable Hotkeys
     - in the "hotkey" column of the "DataGridView", a textbox has been converted to enable recieving of combinational or singular hotkeys. Any hotkeys that interfere with windows operations, such as `ALT+F4` will not work, thanks to the hotkey [API](https://github.com/Willy-Kimura/HotkeyListener/blob/master/README.md)
+    - On kotkey press
+        - When a user presses a hotkey, a notification form will open on the bottom right of the users screen. This notification form displays the name of the audio device that was switched to and also displays the current volume of the device on a volume slider. This volume slider is interactable also resetting the timer that is waiting to fade the window out of view on mouse over.
+        ![](https://github.com/duserc/SoundSwap/blob/main/images/SoundSwapNotif.gif)
     - Hotkey inputs are protected from all potential edge cases that could arise when they are attempted to be stored as a hotkey type, ect.
 - Save button
     - The save button both updates the list of audio device objects, but also writes the users saved settings into the Settings.Json. This can then be loaded from on the next launch of the application.
