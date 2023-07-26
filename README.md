@@ -106,4 +106,4 @@ To use SoundSwap, simply:
 ![](https://github.com/duserc/SoundSwap/blob/main/images/soundSwapAction.gif)
 ### Video Demo
 Apologies if the music is destracting, I felt it necessary to provide evidence of the audio device changing.
-https://youtu.be/r1hTTJDVYGw
+[video](https://youtu.be/r1hTTJDVYGw)
