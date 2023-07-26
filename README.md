@@ -33,9 +33,7 @@ Due to the nature of being a program that is "always on" and "always listening" 
     - in the "hotkey" column of the "DataGridView", a textbox has been converted to enable recieving of combinational or singular hotkeys. Any hotkeys that interfere with windows operations, such as `ALT+F4` will not work, thanks to the hotkey [API](https://github.com/Willy-Kimura/HotkeyListener/blob/master/README.md)
     - On kotkey press
         - When a user presses a hotkey, a notification form will open on the bottom right of the users screen. This notification form displays the name of the audio device that was switched to and also displays the current volume of the device on a volume slider. This volume slider is interactable also resetting the timer that is waiting to fade the window out of view on mouse over.
-        <picture>
-            <img alt="Screenshot of SoundSwapUI" src="https://github.com/duserc/SoundSwap/blob/main/images/SoundSwapNotif.gif">
-        </picture>
+        ![](https://github.com/duserc/SoundSwap/blob/main/images/SoundSwapNotif.gif)
     - Hotkey inputs are protected from all potential edge cases that could arise when they are attempted to be stored as a hotkey type, ect.
 - Save button
     - The save button both updates the list of audio device objects, but also writes the users saved settings into the Settings.Json. This can then be loaded from on the next launch of the application.
