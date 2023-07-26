@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eWUCY7GjVM7/WgO53oZjdtqu6dIXR7e82ufMdoxc1vh6WyBAbAZOrRzes8VJ5MtLetX31f9gA68xXbRF1VXCmQ==",
+  "dgSpecHash": "Vyztz30T9HpRbHIC6VfiTIovYlwQgnmiBpHuzO2pAI+/hqHS24e0hBFzoSrOnqicyaquHeR/jjw+E5HJ/ubKcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\danie\\cs\\harvard final proj\\SoundSwap\\mainForm\\ChangeDefualtAudioDeviceLibrary\\ChangeDefualtAudioDeviceLibrary.csproj",
   "expectedPackageFiles": [
