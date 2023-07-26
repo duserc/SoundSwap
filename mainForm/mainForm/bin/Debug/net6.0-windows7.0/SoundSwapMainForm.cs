@@ -3,7 +3,6 @@ using SoundDeviceObjectDeclareLibrary;
 using System.Reflection;
 using System.Text.Json;
 using WK.Libraries.HotkeyListenerNS;
-
 using ChangeDefualtAudioDeviceLibrary;
 using SetFileLibrary;
 using Microsoft.Win32;
@@ -15,6 +14,8 @@ using audioDeviceEnumberateLibrary;
 using NAudio.CoreAudioApi;
 using ChangeAudioVolumeLibrary;
 using static audioDeviceEnumberateLibrary.audioDevices;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MainForm;
 public partial class SoundSwapMainForm : Form
@@ -87,10 +88,9 @@ public partial class SoundSwapMainForm : Form
             hks.Enable(textBox);
         }
     }
-
     public void saveButton_Click(object sender, EventArgs e)
     {
-        
+
         statusStripProgress(0, "Save Start");
         List<SoundDevice> WriteJsonList = new List<SoundDevice>();
         foreach (DataGridViewRow dr in AudioDeviceGridView.Rows)
@@ -207,7 +207,7 @@ public partial class SoundSwapMainForm : Form
             SoundSwapNotification notificationForm = new SoundSwapNotification();
             initializeAudioSlider();
             notificationForm.Show();
-            
+
         }
         PopulateDataGridView();
         Volume.dev.AudioEndpointVolume.OnVolumeNotification -= AudioEndpointVolume_OnVolumeNotification;
@@ -260,7 +260,6 @@ public partial class SoundSwapMainForm : Form
         Show();
         WindowState = FormWindowState.Normal;
     }
-
     private void SoundSwapMainForm_FormClosing(object sender, FormClosingEventArgs e)
     {
         if (e.CloseReason == CloseReason.UserClosing)
@@ -275,13 +274,11 @@ public partial class SoundSwapMainForm : Form
             Application.Exit();
         }
     }
-
     private void openToolStripMenuItem_Click(object sender, EventArgs e)
     {
         Show();
         WindowState = FormWindowState.Normal;
     }
-
     private void quitToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
     {
         SoundSwapIcon.Visible = false;
@@ -289,7 +286,6 @@ public partial class SoundSwapMainForm : Form
         statusStripProgress(100, "Closing SoundSwap");
         Application.Exit();
     }
-
     private void saveToolStripMenuItem_Click(object sender, EventArgs e)
     {
         if (AudioDeviceGridView.CurrentCell != null)
@@ -298,12 +294,10 @@ public partial class SoundSwapMainForm : Form
         }
         saveButton_Click(sender, e);
     }
-
     private void toSystemTrayToolStripMenuItem_Click(object sender, EventArgs e)
     {
         Hide();
     }
-
     private void quitToolStripMenuItem_Click(object sender, EventArgs e)
     {
         SoundSwapIcon.Visible = false;
@@ -311,7 +305,6 @@ public partial class SoundSwapMainForm : Form
         statusStripProgress(100, "Closing SoundSwap");
         Application.Exit();
     }
-
     private void statusStripReset()
     {
         var activeDevice = listOfSoundDevices.First(x => x.IsPlaying == true);
@@ -335,13 +328,11 @@ public partial class SoundSwapMainForm : Form
             statusStripReset();
         }
     }
-
     private void detectNewAudioDeviceToolStripMenuItem_Click(object sender, EventArgs e)
     {
         statusStripProgress(100, "Detecting New Audio Devices...");
         Application.Restart();
     }
-
     private void resetConfigToolStripMenuItem_Click(object sender, EventArgs e)
     {
         statusStripProgress(25, "Prompting user...");
@@ -360,22 +351,19 @@ public partial class SoundSwapMainForm : Form
         }
         statusStripProgress(100, "Aborting Reset");
     }
-
     private void yesToolStripMenuItem_Click(object sender, EventArgs e)
     {
         RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         reg.SetValue("SoundSwap", Application.ExecutablePath.ToString());
     }
-
     private void noToolStripMenuItem_Click(object sender, EventArgs e)
     {
         RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         if (reg.GetValue("SoundSwap") != null)
         {
-            reg.DeleteValue("SoundSwap");
+            reg.SetValue("SoundSwap", new byte[] { 0, 0, 0, 0 }, RegistryValueKind.Binary);
         }
     }
-
     private void readMeToolStripMenuItem_Click(object sender, EventArgs e)
     {
         Process.Start(new ProcessStartInfo
@@ -410,7 +398,7 @@ public partial class SoundSwapMainForm : Form
                     }
                     catch
                     {
-                     
+
                     }
                 }
                 else
@@ -456,12 +444,10 @@ public partial class SoundSwapMainForm : Form
             VersionNumbertoolStripStatusLabel.Text = $"Version: {version} - Offline";
         }
     }
-
     private void updateToolStripMenuItem_Click(object sender, EventArgs e)
     {
         CheckForUpdates();
     }
-
     private void initializeAudioSlider()
     {
         foreach (SoundDevice soundDevice in listOfSoundDevices)
@@ -469,7 +455,7 @@ public partial class SoundSwapMainForm : Form
             if (soundDevice.IsPlaying == true)
             {
                 var volumeValue = ChangeAudioVolumeLibrary.Volume.GetDeviceVolume(soundDevice);
-                volumeSlider.Value = Convert.ToInt32(volumeValue); 
+                volumeSlider.Value = Convert.ToInt32(volumeValue);
                 volumeUiLabel.Text = $" Volume: {volumeValue}%";
             }
         }
@@ -484,7 +470,7 @@ public partial class SoundSwapMainForm : Form
                 volumeUiLabel.Text = $" Volume: {volumeSlider.Value}%";
             }
         }
-        
+
     }
     private void AudioEndpointVolume_OnVolumeNotification(AudioVolumeNotificationData data)
     {
