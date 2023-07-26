@@ -21,7 +21,7 @@ public partial class SoundSwapMainForm : Form
 
     private List<SoundDevice> listOfSoundDevices;
     public HotkeyListener hkl = new HotkeyListener();
-    private string version = "1.3.1";
+    private string version = "1.3.2";
     private bool latest = true;
     private bool offline = false;
     private System.Threading.Timer volumeUpdateTimer;

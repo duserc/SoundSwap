@@ -7,6 +7,9 @@
 - [Installation](#installation)
 - [Usage](#usage)
 
+### Installation
+Download SoundSwap (windows) [here](https://www.dropbox.com/scl/fi/wzfl37m6c9aq87pz5yl65/SoundSwapSetup.msi?rlkey=lhebk7xjt9cat4sy15hiebkmg&dl=1)
+
 ### What is SoundSwap?
 
 SoundSwap was programmed in `C# .net 6.0` using visual studio codes' winforms.
